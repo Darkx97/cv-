@@ -14,18 +14,19 @@ h1
 {
     color: rgb(247, 235, 222);
     font-family: 'Cookie' , cursive;
-    font-size: 50px;
+    font-size: 4.50rem;
 }
 
-h2,h3
+h2
 {
     font-family: 'Oswald', sans-serif;
     margin-top: 0px;
     color: rgb(247, 235, 222);
+    font-size: 2.50rem;
 }
 p
 {
-    font-size:20px;
+    font-size:1.20rem;
 }
 
 table
@@ -33,6 +34,7 @@ table
     align-content: center;
     align-self: center;
     box-align: center;
+    width: 100%;
 
 }
 
@@ -40,13 +42,13 @@ th
 {
     color: rgb(223, 219, 215);
     font-family: 'Oswald', sans-serif;
-    font-size: 24px;
+    font-size: 1.50rem;
 }
 td 
 {
 
     font-family: 'Roboto', sans-serif;
-    font-size: 18px;
+    font-size: 1.20rem;
     align-self: center;
     align-content :center;
     color: rgb(247, 235, 222);
@@ -60,6 +62,14 @@ hr
     border-style: none;
     background-color: rgb(73, 73, 73);
 
+}
+
+li
+{
+    
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.20rem;
+    color: rgb(247, 235, 222);;
 }
 .top-container
 {
