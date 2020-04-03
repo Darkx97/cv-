@@ -24,6 +24,14 @@ h2
     color: rgb(247, 235, 222);
     font-size: 2.50rem;
 }
+
+h3
+{
+    font-family: 'Oswald', sans-serif;
+    margin-top: 0px;
+    color: rgb(247, 235, 222);
+    font-size: 2.0rem;
+}
 p
 {
     font-size:1.20rem;
@@ -82,6 +90,12 @@ li
 .mid-container
 {
     width: 100%;
+}
+
+.mid-container2
+{
+    width: 100%;
+    text-align: center;
 }
 
 .bot-container
