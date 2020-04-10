@@ -12,7 +12,7 @@ p,td
 }
 h1
 {
-    color: rgb(247, 235, 222);
+    color: rgb(99, 55, 221);
     font-family: 'Cookie' , cursive;
     font-size: 4.50rem;
 }
@@ -21,7 +21,7 @@ h2
 {
     font-family: 'Oswald', sans-serif;
     margin-top: 0px;
-    color: rgb(247, 235, 222);
+    color: rgb(99, 55, 221);
     font-size: 2.50rem;
 }
 
@@ -29,7 +29,7 @@ h3
 {
     font-family: 'Oswald', sans-serif;
     margin-top: 0px;
-    color: rgb(247, 235, 222);
+    color: rgb(99, 55, 221);
     font-size: 2.0rem;
 }
 p
@@ -68,8 +68,9 @@ hr
     width: 65%;
     height: 2px;
     border-style: none;
-    background-color: rgb(73, 73, 73);
-
+    background-color: rgb(117, 117, 117);
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 li
@@ -79,12 +80,36 @@ li
     font-size: 1.20rem;
     color: rgb(247, 235, 222);;
 }
+
+button
+{
+    width: 25%;
+    background-color: rgb(68, 29, 175);
+    border: none;
+    color: rgb(247, 235, 222);
+    text-align: center;
+    font-family: 'Cookie' , cursive;
+    font-size: 4.50rem;
+    border-radius: 8px;
+    margin: 0 auto;
+    
+    transition: background-color 0.4s ease-out;
+
+}
+button:hover
+{
+    background-color: rgb(21, 6, 63);
+}
+
 .top-container
 {
     padding-top: 5%;
     position: relative;
     text-align: center;
     width: 100%;
+    background-image: url(images\Background.png);
+    background-size: cover;
+    
 }
 
 .mid-container
@@ -102,5 +127,7 @@ li
 {
     width: 100%;
     padding-bottom: 5%;
-
+    text-align: center;
+    
 }
+ 
