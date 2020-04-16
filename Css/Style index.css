@@ -10,6 +10,7 @@ p,td
     color: rgb(247, 235, 222);
     font-family: 'Roboto', sans-serif;
 }
+
 h1
 {
     color: rgb(99, 55, 221);
@@ -107,7 +108,6 @@ button:hover
     position: relative;
     text-align: center;
     width: 100%;
-    background-image: url(images\Background.png);
     background-size: cover;
     
 }
@@ -131,3 +131,15 @@ button:hover
     
 }
  
+#title
+{
+    background-color: rgb(56, 22, 207);
+}
+
+.ver-spacing
+{
+    padding-top: 10px;
+    padding-bottom:10px;
+    text-align: center;
+    vertical-align: auto;
+}
