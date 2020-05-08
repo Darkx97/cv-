@@ -40,27 +40,31 @@ p
 
 table
 {
-    align-content: center;
-    align-self: center;
-    box-align: center;
+    border-color: #3b3b3b;
     width: 100%;
 
 }
 
 th
 {
-    color: rgb(223, 219, 215);
+    color: rgb(255, 255, 255);
     font-family: 'Oswald', sans-serif;
     font-size: 1.50rem;
 }
+
 td 
 {
 
     font-family: 'Roboto', sans-serif;
-    font-size: 1.20rem;
+    font-size: 1.30rem;
     align-self: center;
     align-content :center;
-    color: rgb(247, 235, 222);
+    color: rgb(197, 195, 192);
+    
+}
+tr
+{
+    border-color: #3b3b3b;
     
 }
 
