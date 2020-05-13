@@ -1,0 +1,75 @@
+@font-face
+{
+    font-family: 'Cookie';
+    src: url("Fonts/Cookie/Cookie-Regular.ttf");
+    font-style: normal;
+    font-weight: 100;
+}
+
+@font-face
+{
+    font-family: 'Oswald';
+    src: url("Fonts/Oswald/Oswald-Regular.ttf");
+    font-style: normal;
+    font-weight: 100;
+}
+
+@font-face
+{
+    font-family: 'Roboto';
+    src: url("Fonts/Roboto/Roboto-Regular.ttf");
+    font-style: normal;
+    font-weight: 100;
+}
+
+
+body
+{
+    background-color:#252525;
+    font-family: 'Roboto';
+    font-size: 1.30rem;
+    color: rgb(197, 195, 192);
+    font-weight: 100;
+}
+
+
+p,li
+{
+    font-family: 'Roboto';
+    font-size: 1.30rem;
+    color: rgb(197, 195, 192);
+    font-weight: 100;
+    
+}
+
+h1
+{
+    color: rgb(99, 55, 221);
+    font-family: 'Cookie';
+    font-size: 4.50rem;
+    font-weight: 100;
+}
+
+h2,h3
+{
+    font-family: 'Oswald';
+    margin-top: 0px;
+    color: rgb(99, 55, 221);
+    font-size: 2.50rem;
+    font-weight: 100;
+}
+
+h3
+{
+    font-size: 2.0rem;
+}
+
+hr
+{
+    width: 65%;
+    height: 2px;
+    border-style: none;
+    background-color: rgb(107, 107, 107);
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
