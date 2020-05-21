@@ -1,24 +1,28 @@
 @font-face
 {
-    font-family: 'Cookie';
-    src: url("Fonts/Cookie/Cookie-Regular.ttf");
-    font-style: normal;
+    font-family: 'xolonium';
+    src: url("Fonts/xolonium/Xolonium-Regular.ttf");
     font-weight: 100;
 }
 
 @font-face
 {
-    font-family: 'Oswald';
-    src: url("Fonts/Oswald/Oswald-Regular.ttf");
-    font-style: normal;
+    font-family: 'romanserif';
+    src: url("Fonts/romanserif/RomanSerif.ttf");
     font-weight: 100;
 }
 
 @font-face
 {
     font-family: 'Roboto';
-    src: url("Fonts/Roboto/Roboto-Regular.ttf");
-    font-style: normal;
+    src: url("Fonts/roboto/Roboto-Regular.ttf");
+    font-weight: 100;
+}
+
+@font-face
+{
+    font-family: 'bpmono';
+    src: url("Fonts/bpmono/BPmono.ttf");
     font-weight: 100;
 }
 
@@ -26,16 +30,12 @@
 body
 {
     background-color:#252525;
-    font-family: 'Roboto';
-    font-size: 1.30rem;
-    color: rgb(197, 195, 192);
-    font-weight: 100;
 }
 
 
 p,li
 {
-    font-family: 'Roboto';
+    font-family: romanserif;
     font-size: 1.30rem;
     color: rgb(197, 195, 192);
     font-weight: 100;
@@ -45,18 +45,19 @@ p,li
 h1
 {
     color: rgb(99, 55, 221);
-    font-family: 'Cookie';
+    font-family: bpmono;
     font-size: 4.50rem;
     font-weight: 100;
 }
 
 h2,h3
 {
-    font-family: 'Oswald';
+    font-family: Roboto ;
     margin-top: 0px;
     color: rgb(99, 55, 221);
     font-size: 2.50rem;
     font-weight: 100;
+    
 }
 
 h3
@@ -73,3 +74,4 @@ hr
     margin-bottom: 30px;
     margin-top: 30px;
 }
+
