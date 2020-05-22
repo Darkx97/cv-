@@ -1,28 +1,28 @@
 @font-face
 {
     font-family: 'xolonium';
-    src: url("Fonts/xolonium/Xolonium-Regular.ttf");
+    src: url('../Fonts/xolonium/Xolonium-Regular.ttf');
     font-weight: 100;
 }
 
 @font-face
 {
     font-family: 'romanserif';
-    src: url("Fonts/romanserif/RomanSerif.ttf");
+    src: url('../Fonts/romanserif/RomanSerif.ttf');
     font-weight: 100;
 }
 
 @font-face
 {
     font-family: 'Roboto';
-    src: url("Fonts/roboto/Roboto-Regular.ttf");
+    src: url('../Fonts/roboto/Roboto-Regular.ttf');
     font-weight: 100;
 }
 
 @font-face
 {
     font-family: 'bpmono';
-    src: url("Fonts/bpmono/BPmono.ttf");
+    src: url('../Fonts/bpmono/BPmono.ttf');
     font-weight: 100;
 }
 
