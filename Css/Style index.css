@@ -96,7 +96,6 @@ hr
     max-width: 100%;
     overflow-x: hidden;
     
-    
 }
 
 .Grid
@@ -185,7 +184,7 @@ nav
 .nav-links
 {
     display: flex;
-    gap: 1.5rem;
+    gap:3rem;
 }
 
 .nav-links a
@@ -202,7 +201,6 @@ nav
 .nav-links li
 {
     list-style: none;
-    line-height: 4rem;
 }
 
 .burger
