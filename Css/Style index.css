@@ -196,11 +196,13 @@ nav
     font-size: 1rem;
     max-width: 100%;
     overflow-x: hidden;
+    overflow: hidden;
 }
 
 .nav-links li
 {
     list-style: none;
+    line-height: 4rem;
 }
 
 .burger
