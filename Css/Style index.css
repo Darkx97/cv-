@@ -215,6 +215,7 @@ nav
     margin: 5px;
     transition: all 0.5s ease;
 }
+
 @media screen and (max-width: 900px) 
 {
     body ,html
@@ -252,6 +253,7 @@ nav
         color: hsl(0, 0%, 58%);
         font-family: 'romanserif';
         font-size: 0.75rem;
+        line-height: 3rem;
 
     }
     
@@ -307,6 +309,7 @@ nav
     .nav-links a
     {
         font-size: 1.8rem;
+        line-height: 3rem;
     }
     
     .burger
@@ -347,6 +350,13 @@ nav
     {
         font-size: 1rem;
     }
+
+    .nav-links a
+    {
+        font-size: 1.6rem;
+        line-height: 3rem;
+    }
+    
 }
 
 .nav-active
