@@ -167,7 +167,7 @@ nav
     color: #949494;
     font-family: 'xolonium';
     font-size: 2rem;
-    margin: 1rem;
+    margin: 1rem 0rem 1rem 1.5rem;
 }
 .logo a:visited
 {
@@ -248,7 +248,7 @@ nav
         color: #949494;
         font-family: 'xolonium';
         font-size: 1.5rem;
-        margin: 1rem;
+        margin: 1rem 0rem 1rem 1.5rem;
         
     }
 
@@ -263,7 +263,7 @@ nav
     .nav-links li
     {
         list-style: none;
-        margin-left:  1.5rem;
+        margin:  0.8rem;
     }
 
     
@@ -314,6 +314,7 @@ nav
     .nav-links li
     {
         opacity: 0 ;
+        
         
     }
     .nav-links a
