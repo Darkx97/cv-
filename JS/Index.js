@@ -1,3 +1,7 @@
+const DLMode = document.getElementById("DLMode");
+
+const elemnts = document.querySelectorAll("*");
+
 function navSlide()
 {
     const burger =document.querySelector('.burger');
@@ -28,23 +32,37 @@ function navSlide()
 navSlide();
 
 
-function Mainhoverin(x)
+function Navhoverin(x)
 {
-    x.style.color = "rgb(99, 55, 221)";
+    x.classList.add('in-page')
 }
 
-function Mainhoverout(x)
+function Navhoverout(x)
 {
-    x.style.color = " rgb(148, 148, 148)";
+    x.classList.remove('in-page')
 }
 
 
-function Linkhoverin(x)
-{
-    x.style.color = "rgb(219, 219, 219)";
-}
 
-function Linkhoverout(x)
+
+DLMode.addEventListener('change',() =>
 {
-    x.style.color = " rgb(148, 148, 148)";
-}
+    
+    if(DLMode.checked===true)
+    {
+        for(let x=0; x < elemnts.length;x++)
+        {
+            elemnts[x].classList.add('light');
+        }
+    
+    }
+    else
+    {
+        for(let x=0; x < elemnts.length;x++)
+        {
+            elemnts[x].classList.remove('light');
+        }
+    }
+
+
+});

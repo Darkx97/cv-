@@ -13,22 +13,31 @@
 
     </head>
 
-    <body style="background-color:#252525;">
+    <body >
 
 
             
         <!-- nav bar start-->
                           
-        <nav>
+        <nav class="nav-bar">
 
-            <div class="logo"><a href="index.html" onmouseover="Mainhoverin(this)" onmouseout=" Mainhoverout(this)">Drakx97</a></div>
+            <div><a href="index.html" onmouseover="Navhoverin(this)" onmouseout="Navhoverout(this)" class="logo">Drakx97</a></div>
             <ul class="nav-links">
-                <li><a href="projects.html" style="color:rgb(219, 219, 219)">Projects</a></li>
-                <li><a href="Goals.html" onmouseover="Linkhoverin(this)" onmouseout=" Linkhoverout(this)">Goals</a></li>
-                <li><a href="Working_on.html" onmouseover="Linkhoverin(this)" onmouseout=" Linkhoverout(this)">Working on</a></li>
-                <li><a href="aboutme.html" onmouseover="Linkhoverin(this)" onmouseout=" Linkhoverout(this)">About me</a></li>
-                <li><a href="My_Brain.html" onmouseover="Linkhoverin(this)" onmouseout=" Linkhoverout(this)">My Brain</a></li>
-                <li><a href="mailto:syn-97@hotmail.com" onmouseover="Linkhoverin(this)" onmouseout=" Linkhoverout(this)">Contact me</a></li>
+                <li><a href="projects.html" class="in-page">Projects</a></li>
+                <li><a href="Goals.html" onmouseover="Navhoverin(this)" onmouseout="Navhoverout(this)">Goals</a></li>
+                <li><a href="Working_on.html" onmouseover="Navhoverin(this)" onmouseout="Navhoverout(this)" >Working on</a></li>
+                <li><a href="aboutme.html" onmouseover="Navhoverin(this)" onmouseout="Navhoverout(this)">About me</a></li>
+                <li><a href="My_Brain.html" onmouseover="Navhoverin(this)" onmouseout="Navhoverout(this)">My Brain</a></li>
+                <li><a href="mailto:syn-97@hotmail.com" onmouseover="Navhoverin(this)" onmouseout="Navhoverout(this)">Contact me</a></li>
+                <li>
+                    <div>
+                        <input type="checkbox" class="checkbox" id="DLMode">
+                        
+                        <label for="DLMode" class="switch">
+                            <div class="ball"></div>
+                        </label>
+                    </div>
+                </li>
             </ul>
 
             <div class="burger">

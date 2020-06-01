@@ -26,6 +26,7 @@
     font-weight: 100;
 }
 
+
 html,body
 {
     max-width: 100%;
@@ -33,193 +34,375 @@ html,body
     margin: 0px;
     padding: 0px;
 }
-body
-{
-    background-color:#252525;
-    position: relative;
-}
 
 
-p
-{
-    font-family: romanserif;
-    font-size: 1.30rem;
-    color: rgb(248, 248, 248);
-    font-weight: 100;
-    
-}
 
-h1
-{
-    color: rgb(99, 55, 221);
-    font-family: bpmono;
-    font-size: 3.5rem;
-    font-weight: 100;
-}
+/* dark theme start */
+    body
+    {
+        background-color:#252525;
+        position: relative;
+        transition: all 0.6s linear;
+    }
 
-h2,h3
-{
-    font-family: Roboto ;
-    margin-top: 0px;
-    color: rgb(99, 55, 221);
-    font-size: 2.50rem;
-    font-weight: 100;
-    
-}
 
-h3
-{
-    font-size: 2.0rem;
-}
+    p
+    {
+        font-family: romanserif;
+        font-size: 1.30rem;
+        color: rgb(248, 248, 248);
+        font-weight: 100;
+        transition: all 0.3s linear;
+        
+    }
 
-hr
-{
-    width: 65%;
-    height: 2px;
-    border-style: none;
-    background-color: rgb(107, 107, 107);
-    margin-bottom: 30px;
-    margin-top: 30px;
-}
+    h1
+    {
+        color: rgb(99, 55, 221);
+        font-family: bpmono;
+        font-size: 3.5rem;
+        font-weight: 100;
+        transition: all 0.3s linear;
+    }
+
+    h2,h3
+    {
+        font-family: Roboto ;
+        margin-top: 0px;
+        color: rgb(99, 55, 221);
+        font-size: 2.50rem;
+        font-weight: 100;
+        transition: all 0.3s linear;
+    }
+
+    h3
+    {
+        font-size: 2.0rem;
+    }
+
+    hr
+    {
+        width: 65%;
+        height: 2px;
+        border-style: none;
+        background-color: rgb(107, 107, 107);
+        margin-bottom: 30px;
+        margin-top: 30px;
+        transition: all 0.6s linear;
+    }
+/* dark theme finish */
+
+/* light theme start */
+
+    body.light
+    {
+        background-color:#d3d2d2; ;
+        transition: all 0.6s linear;
+    }
+
+
+    p.light
+    {
+        color: rgb(26, 26, 26); 
+        transition: all 0.3s linear;
+    }
+
+    h1.light
+    {
+        color:  rgb(99, 55, 221);
+        transition: all 0.3s linear;
+    }
+
+    h2.light,h3.light
+    {
+        color:  rgb(99, 55, 221);
+        transition: all 0.3s linear;
+    }
+
+    h3.light
+    {
+        font-size: 2.0rem;
+        transition: all 0.3s linear;
+    }
+
+    hr.light
+    {
+        background-color: rgb(255, 255, 255);
+        transition: all 0.6s linear;
+    }
+
+/* light theme finish */
 
 
 /* grid system test start here*/
 
-.container
-{
-    margin-right: 5%;
-    margin-left: 5%;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding :0;
-    display: grid;
-    max-width: 100%;
-    overflow-x: hidden;
+    .container
+    {
+        margin-right: 5%;
+        margin-left: 5%;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding :0;
+        display: grid;
+        max-width: 100%;
+        overflow-x: hidden;
+        
+    }
+
+    .Grid
+    {
+        display: grid;
+        
+    }
+
+    .Row
+    {
+        display: grid;
+        grid-template-rows: 1fr;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        overflow: auto;
+        padding: 1rem 0 1rem;
+        
+    }
+
+    .Col-1
+    {
+        display: grid;
+        grid-template-columns: 1fr;
+        place-items: center;
+    }
+
+    .Col-10-4-content
+    {
+        display: grid;
+        grid-template-columns: 10fr 4fr;
+    }
+
+    .Col-10-4-title
+    {
+        display: grid;
+        grid-template-columns: 10fr 4fr;
+    }
+
+    .Col-2-10-2
+    {
+        display: grid;
+        grid-template-columns: 2fr 10fr 2fr;
+        gap: 1rem;
+        place-items: center;
+        
+    }
+
+    .responsiveImg
+    {
+        width: 80%;
+        height: auto;
+    }
+
+/* grid system finished */
+
+
+/* navigation bar dark theme start */
+    nav
+    {
+        display: flex;
+        align-items: center;
+        max-width: 100%;
+        height: 12vh;
+        overflow-x: hidden;
+        
+    }
+
+    .nav-bar
+    {
+        background-color: #0e0d0d;
+        transition: all 0.6s linear;
+    }
+
+    .logo 
+    {
+        color: #949494;
+        font-family: 'xolonium';
+        font-size: 2rem;
+        margin: 1rem 0rem 1rem 1.5rem;
+        text-decoration: none;
+        transition: all 0.3s linear;
+    }
+
+    .in-page.logo 
+    {
+        color: rgb(99, 55, 221);
+        
+    }
+
+    .nav-links
+    {
+        display: flex;
+        color: #949494;
+        align-items: center;
+        background-color: #0e0d0d;
+        transition: all 0.6s linear;
+        
+    }
+    .nav-links .in-page
+    {
+        color: #ffffff;  
+    }
+
+    .nav-links a
+    {
+        text-decoration: none;
+        color: #949494;
+        font-family: 'bpmono';
+        font-size: 1rem;
+        max-width: 100%;
+        overflow-x: hidden;
+        overflow: hidden;
+        transition: all 0.3s linear;
+    }
+
+
+
+    .nav-links li
+    {
+        list-style: none;
+        margin-left:  1.5rem;
+    }
+
+    .burger
+    {
+        display: none;
+        
+    }
+    .burger div
+    {
+        width: 25px;
+        height: 3px;
+        background-color: #c9c6c6;
+        margin: 5px;
+        transition: all 0.5s linear;
+        color: white;
+        background-color: white;
+        transition: all 0.3s linear;
+    }
+
+
+/* navigation bar dark theme finish */
+
+
+
+/* navigation bar light theme start */
+
+    .nav-bar.light
+    {
+        background-color: #c4c4c4; 
+        transition: all 0.6s linear;
+    }
+    .nav-links.light
+    {
+        background-color: #c4c4c4;
+        transition: all 0.6s linear;
+        
+    }
     
-}
+    .nav-links.light .in-page
+    {
+        color:  #000000;
+        transition: all 0.3s linear;
+    }
 
-.Grid
-{
-    display: grid;
-    
-}
+    .nav-links .light a
+    {
+        color:  #5a5a5a;
+        transition: all 0.3s linear;
+    }
 
-.Row
-{
-    display: grid;
-    grid-template-rows: 1fr;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    overflow: auto;
-    padding: 1rem 0 1rem;
-    
-}
+    .logo.light
+    {
+        color: #6d6d6d;
+        transition: all 0.3s linear;
+    }
 
-.Col-1
-{
-    display: grid;
-    grid-template-columns: 1fr;
-    place-items: center;
-}
-
-.Col-10-4-content
-{
-    display: grid;
-    grid-template-columns: 10fr 4fr;
-}
-
-.Col-10-4-title
-{
-    display: grid;
-    grid-template-columns: 10fr 4fr;
-}
-
-.Col-2-10-2
-{
-    display: grid;
-    grid-template-columns: 2fr 10fr 2fr;
-    gap: 1rem;
-    place-items: center;
-    
-}
+    .in-page.logo 
+    {
+        color: rgb(99, 55, 221);
+        transition: all 0.3s linear;
+        
+    }
 
 
 
-.responsiveImg
-{
-    width: 80%;
-    height: auto;
-}
 
-nav
-{
-    display: flex;
-    align-items: center;
-    background-color: #0e0d0d;
-    max-height: 16vh;
-    max-width: 100%;
-    overflow-x: hidden;
-    
-}
 
-.logo
-{
-    color: #949494;
-    font-family: 'xolonium';
-    font-size: 2rem;
-    margin: 1rem 0rem 1rem 1.5rem;
-}
-.logo a:visited
-{
-    text-decoration: none;
-    color: #949494;
-}
-.logo a:link
-{
-    text-decoration: none;
-    color: #949494;
-    
-}
+    .burger.light  div
+    {
+        color: rgb(0, 0, 0);
+        background-color: rgb(0, 0, 0);
+        transition: all 0.3s linear;
+    }
 
-.nav-links
-{
-    display: flex;
-    
-}
+/* navigation bar light theme finish  */
 
-.nav-links a
-{
-    text-decoration: none;
-    color: #949494;
-    font-family: 'bpmono';
-    font-size: 1rem;
-    max-width: 100%;
-    overflow-x: hidden;
-    overflow: hidden;
-}
 
-.nav-links li
-{
-    list-style: none;
-    margin-left:  1.5rem;
-}
 
-.burger
-{
-    display: none;
-    
-}
-.burger div
-{
-    width: 25px;
-    height: 3px;
-    background-color: #c9c6c6;
-    margin: 5px;
-    transition: all 0.5s ease;
-    color: white;
-    background-color: white;
-}
 
+
+/* toggle switch dark theme design start  */
+    .switch
+    {
+        position: relative;
+        display: flex;
+        width: 100px;
+        height: 40px;
+        background-color: #292929;
+        border-radius: 40px;
+        cursor: pointer;
+        transition: all 0.6s linear;
+    }
+
+    .ball
+    {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top:5px;
+        left: 6px;
+        background-color: rgb(214, 214, 214);
+        border-radius: 100%;
+
+        transition: all 0.6s ease;
+    }
+
+    .checkbox
+    {
+        opacity: 0;
+        position: absolute;
+    }
+
+
+    .checkbox:checked + .switch .ball
+    {
+        transform:  translateX(60px);
+    }
+
+/* toggle switch dark theme finish */
+
+/* toggle switch light theme start */
+    .switch.light
+    {
+        background-color: #e2e2e2;
+        transition: all 0.6s linear;
+    }
+    .ball.light
+    {
+        background-color: rgb(12, 12, 12);
+        transition: all 0.6s ease;
+    }
+/* toggle switch light theme finish */
+
+
+/* responsiveness start */
 @media screen and (max-width: 900px) 
 {
     body ,html
@@ -245,7 +428,6 @@ nav
     }
     .logo
     {
-        color: #949494;
         font-family: 'xolonium';
         font-size: 1.5rem;
         margin: 1rem 0rem 1rem 1.5rem;
@@ -255,7 +437,6 @@ nav
     .nav-links a
     {
         text-decoration: none;
-        color: hsl(0, 0%, 58%);
         font-family: 'romanserif';
         font-size: 1rem;
     }
@@ -299,9 +480,10 @@ nav
     {
         position: absolute;
         right: 0px;
-        height: 100%;
+        height: 98.5%;
+        max-height: fit-content;
         top : 5vh;
-        background-color: #0e0d0d;
+
         
         display: flex;
         flex-direction: column;
@@ -309,7 +491,7 @@ nav
         /* padding-right: 30px; */
         width: 100%;
         transform: translate(100%);
-        transition: transform 0.65s ease-in; 
+        transition: all 0.6s linear; 
     }
     .nav-links li
     {
@@ -370,10 +552,14 @@ nav
     
 }
 
+/* responsiveness finish */
+
+
+/* navigation bar animation start */
 .nav-active
 {
     transform: translateX(0%);
-    transition: transform 0.5s ease-in;
+    transition: transform 0.5s linear-in;
 }
 
 
@@ -403,3 +589,5 @@ nav
 {
     transform: rotate(45deg) translate(-5px,-6px);   
 }
+
+/* navigation bar animation finish */
