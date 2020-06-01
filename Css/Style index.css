@@ -170,6 +170,7 @@ html,body
     {
         display: grid;
         grid-template-columns: 1fr;
+
         place-items: center;
     }
 
@@ -209,7 +210,7 @@ html,body
         display: flex;
         align-items: center;
         max-width: 100%;
-        height: 12vh;
+        height: 6rem;
         overflow-x: hidden;
         
     }
@@ -482,7 +483,7 @@ html,body
         right: 0px;
         height: 95%;
         max-height: fit-content;
-        top : 5vh;
+        top : 5rem;
 
         
         display: flex;
