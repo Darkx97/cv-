@@ -251,7 +251,6 @@ html,body
     .nav-links .in-page
     {
         color: #ffffff;  
-        border-style: outset;
         border-color: white;
         transition: all 0.6s ease;
     }
@@ -269,7 +268,8 @@ html,body
         transition: all 0.3s linear;
         padding: 5px 10px;
         border: 2px;
-        border-style: none;
+        border-color: #00000000;
+        border-style: outset;
         border-radius: 10px;
     }
 
