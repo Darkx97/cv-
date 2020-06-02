@@ -253,12 +253,15 @@ html,body
         margin: 0rem 0rem 1rem 1rem;
         text-decoration: none;
         transition: all 0.3s linear;
+        padding: 5px 10px;
+        border: 2px rgb(180, 180, 180) solid;
+        border-radius: 4px;
     }
 
     .in-page.logo 
     {
-        color: rgb(99, 55, 221);
-        
+        color: rgb(45, 6, 141);
+        border: 2px rgb(99, 55, 221) outset;
     }
 
     .nav-links
@@ -294,7 +297,7 @@ html,body
         border: 2px;
         border-color: #00000000;
         border-style: outset;
-        border-radius: 10px;
+        border-radius: 15px;
     }
 
 
@@ -357,12 +360,14 @@ html,body
     .logo.light
     {
         color: #6d6d6d;
+        border: 2px #6d6d6d outset;
         transition: all 0.3s linear;
     }
 
-    .in-page.logo 
+    .in-page.logo.light 
     {
-        color: rgb(99, 55, 221);
+        color: rgb(45, 6, 141);
+        border: 2px rgb(65, 12, 209) outset;
         transition: all 0.3s linear;
         
     }
