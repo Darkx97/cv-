@@ -394,8 +394,8 @@ html,body
     {
         position: relative;
         display: flex;
-        width: 100px;
-        height: 40px;
+        width: 50px;
+        height: 25px;
         background-color: #292929;
         border-radius: 40px;
         cursor: pointer;
@@ -406,12 +406,12 @@ html,body
     .ball
     {
         position: absolute;
-        width: 30px;
-        height: 30px;
-        top:5px;
-        left: 6px;
+        width: 40%;
+        height: 80%;
+        top:10%;
+        left: 5%;
         background-color: rgb(214, 214, 214);
-        border-radius: 100%;
+        border-radius:100px;
         transition: all 0.6s ease;
     }
 
@@ -424,7 +424,7 @@ html,body
 
     .checkbox:checked + .switch .ball
     {
-        transform:  translateX(60px);
+        transform:  translateX(131%);
     }
 
 /* toggle switch dark theme finish */
