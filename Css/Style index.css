@@ -36,9 +36,11 @@ html,body
 }
 
 
+
+
 *::-webkit-scrollbar
 {
-    width: 0.25rem;
+    width: 2px;
 }
 
 *::-webkit-scrollbar-track
@@ -51,7 +53,6 @@ html,body
     background: blueviolet;
 }
 
-
 body::-webkit-scrollbar
 {
     width: 0.5rem;
@@ -59,13 +60,45 @@ body::-webkit-scrollbar
 
 body::-webkit-scrollbar-track
 {
-    background-color: #000000;
+    background-color: #2e2e2e;
 }
 
 body::-webkit-scrollbar-thumb
 {
     background: blueviolet;
 }
+
+
+*.light::-webkit-scrollbar
+{
+    width: 2px;
+}
+
+*.light::-webkit-scrollbar-track
+{
+    background-color: #c4c4c4;
+}
+
+*.light::-webkit-scrollbar-thumb
+{
+    background: blueviolet;
+}
+
+body.light::-webkit-scrollbar
+{
+    width: 0.5rem;
+}
+
+body.light::-webkit-scrollbar-track
+{
+    background-color: #ffffff;
+}
+
+body.light::-webkit-scrollbar-thumb
+{
+    background: blueviolet;
+}
+
 
 html{
     overflow-y: scroll;
@@ -117,19 +150,27 @@ html{
         transition: all 0.3s linear;
     }
 
+
     h3
     {
         font-size: 2.0rem;
     }
 
+    h4
+    {
+        font-family: xolonium;
+        color: rgb(99, 55, 221);
+        font-size: 1.50rem;
+        margin: 0;
+        transition: all 0.3s linear;
+    }
     hr
     {
         width: 65%;
         height: 2px;
         border-style: none;
         background-color: rgb(107, 107, 107);
-        margin-bottom: 30px;
-        margin-top: 30px;
+        margin: 0 auto;
         transition: all 0.6s linear;
     }
 /* dark theme finish */
@@ -363,20 +404,49 @@ html{
 
     .nav-list 
     {
-        display: flex;
-        flex-direction: column;
+
+        display: grid;
         height: 0;
         width: 100%;
         background-color:#0e0d0d;
-        z-index: 1;
         overflow-x: hidden ;
         transition: all 0.6s linear;
+        overflow-y: scroll;
+        scrollbar-color: blueviolet #0e0d0d;
+        scrollbar-width: thin;
+        
+        place-items: center;
         justify-content: center;
-        align-items: center;
-        gap: 1.5rem;
-        scrollbar-width: none;
+
+        gap: 0;
+        margin: 0px;
+
     }
     
+    .nav-list .list-item
+    {
+        margin: 1rem;
+    }
+
+    hr.nav-list .list-item 
+    {
+        margin: 0px;
+    }
+
+    .nav-list .list-item :last-child
+    {
+        margin-bottom: 5px;
+
+    }
+
+    .nav-list .list-item .list-option
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+        justify-content: center;
+        align-content: center;
+    }
 
     .nav-list a
     {
@@ -391,6 +461,7 @@ html{
         border-style: outset;
         border-radius: 15px;
         transition: all 0.6s linear;
+
     }
 
     .nav-list .in-page
@@ -476,7 +547,9 @@ html{
         transition: all 0.6s linear;
         justify-content: center;
         align-items: center;
-        gap: 1.5rem;
+        overflow-y: scroll;
+        scrollbar-color: blueviolet #c4c4c4;
+        scrollbar-width: thin
     }
     
 
@@ -509,7 +582,7 @@ html{
 /* toggle switch dark theme design start  */
     .switch
     {
-        position: relative;
+        margin: 0;
         display: flex;
         width: 50px;
         height: 25px;
@@ -518,15 +591,16 @@ html{
         cursor: pointer;
         border: 2px rgb(180, 180, 180) outset;
         transition: all 0.6s linear;
+
     }
 
     .ball
     {
-        position: absolute;
-        width: 40%;
-        height: 80%;
-        top:10%;
-        left: 5%;
+        position: relative;
+        width:  20px;
+        height: 20px;
+        top:2px;
+        left: 2px;
         background-color: rgb(214, 214, 214);
         border-radius:100px;
         transition: all 0.6s ease;
