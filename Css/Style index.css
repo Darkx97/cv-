@@ -51,6 +51,7 @@ body::-webkit-scrollbar-thumb
     background: blueviolet;
 }
 
+
 /* dark theme start */
     body
     {
@@ -68,6 +69,7 @@ body::-webkit-scrollbar-thumb
         color: rgb(248, 248, 248);
         font-weight: 100;
         transition: all 0.3s linear;
+        margin-top: 10px;
         margin-bottom: 10px ;
         
     }
@@ -204,8 +206,6 @@ body::-webkit-scrollbar-thumb
         display: grid;
         grid-template-columns: 1fr;
         justify-content: center;
-        margin-top: 10px;
-        margin-bottom: 10px;
         align-items: center;
         justify-content: center;
     }
@@ -287,6 +287,7 @@ body::-webkit-scrollbar-thumb
         padding: 5px 10px;
         border: 2px rgb(180, 180, 180) solid;
         border-radius: 4px;
+        justify-content: flex-start;
     }
 
     .in-page.logo 
@@ -303,7 +304,7 @@ body::-webkit-scrollbar-thumb
         align-items: center;
         background-color: #0e0d0d;
         transition: all 0.6s linear;
-        margin: 0;
+        margin: auto;
         
     }
     .nav-links .in-page
@@ -337,10 +338,52 @@ body::-webkit-scrollbar-thumb
         margin-left: 1rem;
     }
 
+    .nav-list 
+    {
+        display: flex;
+        flex-direction: column;
+        height: 0;
+        width: 100%;
+        background-color:#0e0d0d;
+        z-index: 1;
+        overflow-x: hidden ;
+        transition: all 0.6s linear;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    
+
+    .nav-list a
+    {
+        text-decoration: none;
+        color: #949494;
+        font-family: 'bpmono';
+        font-size: 1rem;
+        transition: all 0.3s linear;
+        padding: 5px 10px;
+        border: 2px;
+        border-color: #00000000;
+        border-style: outset;
+        border-radius: 15px;
+        transition: all 0.6s linear;
+    }
+
+    .nav-list .in-page
+    {
+        color: #ffffff;  
+        border-color: rgb(180, 180, 180);
+        transition: all 0.6s linear;
+    }
+
+
+
     .burger
     {
-        display: none;
-        
+        display: block;
+        margin-left: auto;
+        margin-right: 15px;
+        justify-content: flex-end;
     }
     .burger div
     {
@@ -402,7 +445,31 @@ body::-webkit-scrollbar-thumb
     }
 
 
+    .nav-list.light
+    {
 
+        background-color:#c4c4c4;
+        transition: all 0.6s linear;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    
+
+    .nav-list.light a
+    {
+        color: #5a5a5a;
+        font-size: 1rem;
+        border-color: #00000000;
+        transition: all 0.6s linear;
+    }
+
+    .nav-list.light .in-page 
+    {
+        color: #000000;  
+        border-color: rgb(70, 70, 70);
+        transition: all 0.6s linear;
+    }
 
 
     .burger.light  div
@@ -505,15 +572,8 @@ body::-webkit-scrollbar-thumb
 
     .nav-links a
     {
-        text-decoration: none;
         font-family: 'romanserif';
-        font-size: 0.8rem;
-    }
-
-    .nav-links li
-    {
-        list-style: none;
-        margin:  0.4rem;
+        font-size: 1rem;
     }
 
     
@@ -547,25 +607,8 @@ body::-webkit-scrollbar-thumb
 
     .nav-links
     {
-        position: absolute;
-        right: 0px;
-        max-height: fit-content;
-        top : 5rem;
+        display: none;
 
-        
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        /* padding-right: 30px; */
-        width: 100%;
-        transform: translate(100%);
-        transition: all 0.6s linear; 
-    }
-    .nav-links li
-    {
-        opacity: 0 ;
-        
-        
     }
     .nav-links a
     {
@@ -626,22 +669,16 @@ body::-webkit-scrollbar-thumb
 /* navigation bar animation start */
 .nav-active
 {
-    transform: translateX(0%);
-    transition: transform 0.5s linear-in;
+    height: 400px;
+    transition: all 0.6s linear;
+}
+.nav-active.light
+{
+    height: 400px;
+    transition: all 0.6s linear;
 }
 
 
-
-@keyframes navLinkFade{
-    from{
-        opacity: 0;
-        transform: translateX(200px) ;
-    }
-    to{
-        opacity: 1;
-        transform: translateX(0px) ;
-    }
-}
 
 
 .toggle .line1
