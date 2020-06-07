@@ -285,7 +285,7 @@ body::-webkit-scrollbar-thumb
         text-decoration: none;
         transition: all 0.3s linear;
         padding: 5px 10px;
-        border: 2px rgb(180, 180, 180) solid;
+        border: 5px rgb(180, 180, 180) solid;
         border-radius: 4px;
         justify-content: flex-start;
     }
@@ -293,7 +293,7 @@ body::-webkit-scrollbar-thumb
     .in-page.logo 
     {
         color: rgb(45, 6, 141);
-        border: 2px rgb(99, 55, 221) outset;
+        border: 5px rgb(99, 55, 221) outset;
     }
 
     .nav-links
@@ -320,11 +320,11 @@ body::-webkit-scrollbar-thumb
         text-decoration: none;
         color: #949494;
         font-family: 'bpmono';
-        font-size: 1rem;
+        font-size: 1.1rem;
         max-width: 100%;
         transition: all 0.3s linear;
         padding: 5px 10px;
-        border: 2px;
+        border: 3px;
         border-color: #00000000;
         border-style: outset;
         border-radius: 15px;
@@ -359,10 +359,10 @@ body::-webkit-scrollbar-thumb
         text-decoration: none;
         color: #949494;
         font-family: 'bpmono';
-        font-size: 1rem;
+        font-size: 1.5rem;
         transition: all 0.3s linear;
         padding: 5px 10px;
-        border: 2px;
+        border: 4px;
         border-color: #00000000;
         border-style: outset;
         border-radius: 15px;
@@ -432,14 +432,14 @@ body::-webkit-scrollbar-thumb
     .logo.light
     {
         color: #6d6d6d;
-        border: 2px #6d6d6d outset;
+        border-color:#6d6d6d;
         transition: all 0.3s linear;
     }
 
     .in-page.logo.light 
     {
         color: rgb(45, 6, 141);
-        border: 2px rgb(65, 12, 209) outset;
+        border-color:  rgb(65, 12, 209) ;
         transition: all 0.3s linear;
         
     }
@@ -459,7 +459,6 @@ body::-webkit-scrollbar-thumb
     .nav-list.light a
     {
         color: #5a5a5a;
-        font-size: 1rem;
         border-color: #00000000;
         transition: all 0.6s linear;
     }
@@ -619,8 +618,7 @@ body::-webkit-scrollbar-thumb
     .burger
     {
         display: block;
-        position: absolute;
-        right: 25px;
+
     }
 
     .Col-10-4-content
