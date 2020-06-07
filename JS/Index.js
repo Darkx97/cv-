@@ -37,21 +37,29 @@ function Navhoverout(x)
 DLMode.addEventListener('change',() =>
 {
     
-    if(DLMode.checked===true)
+    if(DLMode.checked)
     {
-        for(let x=0; x < elemnts.length;x++)
-        {
-            elemnts[x].classList.add('light');
-        }
+        document.documentElement.setAttribute('data-theme','light');
     
     }
     else
     {
-        for(let x=0; x < elemnts.length;x++)
-        {
-            elemnts[x].classList.remove('light');
-        }
+        document.documentElement.setAttribute('data-theme','dark');
     }
 
 
 });
+
+function checktheme()
+{
+    if(DLMode.checked)
+    {
+        document.documentElement.setAttribute('data-theme','light');
+    
+    }
+    else
+    {
+        document.documentElement.setAttribute('data-theme','dark');
+    }
+}
+

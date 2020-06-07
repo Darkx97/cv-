@@ -27,6 +27,60 @@
 }
 
 
+html[data-theme ='dark']
+{
+    --body-bg-color : #252525;
+
+    --main-scroll-bar-color : #2e2e2e;
+    --main-scroll-thump-color :#592dd3;
+
+    --menu-scroll-bar-color :#00000000;
+    --menu-scroll-thump-color :#592dd3;
+
+    --hr-color :#6b6b6b;
+
+    --header-color : #592dd3;
+    --normal-text-color :#f7f7f7;
+
+    --nav-list-bg-color :#0e0d0d;
+    --nav-list-text-color :#949494;
+    --nav-list-active-color :#eeeeee;
+    --nav-list-border-color :#b4b4b4;
+
+    --burger-line-color :#ffffff;
+    
+    --switch-bg-color : #292929;
+    --switch-border-color :#b4b4b4;
+    --switch-ball-color : #d6d6d6;
+}
+
+html[data-theme ='light']
+{
+    --body-bg-color : #dadada;
+
+    --main-scroll-bar-color :#e2e2e2;
+    --main-scroll-thumb-color : #3d08ce;
+
+    --menu-scroll-bar-color :#3d08ce00;
+    --menu-scroll-thumb-color :#3d08ce;
+
+    --hr-color :#c9c9c9;
+
+    --header-color : #3d05d6;
+    --normal-text-color :#000000;
+
+    --nav-list-bg-color :#c4c4c4;
+    --nav-list-text-color :#494949;
+    --nav-list-active-color :#000000;
+    --nav-list-border-color :#242424;
+
+    --burger-line-color :#000000;
+
+    --switch-bg-color : #e2e2e2;
+    --switch-border-color :#0c0c0c;
+    --switch-ball-color : #0c0c0c;
+}
+
 html,body
 {
     max-width: 100%;
@@ -84,36 +138,21 @@ body::-webkit-scrollbar-thumb
     background: blueviolet;
 }
 
-body.light::-webkit-scrollbar
-{
-    width: 0.5rem;
-}
-
-body.light::-webkit-scrollbar-track
-{
-    background-color: #ffffff;
-}
-
-body.light::-webkit-scrollbar-thumb
-{
-    background: blueviolet;
-}
-
 
 html{
     overflow-y: scroll;
-    scrollbar-color: blueviolet #000000;
+    scrollbar-color: var(--main-scroll-thump-color) var(--main-scroll-bar-color);
     scrollbar-width: thin;
 
 }
 
 
-/* dark theme start */
+/* general theme start */
     body
     {
-        background-color:#252525;
+        background-color:var(--body-bg-color);
         position: relative;
-        transition: all 0.6s linear;
+        transition: all 0.6s ease;
     }
 
 
@@ -122,9 +161,9 @@ html{
         font-family: romanserif;
         padding-left: 15px;
         font-size: 1.30rem;
-        color: rgb(248, 248, 248);
+        color: var(--normal-text-color);
         font-weight: 100;
-        transition: all 0.3s linear;
+        transition: all 0.3s ease;
         margin-top: 10px;
         margin-bottom: 10px ;
         
@@ -132,11 +171,11 @@ html{
 
     h1
     {
-        color: rgb(99, 55, 221);
+        color: var(--header-color );
         font-family: bpmono;
         font-size: 3.5rem;
         font-weight: 100;
-        transition: all 0.3s linear;
+        transition: all 0.3s ease;
         margin: 0;
     }
 
@@ -144,10 +183,10 @@ html{
     {
         font-family: Roboto ;
         margin: 0;
-        color: rgb(99, 55, 221);
+        color: var(--header-color );
         font-size: 2.50rem;
         font-weight: 100;
-        transition: all 0.3s linear;
+        transition: all 0.3s ease;
     }
 
 
@@ -159,61 +198,22 @@ html{
     h4
     {
         font-family: xolonium;
-        color: rgb(99, 55, 221);
+        color: var(--header-color );
         font-size: 1.50rem;
         margin: 0;
-        transition: all 0.3s linear;
+        transition: all 0.3s ease;
     }
     hr
     {
         width: 65%;
         height: 2px;
         border-style: none;
-        background-color: rgb(107, 107, 107);
+        background-color: var(--hr-color);
         margin: 0 auto;
-        transition: all 0.6s linear;
+        transition: all 0.6s ease;
     }
-/* dark theme finish */
+/*general theme finish */
 
-/* light theme start */
-
-    body.light
-    {
-        background-color:#d3d2d2; ;
-        transition: all 0.6s linear;
-    }
-
-
-    p.light
-    {
-        color: rgb(26, 26, 26); 
-        transition: all 0.3s linear;
-    }
-
-    h1.light
-    {
-        color:  rgb(99, 55, 221);
-        transition: all 0.3s linear;
-    }
-
-    h2.light,h3.light
-    {
-        color:  rgb(99, 55, 221);
-        transition: all 0.3s linear;
-    }
-
-    h3.light
-    {
-        transition: all 0.3s linear;
-    }
-
-    hr.light
-    {
-        background-color: rgb(255, 255, 255);
-        transition: all 0.6s linear;
-    }
-
-/* light theme finish */
 
 
 /* grid system test start here*/
@@ -322,7 +322,6 @@ html{
 /* grid system finished */
 
 
-/* navigation bar dark theme start */
     nav
     {
         display: flex;
@@ -335,45 +334,44 @@ html{
 
     .nav-bar
     {
-        background-color: #0e0d0d;
-        transition: all 0.6s linear;
+        background-color: var(--nav-list-bg-color);
+        transition: all 0.6s ease;
     }
 
     .logo 
     {
-        color: #949494;
+        color: var(--nav-list-text-color);
         font-family: 'xolonium';
         font-size: 2rem;
         margin: 0rem 0rem 1rem 1rem;
         text-decoration: none;
-        transition: all 0.3s linear;
+        transition: all 0.3s ease;
         padding: 5px 10px;
-        border: 5px rgb(180, 180, 180) solid;
+        border: 5px var(--nav-list-text-color) solid;
         border-radius: 4px;
         justify-content: flex-start;
     }
 
     .in-page.logo 
     {
-        color: rgb(45, 6, 141);
-        border: 5px rgb(99, 55, 221) outset;
+        color: var(--header-color);
+        border: 5px var(--header-color) outset;
     }
 
     .nav-links
     {
         padding: 0;
         display: flex;
-        color: #949494;
+        color: var(--nav-list-text-color);
         align-items: center;
-        background-color: #0e0d0d;
-        transition: all 0.6s linear;
+        transition: all 0.6s ease;
         margin: auto;
         
     }
     .nav-links .in-page
     {
-        color: #ffffff;  
-        border-color: rgb(180, 180, 180);
+        color: var(--nav-list-active-color);  
+        border-color: var(--nav-list-border-color);
         transition: all 0.6s ease;
     }
     
@@ -381,11 +379,11 @@ html{
     .nav-links a
     {
         text-decoration: none;
-        color: #949494;
+        color: var(--nav-list-text-color);
         font-family: 'bpmono';
         font-size: 1.1rem;
         max-width: 100%;
-        transition: all 0.3s linear;
+        transition: all 0.3s ease;
         padding: 5px 10px;
         border: 3px;
         border-color: #00000000;
@@ -407,11 +405,11 @@ html{
         display: grid;
         height: 0;
         width: 100%;
-        background-color:#0e0d0d;
+        background-color:var(--nav-list-bg-color);
         overflow-x: hidden ;
-        transition: all 0.6s linear;
+        transition: all 0.6s ease;
         overflow-y: scroll;
-        scrollbar-color: blueviolet #0e0d0d;
+        scrollbar-color: var(--menu-scroll-thump-color) var(--menu-scroll-bar-color);
         scrollbar-width: thin;
         
         place-items: center;
@@ -450,24 +448,24 @@ html{
     .nav-list a
     {
         text-decoration: none;
-        color: #949494;
+        color: var(--nav-list-text-color);
         font-family: 'bpmono';
         font-size: 1.5rem;
-        transition: all 0.3s linear;
+        transition: all 0.3s ease;
         padding: 5px 10px;
         border: 4px;
         border-color: #00000000;
         border-style: outset;
         border-radius: 15px;
-        transition: all 0.6s linear;
+        transition: all 0.6s ease;
 
     }
 
     .nav-list .in-page
     {
-        color: #ffffff;  
-        border-color: rgb(180, 180, 180);
-        transition: all 0.6s linear;
+        color: var(--nav-list-active-color);  
+        border-color: var(--nav-list-border-color);
+        transition: all 0.6s ease;
     }
 
 
@@ -483,113 +481,31 @@ html{
     {
         width: 25px;
         height: 3px;
-        background-color: #c9c6c6;
+        background-color: var(--burger-line-color);
         margin: 5px;
-        transition: all 0.5s linear;
-        color: white;
-        background-color: white;
-        transition: all 0.3s linear;
+        transition: all 0.5s ease;
+        color: var(--burger-line-color);
+        transition: all 0.3s ease;
     }
 
 
-/* navigation bar dark theme finish */
 
 
 
-/* navigation bar light theme start */
-
-    .nav-bar.light
-    {
-        background-color: #c4c4c4; 
-        transition: all 0.6s linear;
-    }
-    .nav-links.light
-    {
-        background-color: #c4c4c4;
-        transition: all 0.6s linear;
-        
-    }
-    
-    .nav-links.light .in-page
-    {
-        color:  #000000;
-        transition: all 0.3s linear;
-        border-color: rgb(70, 70, 70);
-    }
-
-    .nav-links .light a
-    {
-        color:  #5a5a5a;
-        transition: all 0.3s linear;
-    }
-
-    .logo.light
-    {
-        color: #6d6d6d;
-        border-color:#6d6d6d;
-        transition: all 0.3s linear;
-    }
-
-    .in-page.logo.light 
-    {
-        color: rgb(45, 6, 141);
-        border-color:  rgb(65, 12, 209) ;
-        transition: all 0.3s linear;
-        
-    }
 
 
-    .nav-list.light
-    {
-
-        background-color:#c4c4c4;
-        transition: all 0.6s linear;
-        justify-content: center;
-        align-items: center;
-        overflow-y: scroll;
-        scrollbar-color: blueviolet #c4c4c4;
-        scrollbar-width: thin
-    }
-    
-
-    .nav-list.light a
-    {
-        color: #5a5a5a;
-        border-color: #00000000;
-        transition: all 0.6s linear;
-    }
-
-    .nav-list.light .in-page 
-    {
-        color: #000000;  
-        border-color: rgb(70, 70, 70);
-        transition: all 0.6s linear;
-    }
-
-
-    .burger.light  div
-    {
-        color: rgb(0, 0, 0);
-        background-color: rgb(0, 0, 0);
-        transition: all 0.3s linear;
-    }
-
-/* navigation bar light theme finish  */
-
-
-
-/* toggle switch dark theme design start  */
+/* toggle switch design start  */
     .switch
     {
         margin: 0;
         display: flex;
         width: 50px;
-        height: 25px;
-        background-color: #292929;
+        height: 24px;
+        background-color: var(--switch-bg-color);
         border-radius: 40px;
         cursor: pointer;
-        border: 2px rgb(180, 180, 180) outset;
-        transition: all 0.6s linear;
+        border: 2px var(--switch-border-color) outset;
+        transition: all 0.6s ease;
 
     }
 
@@ -599,8 +515,8 @@ html{
         width:  20px;
         height: 20px;
         top:2px;
-        left: 2px;
-        background-color: rgb(214, 214, 214);
+        left: 3px;
+        background-color: var(--switch-ball-color);
         border-radius:100px;
         transition: all 0.6s ease;
     }
@@ -614,24 +530,10 @@ html{
 
     .checkbox:checked + .switch .ball
     {
-        transform:  translateX(125%);
+        transform:  translateX(25px);
     }
 
-/* toggle switch dark theme finish */
-
-/* toggle switch light theme start */
-    .switch.light
-    {
-        background-color: #e2e2e2;
-        transition: all 0.6s linear;
-        border-color: #7e7e7e;
-    }
-    .ball.light
-    {
-        background-color: rgb(12, 12, 12);
-        transition: all 0.6s ease;
-    }
-/* toggle switch light theme finish */
+/* toggle switch  finish */
 
 
 /* responsiveness start */
@@ -765,12 +667,12 @@ html{
 .nav-active
 {
     height: 400px;
-    transition: all 0.6s linear;
+    transition: all 0.6s ease;
 }
 .nav-active.light
 {
     height: 400px;
-    transition: all 0.6s linear;
+    transition: all 0.6s ease;
 }
 
 
