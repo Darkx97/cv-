@@ -32,10 +32,10 @@ html[data-theme ='dark']
     --body-bg-color : #252525;
 
     --main-scroll-bar-color : #2e2e2e;
-    --main-scroll-thump-color :#592dd3;
+    --main-scroll-thumb-color :#592dd3;
 
     --menu-scroll-bar-color :#00000000;
-    --menu-scroll-thump-color :#592dd3;
+    --menu-scroll-thumb-color :#592dd3;
 
     --hr-color :#6b6b6b;
 
@@ -61,16 +61,16 @@ html[data-theme ='light']
     --main-scroll-bar-color :#e2e2e2;
     --main-scroll-thumb-color : #3d08ce;
 
-    --menu-scroll-bar-color :#3d08ce00;
+    --menu-scroll-bar-color :#ffffff00;
     --menu-scroll-thumb-color :#3d08ce;
 
-    --hr-color :#c9c9c9;
+    --hr-color :#ffffff;
 
     --header-color : #3d05d6;
     --normal-text-color :#000000;
 
     --nav-list-bg-color :#c4c4c4;
-    --nav-list-text-color :#494949;
+    --nav-list-text-color :#858585;
     --nav-list-active-color :#000000;
     --nav-list-border-color :#242424;
 
@@ -92,6 +92,7 @@ html,body
 
 
 
+
 *::-webkit-scrollbar
 {
     width: 2px;
@@ -99,12 +100,12 @@ html,body
 
 *::-webkit-scrollbar-track
 {
-    background-color: #00000000;
+    background-color: var( --menu-scroll-bar-color);
 }
 
 *::-webkit-scrollbar-thumb
 {
-    background: blueviolet;
+    background: var( --menu-scroll-thumb-color);
 }
 
 body::-webkit-scrollbar
@@ -114,34 +115,20 @@ body::-webkit-scrollbar
 
 body::-webkit-scrollbar-track
 {
-    background-color: #2e2e2e00;
+    background-color: var( --main-scroll-bar-color);
 }
+
 
 body::-webkit-scrollbar-thumb
 {
-    background: blueviolet;
+    background:  var( --main-scroll-thumb-color);
 }
 
-
-*.light::-webkit-scrollbar
-{
-    width: 2px;
-}
-
-*.light::-webkit-scrollbar-track
-{
-    background-color: #c4c4c4;
-}
-
-*.light::-webkit-scrollbar-thumb
-{
-    background: blueviolet;
-}
 
 
 html{
     overflow-y: scroll;
-    scrollbar-color: var(--main-scroll-thump-color) var(--main-scroll-bar-color);
+    scrollbar-color: var(--main-scroll-thumb-color) var(--main-scroll-bar-color);
     scrollbar-width: thin;
 
 }
@@ -220,20 +207,13 @@ html{
 
     .container
     {
+        margin :0;
+        padding :0;
         margin-right: 5%;
         margin-left: 5%;
-        margin-top: 0;
-        margin-bottom: 0;
-        padding :0;
         display: grid;
         max-width: 100%;
         overflow-x: hidden;
-        
-    }
-
-    .Grid
-    {
-        display: grid;
         
     }
 
@@ -249,20 +229,7 @@ html{
         
     }
 
-    .H-center
-    {
-        justify-items: center;
-        justify-content: center;
-    }
-
-    .V-center
-    {
-        align-items: center;
-        align-content: center;
-        text-align: center;
-
-    }
-
+    
     .Col-1
     {
         padding: 0;
@@ -285,7 +252,7 @@ html{
         margin-top: 10px;
         margin-bottom: 10px;
     }
-
+    
     .Col-10-4-title
     {
         padding: 0;
@@ -295,7 +262,7 @@ html{
         margin-bottom: 10px;
         align-items: center;
     }
-
+    
     .Col-2-10-2
     {
         padding: 0;
@@ -307,15 +274,28 @@ html{
         justify-items: center;
         align-items: center;
         
-
+        
+    }
+    .H-center
+    {
+        justify-items: center;
+        justify-content: center;
     }
 
+    .V-center
+    {
+        align-items: center;
+        align-content: center;
+        text-align: center;
 
-
+    }
+    
+    
+    
 
     .responsiveImg
     {
-        width: 80%;
+        width: 95%;
         height: auto;
     }
 
@@ -409,7 +389,7 @@ html{
         overflow-x: hidden ;
         transition: all 0.6s ease;
         overflow-y: scroll;
-        scrollbar-color: var(--menu-scroll-thump-color) var(--menu-scroll-bar-color);
+        scrollbar-color: var(--menu-scroll-thumb-color) var(--menu-scroll-bar-color);
         scrollbar-width: thin;
         
         place-items: center;
@@ -439,7 +419,7 @@ html{
     .nav-list .list-item .list-option
     {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 2fr 1fr;
         place-items: center;
         justify-content: center;
         align-content: center;
