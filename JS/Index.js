@@ -70,7 +70,7 @@ function showcomment(elemnt)
 {
    var parent=elemnt.parentElement.parentElement;
    var commentsection = parent.querySelector(".comment-section")
-   commentsection.classList.toggle("active");
+   commentsection.classList.toggle("comment-active");
     
 };
 
