@@ -1,6 +1,8 @@
 const DLMode = document.getElementById("DLMode");
 
-const elemnts = document.querySelectorAll("*");
+
+const comment = document.querySelector(".comment-section");
+
 
 function navSlide()
 {
@@ -63,3 +65,27 @@ function checktheme()
     }
 }
 
+
+function showcomment(elemnt)
+{
+   var parent=elemnt.parentElement.parentElement;
+   var commentsection = parent.querySelector(".comment-section")
+   commentsection.classList.toggle("active");
+    
+};
+
+function textAreaAdjust(TA) 
+{
+    TA.style.height = "1px";
+    TA.style.height = (TA.scrollHeight)+"px";
+}
+
+function deletetext(element) 
+{
+    var parent=element.parentElement.parentElement;
+    // var CT = parent.querySelector(".Text");
+    var CT = parent.querySelector("textarea");
+    CT.value ="";
+    CT.style.height = "1px";
+    CT.style.height = (CT.scrollHeight)+"px";
+}
