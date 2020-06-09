@@ -225,7 +225,8 @@ html{
         font-family: romanserif;
         background-color: transparent;
         border: 0;
-        font-size: 1.3rem;color: var(--normal-text-color);
+        font-size: 1.3rem;
+        color: var(--normal-text-color);
         resize: none;
         outline: none;
         scrollbar-color: var(--menu-scroll-thumb-color) var(--menu-scroll-bar-color);
@@ -711,6 +712,12 @@ html{
 
 /* toggle switch  finish */
 
+.comment-active
+{
+    height :600px;
+    transition: all 0.5s ease;
+}
+
 
 /* responsiveness start */
 @media screen and (max-width: 900px) 
@@ -736,13 +743,17 @@ html{
     {
         font-size: 1.5rem;
     }
-    .button-comment
+    textarea
     {
         font-size: 1rem;
     }
+    .button-comment
+    {
+        font-size: 0.8rem;
+    }
     .button-cancel-comment
     {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     .logo
@@ -758,7 +769,10 @@ html{
         font-family: 'romanserif';
         font-size: 1rem;
     }
-
+    .comment-active
+    {
+        height: 500px;
+    }
     
 }
 
@@ -786,13 +800,17 @@ html{
     {
         font-size: 1.4rem;
     }
-    .button-comment
+    textarea
     {
         font-size: 0.8rem;
     }
+    .button-comment
+    {
+        font-size: 0.6rem;
+    }
     .button-cancel-comment
     {
-        font-size: 0.8rem;
+        font-size: 0.6rem;
     }
 
     .nav-links
@@ -824,6 +842,11 @@ html{
         grid-template-columns: 1fr 4fr 2fr ;
 
     }
+    .comment-active
+    {
+        height: 400px;
+        transition: all 0.5s ease;
+    }
 
 }
 
@@ -850,7 +873,10 @@ html{
     {
         font-size: 1rem;
     }
-
+    textarea
+    {
+        font-size: 0.6rem;
+    }
     .button-comment
     {
         font-size: 0.6rem;
@@ -864,7 +890,11 @@ html{
         font-size: 1.6rem;
         line-height: 3rem;
     }
-    
+    .comment-active
+    {
+        height: 300px;
+    }
+        
 }
 
 /* responsiveness finish */
@@ -872,18 +902,6 @@ html{
 
 /* navigation bar animation start */
 .nav-active
-{
-    height: 400px;
-    transition: all 0.5s ease;
-}
-.nav-active.light
-{
-    height: 400px;
-    transition: all 0.5s ease;
-}
-
-
-.active
 {
     height: 400px;
     transition: all 0.5s ease;
