@@ -94,8 +94,8 @@ html[data-theme ='light']
     --button-accept-bg-color : #3d05d6;
     --button-accept-hover-bg-color:#2f1280 ;
 
-    --button-deny-bg-color : #00000000;
-    --button-deny-bg-color : #4d4d4d;
+    --button-deny-bg-color : #8f8f8f00;
+    --button-deny-bg-hover-color : #888888;
 }
 
 html,body
