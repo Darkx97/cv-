@@ -76,9 +76,14 @@ function showcomment(elemnt)
 
 function textAreaAdjust(TA) 
 {
-    TA.style.height = "1px";
-    TA.style.height = (TA.scrollHeight)+"px";
+    if (TA.scrollHeight <300)
+    {
+        TA.style.height = "1px";
+        TA.style.height = TA.scrollHeight + 'px'; 
+
+    }
 }
+
 
 function deletetext(element) 
 {

@@ -228,6 +228,22 @@ html{
         font-size: 1.3rem;
         color: var(--normal-text-color);
         resize: none;
+        scrollbar-color: var(--menu-scroll-thumb-color) var(--menu-scroll-bar-color);
+        scrollbar-width: thin;
+    }
+
+    textarea.post-textarea
+    {
+        width: 95%;
+        margin: auto auto;
+        padding: 0;
+        height: 1.6rem;
+        font-family: romanserif;
+        background-color: transparent;
+        border: 0;
+        font-size: 1.3rem;
+        color: var(--normal-text-color);
+        resize: none;
         outline: none;
         scrollbar-color: var(--menu-scroll-thumb-color) var(--menu-scroll-bar-color);
         scrollbar-width: thin;
@@ -251,6 +267,32 @@ html{
         background-color: var(--button-accept-hover-bg-color);
     }
     .button-comment:active
+    {
+        background-color: var(--button-accept-hover-bg-color);
+        transform: translateY(2px) ;
+        transition: translateY 0.05s ease;
+
+    }
+
+
+    .button-post
+    {
+        font-size: 1.30rem;;
+        font-family:  xolonium;
+        padding : 8px 10px;
+        margin: 5px 5px;
+        color: var(--normal-text-color);
+        background-color: var(--button-accept-bg-color);
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.5s ease;
+    }
+    .button-post:hover
+    {
+        background-color: var(--button-accept-hover-bg-color);
+    }
+    .button-post:active
     {
         background-color: var(--button-accept-hover-bg-color);
         transform: translateY(2px) ;
@@ -291,7 +333,7 @@ html{
 /* grid system test start here*/
     .Page
     {
-        margin-top: 5rem;
+        margin-top: 6rem;
     }
     .container
     {
@@ -387,6 +429,29 @@ html{
         align-content: center;
         text-align: center;
 
+    }
+
+    .add-post
+    {
+        display: grid;
+        width:100%;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+    }
+
+    .add-post-text
+    {
+        display: grid;
+        align-content: center;
+        width: 98%;
+        padding: 0;
+        background-color: var(--textinput-bg-color);
+        border:2px var(--textinput-border-color) solid;
+        border-radius: 7px;
+        padding: 5px 0px;
+        scrollbar-color: var(--menu-scroll-thumb-color) var(--menu-scroll-bar-color);
+        scrollbar-width: thin;
     }
 
     .add-comment-section
