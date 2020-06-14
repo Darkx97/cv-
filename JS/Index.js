@@ -1,7 +1,7 @@
 const DLMode = document.getElementById("DLMode");
 
 
-const comment = document.querySelector(".comment-section");
+const comment = document.querySelector(".comments");
 
 
 function navSlide()
@@ -69,7 +69,7 @@ function checktheme()
 function showcomment(elemnt)
 {
    var parent=elemnt.parentElement.parentElement;
-   var commentsection = parent.querySelector(".comment-section")
+   var commentsection = parent.querySelector(".comments")
    commentsection.classList.toggle("comment-active");
     
 };

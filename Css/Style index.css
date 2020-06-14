@@ -435,7 +435,7 @@ html{
     {
         display: grid;
         width:100%;
-        margin: 0;
+        margin: 20px 0;
         padding: 0;
         align-items: center;
     }
@@ -452,6 +452,27 @@ html{
         padding: 5px 0px;
         scrollbar-color: var(--menu-scroll-thumb-color) var(--menu-scroll-bar-color);
         scrollbar-width: thin;
+    }
+
+    .post
+    {
+        display : grid;
+        margin: 25px 0px;
+    }
+    .post-user
+    {
+        display: grid;
+        grid-template-columns: 1fr 10fr 2fr ;
+        padding: 0 5px;
+        margin: 10px 0px;
+
+    }
+
+    .post-text
+    {
+        display: grid;
+        margin: auto 10px;
+        justify-content: center;
     }
 
     .add-comment-section
@@ -485,8 +506,12 @@ html{
         margin-bottom: 20px;
     }
 
-
     .comment-section
+    {
+        display :grid;
+        margin: 0% 5%;
+    }
+    .comments
     {
         height: 0px;
         overflow-y: scroll;
@@ -522,7 +547,7 @@ html{
     
     .comment-text
     {
-
+        display: grid;
         margin: auto 10px;
         justify-content: center;
     }
