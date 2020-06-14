@@ -156,7 +156,7 @@ html{
     {
         background-color:var(--body-bg-color);
         position: relative;
-        transition: all 0.5s ease;
+        transition: all 0.565s ease-out;
     }
 
 
@@ -289,7 +289,10 @@ html{
 
 
 /* grid system test start here*/
-
+    .Page
+    {
+        margin-top: 5rem;
+    }
     .container
     {
         margin :0;
@@ -300,7 +303,7 @@ html{
         max-width: 100%;
         overflow-x: hidden;
         background-color:var(--body-bg-color);
-        transition: all 0.5s ease;
+        transition: all 0.575s ease-out;
         
     }
 
@@ -313,9 +316,7 @@ html{
         margin-bottom: 20px;
         overflow: auto;
         padding: 1rem 0 1rem;
-        background-color:var(--body-bg-color);
-        transition: all 0.5s ease;
-        
+
     }
 
     
@@ -327,15 +328,11 @@ html{
         justify-content: center;
         align-items: center;
         justify-content: center;
-        background-color:var(--body-bg-color);
-        transition: all 0.5s ease;
     }
     .Col-1 div
     {
         margin-top: 10px;
         margin-bottom: 10px;
-        background-color:var(--body-bg-color);
-        transition: all 0.5s ease;
     }
 
     .Col-10-4-content
@@ -344,8 +341,6 @@ html{
         grid-template-columns: 10fr 4fr;
         margin-top: 10px;
         margin-bottom: 10px;
-        background-color:var(--body-bg-color);
-        transition: all 0.5s ease;
     }
     
     .Col-10-4-title
@@ -356,8 +351,6 @@ html{
         margin-top: 10px;
         margin-bottom: 10px;
         align-items: center;
-        background-color:var(--body-bg-color);
-        transition: all 0.5s ease;
     }
     
     .Col-2-10-2
@@ -370,9 +363,6 @@ html{
         margin-bottom: 10px;
         justify-items: center;
         align-items: center;
-        transition: all 0.5s ease;
-        background-color: var(--body-bg-color);
-        
     }
 
     .col-1-2-state
@@ -383,8 +373,6 @@ html{
         margin-top: 10px;
         margin-bottom: 10px;
         align-items: center;
-        background-color:var(--body-bg-color);
-        transition: all 0.5s ease;
     }
 
     .H-center
@@ -409,8 +397,6 @@ html{
         padding: 0;
         grid-template-columns: 1fr 20fr;
         align-items: center;
-        align-content: center;
-        transition: all 0.5s ease;
     }
 
     .add-comment-text
@@ -425,8 +411,6 @@ html{
         padding: 5px 0px;
         scrollbar-color: var(--menu-scroll-thumb-color) var(--menu-scroll-bar-color);
         scrollbar-width: thin;
-        transition: all 0.5s ease;
-
     }
     .add-comment-buttons
     {
@@ -434,7 +418,6 @@ html{
         display: flex;
         justify-content: flex-end;
         margin-bottom: 20px;
-        transition: all 0.5s ease;
     }
 
 
@@ -444,7 +427,7 @@ html{
         overflow-y: scroll;
         scrollbar-color: var(--main-scroll-thumb-color) var(--main-scroll-bar-color);
         scrollbar-width: thin;
-        transition: all 0.5s ease;
+        transition: all 0.6s ease;
     }
     .comment
     {
@@ -456,7 +439,6 @@ html{
         background-color: var(--textinput-bg-color);
         border:2px var(--textinput-border-color) solid;
         grid-template-rows: 3fr;
-        transition: all 0.5s ease;
     }
     .comment-user
     {
@@ -464,7 +446,6 @@ html{
         grid-template-columns: 1fr 10fr 2fr ;
         padding: 0 5px;
         margin: 10px 0px;
-        transition: all 0.5s ease;
 
     }
     .comment-user p a
@@ -472,7 +453,6 @@ html{
         text-decoration: none;
         margin-top:auto ;
         margin-bottom: auto;
-        transition: all 0.5s ease;
     }
     
     .comment-text
@@ -480,7 +460,6 @@ html{
 
         margin: auto 10px;
         justify-content: center;
-        transition: all 0.5s ease;
     }
 
     .responsiveImg
@@ -509,12 +488,16 @@ html{
         max-width: 100%;
         height: 5rem;
         overflow-x: hidden;
-        
+        position: fixed;
+        width: 100%;
     }
+
+
 
     .nav-bar
     {
         background-color: var(--nav-list-bg-color);
+        opacity: 0.98;
         transition: all 0.5s ease;
     }
 
@@ -586,12 +569,14 @@ html{
         height: 0;
         width: 100%;
         background-color:var(--nav-list-bg-color);
+        opacity: 0.9;
         overflow-x: hidden ;
         transition: all 0.5s ease;
         overflow-y: scroll;
         scrollbar-color: var(--menu-scroll-thumb-color) var(--menu-scroll-bar-color);
         scrollbar-width: thin;
-        
+        position: fixed;
+        top:  5rem;
         place-items: center;
         justify-content: center;
 

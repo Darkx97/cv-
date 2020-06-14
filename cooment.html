@@ -62,55 +62,56 @@
                         </label>
                     </div>
                 </div>
-
+                
             </div>
-
+            
         </div>
-
+        
+        
         <!-- nav bar end -->
-        <div class="Page ">
+        
+        <div class="container">
+            
+            <div class=" add-comment-section">
+                <div><img src="Icons\Defult_User.png" alt="" class="profileImg"></div>
+                <div >
+                    <label class="add-comment-text">
+                        <textarea placeholder="Add Comment" name="" id=""  rows="1" onkeyup="textAreaAdjust(this)" onkeydown="textAreaAdjust(this)" ></textarea>
+                    </label> 
+                </div>
+            </div>  
+            
+            <div class="add-comment-buttons">
+                <input type="button" value="Comment" class="button-comment" id="Comment">
+                <input type="button" value="show/hide comments" class="button-cancel-comment" onclick="showcomment()">
+                <input type="button" value="Cancel" class="button-cancel-comment" id="Cancel">
+            </div> 
+        </div>
 
-            <div class="container">
-                
-                <div class="Row">
-                    <div class="Col-1 " >
-                        <div>
-                            <h1  align="center">Hello World </h1>
-                        </div>
-                        
-                        <div> 
-                            <p align="center">This is just the main page i still don't know what i should put in here so its empty , however the other pages are fill with some stuff , enjoy .</p>
-                        </div>
-                        
+        <hr>
+        
+        <section class="comment-section" id="comment-section">
+            <div >
+                <div class="comment">
+
+                    <div class="comment-user">
+    
+                            <img src="Icons\Defult_User.png" alt="" class="profileImg">
+    
+                            <p>Username</p>
+    
+                            <p>date</p>
+    
+                    </div>
+                    <div class="comment-text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo nesciunt dignissimos, iure harum voluptas enim repudiandae tenetur magni eligendi distinctio nostrum eaque tempore laudantium accusantium temporibus, qui, hic beatae numquam?Ea in labore tenetur neque autem sint, laudantium ipsam harum delectus ex asperiores repudiandae assumenda eligendi, quasi repellendus nostrum error magni nobis eos. Animi et deserunt aliquid ratione? Fugiat, doloremque?</p>
                     </div>
                 </div>
-                
-                    <hr>
-                    
-                    <div class="Row">
-                        <div class="Col-1" style="text-align: center;" >
-                            <div>
-                                <img src="images\Background2.0.png" alt="" class="responsiveImg">
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <hr>
-                    
-                <div class="Row">
-                    <div class="Col-1" >
-                        <div style="text-align: center;" >
-                            <p align="center">This picture just displays languages i can work with, the size of the language displays how good i think i am in the language </p>
-                        </div>
-                    </div>
-                </div>
-
 
             </div>
-            
-            
-            <script src="JS/Index.js"></script>
-        </div>
+        </section>
+        
+        <script src="JS/Index.js"></script>
     </body>
-    
-    </html>
+
+</html>
