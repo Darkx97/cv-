@@ -156,7 +156,7 @@ html{
     {
         background-color:var(--body-bg-color);
         position: relative;
-        transition: all 0.565s ease-out;
+        transition: all 0.55s ease-out;
     }
 
 
