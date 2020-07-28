@@ -43,7 +43,12 @@ html[data-theme ='dark']
 
     --header-color : #592dd3;
     --normal-text-color :#f7f7f7;
-
+    --anchor-text-color :#9f64ff;
+    --note-color:#000000;
+    
+    --droparea-border-color :#2e2e2e;
+    --droparea-hover-border-color :#d6d6d6;
+    --dropitem-border-color :#9c9c9c;
 
     --nav-list-bg-color :#0e0d0d;
     --nav-list-text-color :#949494;
@@ -56,9 +61,16 @@ html[data-theme ='dark']
     --switch-border-color :#b4b4b4;
     --switch-ball-color : #d6d6d6;
 
-    --button-accept-bg-color : #3d05d6;
-    --button-accept-hover-bg-color:#2d0980 ;
+    --button-submit-bg-color : #3d05d6;
+    --button-submit-border-color : #250283;
+    --button-submit-hover-bg-color:#2d0980 ;
 
+    --input-text-bg-color: #292929;
+    --input-text-border-color: #00000000;
+    
+    --card-bg-color : #414141;
+    --card-border-color : #131313;
+    
     --button-deny-bg-color : #00000000;
     --button-deny-bg-hover-color : #979797;
 }
@@ -67,7 +79,7 @@ html[data-theme ='light']
 {
     --body-bg-color : #dadada;
     --textinput-bg-color :#c7c7c7;
-    --textinput-border-color:#ffffff;
+    --textinput-border-color:#a8a8a8;
 
     --main-scroll-bar-color :#e2e2e2;
     --main-scroll-thumb-color : #3d08ce;
@@ -79,7 +91,12 @@ html[data-theme ='light']
 
     --header-color : #3d05d6;
     --normal-text-color :#000000;
+    --anchor-text-color :#863bff;
 
+    --droparea-border-color :#c0c0c0;
+    --droparea-hover-border-color :#ececec;
+    --dragitem-border-color :#7a7a7a;
+    
     --nav-list-bg-color :#c4c4c4;
     --nav-list-text-color :#858585;
     --nav-list-active-color :#000000;
@@ -91,8 +108,15 @@ html[data-theme ='light']
     --switch-border-color :#0c0c0c;
     --switch-ball-color : #0c0c0c;
 
-    --button-accept-bg-color : #3d05d6;
-    --button-accept-hover-bg-color:#2f1280 ;
+    --button-submit-bg-color : #3d05d6;
+    --button-submit-border-color :  #250283;
+    --button-submit-hover-bg-color:#2f1280 ;
+
+    --input-text-bg-color: #d6d6d6;
+    --input-text-border-color: #00000000;
+
+    --card-bg-color : #b4b4b4;
+    --card-border-color : #a8a8a8;
 
     --button-deny-bg-color : #8f8f8f00;
     --button-deny-bg-hover-color : #888888;
@@ -159,10 +183,16 @@ html{
         transition: all 0.55s ease-out;
     }
 
+    a
+    {
+        font-family:Roboto ;
+        color: var(--anchor-text-color);
+    }
 
     p
     {
         font-family: romanserif;
+        white-space: pre-line;
         padding-left: 15px;
         font-size: 1.30rem;
         color: var(--normal-text-color);
@@ -216,6 +246,36 @@ html{
         margin: 0 auto;
         transition: all 0.5s ease;
     }
+    
+    input[type=text].sign-in
+    {
+        font-family: romanserif;
+        font-size: 1.3rem;
+        background-color: var(--input-text-bg-color);
+        border: 0;
+        color: var(--normal-text-color);
+        margin: auto 0;
+    }
+    input[type=email].sign-in
+    {
+        font-family: romanserif;
+        font-size: 1.3rem;
+        background-color: var(--input-text-bg-color);
+        border: 0;
+        color: var(--normal-text-color);
+        margin: auto 0;
+    }
+
+    input[type=password].sign-in
+    {
+        font-family: romanserif;
+        font-size: 1.3rem;
+        background-color: var(--input-text-bg-color);
+        border: 0;
+        color: var(--normal-text-color);
+        margin: auto 0;
+    }
+
     textarea
     {
         width: 95%;
@@ -249,26 +309,36 @@ html{
         scrollbar-width: thin;
     }
 
-    .button-comment
+    .note
+    {
+        font-family: xolonium;
+        color: var(--note-color );
+        font-size: 0.7rem;
+        margin: 1px;
+        transition: all 0.3s ease;
+        justify-self: center;
+    }
+
+    .button-submit
     {
         font-size: 1.30rem;;
         font-family:  xolonium;
         padding : 5px 10px;
         margin: 5px 5px;
         color: var(--normal-text-color);
-        background-color: var(--button-accept-bg-color);
-        border: none;
-        border-radius: 10px;
+        background-color: var(--button-submit-bg-color);
+        border: 2px var(--button-submit-border-color) solid;
+        border-radius: 8px;
         cursor: pointer;
         transition: background-color 0.5s ease;
     }
-    .button-comment:hover
+    .button-submit:hover
     {
-        background-color: var(--button-accept-hover-bg-color);
+        background-color: var(--button-submit-hover-bg-color);
     }
-    .button-comment:active
+    .button-submit:active
     {
-        background-color: var(--button-accept-hover-bg-color);
+        background-color: var(--button-submit-hover-bg-color);
         transform: translateY(2px) ;
         transition: translateY 0.05s ease;
 
@@ -282,19 +352,19 @@ html{
         padding : 8px 10px;
         margin: 5px 5px;
         color: var(--normal-text-color);
-        background-color: var(--button-accept-bg-color);
+        background-color: var(--button-submit-bg-color);
         border: none;
-        border-radius: 10px;
+        border-radius: 8px;
         cursor: pointer;
         transition: background-color 0.5s ease;
     }
     .button-post:hover
     {
-        background-color: var(--button-accept-hover-bg-color);
+        background-color: var(--button-submit-hover-bg-color);
     }
     .button-post:active
     {
-        background-color: var(--button-accept-hover-bg-color);
+        background-color: var(--button-submit-hover-bg-color);
         transform: translateY(2px) ;
         transition: translateY 0.05s ease;
 
@@ -309,7 +379,7 @@ html{
         color: var(--normal-text-color);
         background-color: var(--button-deny-bg-color);
         border: 3px var(--switch-border-color) solid;
-        border-radius: 10px;
+        border-radius: 8px;
         cursor: pointer;
         transition: background-color 0.5s ease;
 
@@ -333,6 +403,7 @@ html{
 /* grid system test start here*/
     .Page
     {
+        display: grid;
         margin-top: 6rem;
     }
     .container
@@ -440,15 +511,30 @@ html{
         align-items: center;
     }
 
+    .add-post-title
+    {
+        display: grid;
+        align-content: center;
+        width: 35%;
+        padding: 0;
+        background-color: var(--textinput-bg-color);
+        border:2px var(--textinput-border-color) solid;
+        border-radius: 8px;
+        padding: 5px 0px;
+        scrollbar-color: var(--menu-scroll-thumb-color) var(--menu-scroll-bar-color);
+        scrollbar-width: thin;
+    }
+
     .add-post-text
     {
         display: grid;
         align-content: center;
+        height: fit-content;
         width: 98%;
         padding: 0;
         background-color: var(--textinput-bg-color);
         border:2px var(--textinput-border-color) solid;
-        border-radius: 7px;
+        border-radius: 8px;
         padding: 5px 0px;
         scrollbar-color: var(--menu-scroll-thumb-color) var(--menu-scroll-bar-color);
         scrollbar-width: thin;
@@ -493,7 +579,7 @@ html{
         padding: 0;
         background-color: var(--textinput-bg-color);
         border:2px var(--textinput-border-color) solid;
-        border-radius: 7px;
+        border-radius: 8px;
         padding: 5px 0px;
         scrollbar-color: var(--menu-scroll-thumb-color) var(--menu-scroll-bar-color);
         scrollbar-width: thin;
@@ -525,7 +611,7 @@ html{
         width: 80%;
         height: auto;
         margin: 5px auto;
-        border-radius: 15px;
+        border-radius: 8px;
         background-color: var(--textinput-bg-color);
         border:2px var(--textinput-border-color) solid;
         grid-template-rows: 3fr;
@@ -568,9 +654,80 @@ html{
         transition: all 0.5s ease;
     }
     
+    .sign
+    {
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        place-items: center;
+
+    }
+    .sign-bg
+    {
+        display: grid;
+
+        grid-template-columns: 1fr;
+        width: 100%;
+        padding: 10% ;
+        display: grid;
+
+        background-color: var(--card-bg-color);
+        border: 2px var(--card-border-color) solid;
+        border-radius: 8px;
+
+        place-items: center;
+        row-gap: 1rem;
+    }
+
+    .sign-layout
+    {
+        text-align: right;
+        display: grid;
+
+        grid-template-columns: 1fr 2fr;
+
+        display: grid;
+
+        row-gap: 1rem;
+        column-gap: 0.3rem;
+
+    }
 /* grid system finished */
 
+/* drag and drop areas style  start*/
 
+    .droparea
+    {
+        display :inline-block;
+        border: 3px var(--droparea-border-color) dashed;
+        width: 98%;
+        min-height: 20px ;
+        max-height: fit-content;
+        justify-self: center;
+    }
+    .dragover
+    {
+        border: 3px var(--droparea-hover-border-color ) dashed;
+    }
+
+    .dropitem
+    {
+        display: inline-block;
+        border: 2px #00000000 solid;
+        height: 80px;
+        width: 80px;
+        margin: 5px;
+        text-align: center;
+        background-image: image();
+    }
+    .dropitem:hover
+    {
+        border: 2px var(--droparea-hover-border-color) solid;
+    }
+/* drag and drop areas style finish*/
+
+/* navigation bar style start */
     nav
     {
         display: flex;
@@ -601,7 +758,7 @@ html{
         transition: all 0.3s ease;
         padding: 5px 10px;
         border: 5px var(--nav-list-text-color) solid;
-        border-radius: 4px;
+        border-radius: 8px;
         justify-content: flex-start;
     }
 
@@ -641,7 +798,7 @@ html{
         border: 3px;
         border-color: #00000000;
         border-style: outset;
-        border-radius: 15px;
+        border-radius: 8px;
     }
 
 
@@ -708,7 +865,7 @@ html{
         border: 4px;
         border-color: #00000000;
         border-style: outset;
-        border-radius: 15px;
+        border-radius: 8px;
         transition: all 0.5s ease;
 
     }
@@ -822,7 +979,22 @@ html{
     {
         font-size: 1rem;
     }
-    .button-comment
+    input[type=text]
+    {
+        font-size: 1rem;
+        height: 1.1rem;
+    }
+    input[type=email]
+    {
+        font-size: 1rem;
+        height: 1.1rem;
+    }
+    input[type=password]
+    {
+        font-size: 1rem;
+        height: 1.1rem;
+    }
+    .button-submit
     {
         font-size: 0.8rem;
     }
@@ -877,9 +1049,24 @@ html{
     }
     textarea
     {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
-    .button-comment
+    input[type=text]
+    {
+        font-size: 1rem;
+        height: 1.1rem;
+    }
+    input[type=email]
+    {
+        font-size: 1rem;
+        height: 1.1rem;
+    }
+    input[type=password]
+    {
+        font-size: 1rem;
+        height: 1.1rem;
+    }
+    .button-submit
     {
         font-size: 0.6rem;
     }
@@ -950,9 +1137,24 @@ html{
     }
     textarea
     {
-        font-size: 0.6rem;
+        font-size: 0.8rem;
     }
-    .button-comment
+    input[type=text]
+    {
+        font-size: 0.8rem;
+        height: 0.9rem;
+    }
+    input[type=email]
+    {
+        font-size: 0.8rem;
+        height: 0.9rem;
+    }
+    input[type=password]
+    {
+        font-size: 0.8rem;
+        height: 0.9rem;
+    }
+    .button-submit
     {
         font-size: 0.6rem;
     }
