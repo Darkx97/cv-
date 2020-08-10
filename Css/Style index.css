@@ -370,7 +370,7 @@ html{
 
     }
 
-    .button-cancel-comment
+    .button-cancel
     {
         font-size: 1.30rem;;
         font-family:  xolonium;
@@ -384,11 +384,11 @@ html{
         transition: background-color 0.5s ease;
 
     }
-    .button-cancel-comment:hover
+    .button-cancel:hover
     {
         background-color: var(--button-deny-bg-hover-color);
     }
-    .button-cancel-comment:active
+    .button-cancel:active
     {
         background-color: var(--button-deny-bg-hover-color);
         transform: translateY(2px) ;
