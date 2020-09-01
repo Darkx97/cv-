@@ -66,57 +66,57 @@
             <p></p> 
         </div>
             
-        </div>
+        
             <!-- nav bar end -->
+        <form >
+            <div class="Row" >
+                <div class="hide-show-UI">
+                    <div class="UI-button" onclick="toggleUI(this)">
+                        <button class="arrow-button" type="button" >
+                            <div class="arrow-up"></div>
+                            <div class="arrow-down"></div>
+                            <p class="arrow-button-text">Add project</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="add-data-section">
+                <div class="add-project-section">
+                    <div class="add-project-data add-data">
+                        <p >project Title</p>
+                        <textarea class="Title-textarea" rows="1" name="add_post_title" id="" placeholder="post title "  onkeypress="TextAreaAdjust(this)" onclick="TextAreaAdjust(this)"></textarea>
+
+                        <div class="add-project-description-picture">
+                            <div class="add-description" >
+                                <p class="indicator">add description</p>
+                                <textarea class="Skill-description-text"  rows="5" name="Add_Skill_Discretion" placeholder="post content"></textarea>
+                            </div>
+                            <div class="add-picture" >
+                                <p class="indicator">add image</p>
+                                <input style="display: none;" type="file" accept="image/png, image/jpeg, image/jpg" value="tap"> 
+                                <div class="Add-Skill-Image" name="Add_Skill_Image"  ondragover="dragover(this)" ondragleave="dragout(this)"  ondrop="PictureDrop(this,event)">
+                                    <p class="note" align="center" style="cursor: pointer;">click / tap to add picture</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <div class="add-data-buttons">
+                        <button name="add_task" class="button-accept" onmousedown="finalcheck()">Post</button>
+                        <button name="add_task" class="button-cancel" onmousedown="finalcheck()">Post</button>
+                    </div> 
+                </div>
+            </div>
+
+
+            <hr>
+        </form>
             
         <div class="Page ">
             <div class="container">
             
-                <form >
-                    <div class="Row" >
-                        <div class="hide-show-UI">
-                            <div class="UI-button" onclick="toggleUI(this)">
-                                <button class="arrow-button" type="button" >
-                                    <div class="arrow-up"></div>
-                                    <div class="arrow-down"></div>
-                                    <p class="arrow-button-text">Add project</p>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="add-data-section">
-                        <div class="add-project-section">
-                            <div class="add-project-data add-data">
-                                <p >project Title</p>
-                                <textarea class="Title-textarea" rows="1" name="add_post_title" id="" placeholder="post title "  onkeypress="TextAreaAdjust(this)" onclick="TextAreaAdjust(this)"></textarea>
-
-                                <div class="add-project-description-picture">
-                                    <div class="add-description" >
-                                        <p class="indicator">add description</p>
-                                        <textarea class="Skill-description-text"  rows="5" name="Add_Skill_Discretion" placeholder="post content"></textarea>
-                                    </div>
-                                    <div class="add-picture" >
-                                        <p class="indicator">add image</p>
-                                        <input style="display: none;" type="file" accept="image/png, image/jpeg, image/jpg" value="tap"> 
-                                        <div class="Add-Skill-Image" name="Add_Skill_Image"  ondragover="dragover(this)" ondragleave="dragout(this)"  ondrop="PictureDrop(this,event)">
-                                            <p class="note" align="center" style="cursor: pointer;">click / tap to add picture</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            
-                            <div class="add-data-buttons">
-                                <button name="add_task" class="button-accept" onmousedown="finalcheck()">Post</button>
-                                <button name="add_task" class="button-cancel" onmousedown="finalcheck()">Post</button>
-                            </div> 
-                        </div>
-                    </div>
-
-
-                    <hr>
-                </form>
 
                 <div class="Row">
                     <div class="Title-date">
