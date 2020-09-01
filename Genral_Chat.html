@@ -1,0 +1,122 @@
+<!doctype html>
+<html data-theme="dark">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="Css\Style index.css">
+
+        
+        <title>Projects</title>
+
+    </head>
+
+    <body >
+
+
+            
+        <!-- nav bar start-->
+    
+
+        <nav class="nav-bar">
+            
+            <div><a href="index.html"  class="logo">Darkx97</a></div>
+            <ul class="nav-links">
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="Goals.html" >Goals</a></li>
+                <li><a href="Blog.html" >Blog</a></li>
+                <li><a href="aboutme.html" >About me</a></li>
+                <li><a href="Genral_Chat.html" class="in-page">Chat</a></li>
+                <li><a href="mailto:syn-97@hotmail.com" >Contact me</a></li>
+                
+            </ul>
+
+            <div class="burger" onclick="navSlide(this)">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>     
+            
+        </nav>  
+        
+        
+        <div class="nav-list" >
+            <a href="projects.html">Projects</a>
+            <a href="Goals.html" >Goals</a>
+            <a href="Blog.html" >Blog</a>
+            <a href="aboutme.html" >About me</a>
+            <a href="Genral_Chat.html" class="in-page">Chat</a>    
+            <a href="mailto:syn-97@hotmail.com" >Contact me</a> 
+            <div class="list-option">
+                <div>
+                    <h4>
+                        Dark/Light mode
+                    </h4>
+                </div>
+                
+                <div>
+                    <input type="checkbox" class="checkbox DLMode" id="DLMode">
+                    <label for="DLMode" class="switch" onclick="toggleMode(this)">
+                        <div class="ball"></div>
+                    </label>
+                </div>
+            </div>
+            <p></p> 
+        </div>
+            
+            <!-- nav bar end -->
+            
+        <div class="Page ">
+            <div class="container chat" >
+                
+                <div style="display: grid;">
+                    <div class="Chat-users">
+                        <div class="User-chat">
+                            <img src="Icons\pngfuel2.png" class="responsiveImg">
+                            <div class="User-description">
+                                <p class="User-name">username</p>
+                                <p class="User-msg">last msg</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Chat-area">
+                        <div class="Message">
+                            <div class="Message-user-info">
+                                <img src="Icons\pngfuel2.png" class="responsiveImg">
+                                <p>username</p>
+                                <div>
+                                    <p class="date">date</p>
+                                    <p class="date">time</p>
+                                </div>
+                            </div>
+                            <div class="Message-data ">
+                                <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem odio nam quaerat veniam ea facere corrupti quisquam corporis repellendus, explicabo doloribus? Deserunt quisquam vero at magni consectetur obcaecati assumenda. Obcaecati!</p>
+                            </div>
+                            <hr>
+                        </div>
+
+
+                    </div>
+                    <div class="Chat-input-area">
+                        <form>
+                            <div class="Chat-input-text">
+                                <div>
+                                    <textarea class="Post-textarea" id=""  rows="2" placeholder="Message"></textarea>
+                                </div>
+                                <div class="Chat-input-button">
+                                    <input type="button" value="send" class="button-accept">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+            <script src="JS/Index.js"></script>
+        </div>
+    </body>
+
+</html>

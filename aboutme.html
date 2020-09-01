@@ -1,198 +1,307 @@
-<!DOCTYPE html>
+<!doctype html>
 <html data-theme="dark">
-
     <head>
-
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+        <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="Css\Style index.css">
 
-
-
+        
         <title>About me</title>
+
     </head>
 
     <body >
 
-   <!-- nav bar start  -->
-    <nav class="nav-bar"> 
-        <div><a href="index.html" onmouseover="Navhoverin(this)" onmouseout="Navhoverout(this)" class="logo">Darkx97</a></div>
-        <ul class="nav-links">
-            <li><a href="projects.html" onmouseover="Navhoverin(this)" onmouseout="Navhoverout(this)">Projects</a></li>
-            <li><a href="Goals.html" onmouseover="Navhoverin(this)" onmouseout="Navhoverout(this)">Goals</a></li>
-            <li><a href="aboutme.html" class="in-page">About me</a></li>
-            <li><a href="Blog.html" onmouseover="Navhoverin(this)" onmouseout="Navhoverout(this)">Blog</a></li>
-            <li><a href="mailto:syn-97@hotmail.com" onmouseover="Navhoverin(this)" onmouseout="Navhoverout(this)">Contact me</a></li>
-        </ul>
 
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>   
-    </nav>  
+            
+        <!-- nav bar start-->
+        
+                    
+        <nav class="nav-bar">
+            
+            <div><a href="index.html"  class="logo">Darkx97</a></div>
+            <ul class="nav-links">
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="Goals.html" >Goals</a></li>
+                <li><a href="Blog.html" >Blog</a></li>
+                <li><a href="aboutme.html" class="in-page">About me</a></li>
+                <li><a href="Genral_Chat.html" >Chat</a></li>
+                <li><a href="mailto:syn-97@hotmail.com" >Contact me</a></li>
+                
+            </ul>
 
-    <div class="nav-list" id="nav-list">
-        <div class="list-item"><a href="projects.html" onmouseover="Navhoverin(this)" onmouseout="Navhoverout(this)">Projects</a></div>
-        <div class="list-item"><a href="Goals.html" onmouseover="Navhoverin(this)" onmouseout="Navhoverout(this)">Goals</a></div>
-        <div class="list-item"><a href="aboutme.html" class="in-page">About me</a></div>
-        <div class="list-item"><a href="Blog.html" onmouseover="Navhoverin(this)" onmouseout="Navhoverout(this)">Blog</a></div>
-        <div class="list-item"><a href="mailto:syn-97@hotmail.com" onmouseover="Navhoverin(this)" onmouseout="Navhoverout(this)">Contact me</a></div>
-        <hr>
-        <div class="list-item">
+            <div class="burger" onclick="navSlide(this)">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>     
+            
+        </nav>  
+        
+        
+        <div class="nav-list" >
+            <a href="projects.html">Projects</a>
+            <a href="Goals.html" >Goals</a>
+            <a href="Blog.html">Blog</a>
+            <a href="aboutme.html"  class="in-page">About me</a>
+            <a href="Genral_Chat.html">Chat</a>    
+            <a href="mailto:syn-97@hotmail.com" >Contact me</a> 
             <div class="list-option">
                 <div>
-                    <h4 style="margin-bottom: 5px;">
+                    <h4>
                         Dark/Light mode
                     </h4>
                 </div>
-
+                
                 <div>
-                    <input type="checkbox" class="checkbox" id="DLMode">
-                    <label for="DLMode" class="switch">
+                    <input type="checkbox" class="checkbox DLMode" id="DLMode">
+                    <label for="DLMode" class="switch" onclick="toggleMode(this)">
                         <div class="ball"></div>
                     </label>
                 </div>
             </div>
-
-        </div>
-
-    </div>
-
-    <!-- nav bar end -->
-    
+            <p></p> 
+        </div>   
+        
+        
+        <!-- nav bar end -->
         <div class="Page">
-
-    
             <div class="container">
 
-                <div class="Row">
-                    <div class="Col-1" style="justify-items: center;">
-                        <img src="images\hello there4.0.jpg"   style="border-radius: 100%;  width: 35%; height: auto;">
-                    </div>
-                </div>
                 
+                <form >
+                    <div class="Row">
+                        <img class="profile-picture" src="Icons\Defult_User.png" >
+                    </div>
+
+                    <div class="Row" >
+                        <div class="hide-show-UI">
+                            <div class="UI-button" onclick="toggleUI(this)">
+                                <button class="arrow-button" type="button" >
+                                    <div class="arrow-up"></div>
+                                    <div class="arrow-down"></div>
+                                    <p class="note">Add a description about your self or what you do</p>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <div class="add-data-section">
+                        <div class="add-self-description-section">
+                            <div class="add-self-description-input add-data ">
+                                
+                                <div class="add-data-M">
+                                    <p class="indicator">say hello</p>
+                                    <textarea class="Title-textarea" id=""  rows="1"></textarea>
+                                </div>
+                                <div class="add-data-M">
+                                    <p class="indicator">leave a small message</p>
+                                    <textarea class="Title-textarea"  id=""  rows="1"></textarea>
+                                </div>
+                                <div class="add-data-L">
+                                    <p class="indicator">description about what you do </p>
+                                    <textarea class="Post-textarea" id=""  rows="5"></textarea>
+                                </div>
+                            </div>
+                            
+                            <div class="add-data-buttons">
+                                <button name="add_task" class="button-accept" onmousedown="CreateSkillRow(this)">Post</button>
+                            </div>               
+                        </div>
+                    </div>
+                    <hr>
+                </form>
+
                 <div class="Row">
-                    <div class="Col-1" style="text-align: center;">
+                    <div class="Content" style="text-align: center;">
                         <H1>My name is Sufian </H1>
                     </div>
-                    <div class="Col-1" style="text-align: center;">
+                    <div class="Content" style="text-align: center;">
                         <H2>Welcome to my website </H2>
                     </div>
-                </div>
-                
-            
-                <div class="Row ">
 
-                    <div class="col-1" >
+                    <div class="Content" >
                         <p align="left"> I'm a computer science student interested in learning about Game developing websites developing and AI , just finished my second year at the time of making this website.</p>
                         <p align="left">Only started taking programing seriously this year and decided to set my self challenges to see if can actually program things or not , This is the first website I make and going to go life at some point  right now its going be hosted through github for testing ,I made this website as a way to test my skills in website design also to share some of the stuff that I did thorough my journey of learning </p>
                     </div>
                 </div>
 
-                
-                <hr>
-
-                <div class="Row ">
-
-                    <div class="col-1" >
-                        <h1 align="center">Skills</h1>
-                    </div>
-                </div>
-
-        
                 <div class="container">
+                    <form >
+                        <div class="Row" >
+                            <div class="hide-show-UI">
+                                <div class="UI-button" onclick="toggleUI(this)">
+                                    <button class="arrow-button" type="button" >
+                                        <div class="arrow-up"></div>
+                                        <div class="arrow-down"></div>
+                                        <p class="note">Add skill</p>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
 
-                    <div class="Grid"> 
-                        
-                        <div class="Row VH-center" >
-                            <div class="Col-2-10-2" >
-                                <div><h3>Skill</h3></div>
-                                <div><h3>Projects</h3></div>
-                                <div><h3>Level</h3></div>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="Row">
-                            <div class="Col-2-10-2" >
-                                <div><img src="images\java.png" alt="" class="responsiveImg" width="175" height="175"></div>
-                                <div><p>Programed 3 games (Flappy bird , Pong and Chrome dinosaur game) , totally functional but not perfect </p></div>
-                                <div><p>Intermediate</p></div>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="Row">
-                            <div class="Col-2-10-2" >
-                                <div><img src="images\HTML.png" alt="" class="responsiveImg" width="175" height="175"></div>
-                                <div><p>Currently learning how to make this project is first one to go online </p></div>
-                                <div><p>Intermediate</p></div>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="Row">
-                            <div class="Col-2-10-2" >
-                                <div><img src="images\C sharp.png" alt="" class="responsiveImg" width="175" height="175"></div>
-                                <div><p>Only made one game following a tutorial</p></div>
-                                <div><p>beginner</p></div>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="Row">
-                            <div class="Col-2-10-2" >
-                                <div><img src="images\Unity_3D_Pro_icon.png" alt="" class="responsiveImg" width="175" height="175"></div>
-                                <div><p>Just started learning using Unity and planing on re-making my old games then uploading it to my projects coming soon.</p></div>
-                                <div><p>beginner</p></div>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="Row">
-                            <div class="Col-2-10-2" >
-                                <div><img src="images\unnamed.png" alt="" class="responsiveImg" width="175" height="175"></div>
-                                <div>
-                                    <p>Arabic</p>
-                                    <p>English</p>
+                        <div class="add-data-section">
+                            <div class="add-skill-section">
+                                <div class="add-skill-input add-data ">
+                                    <div class="add-picture" >
+                                        <p class="indicator">add image</p>
+                                        <textarea class="Skill-Name-text" rows="1" name="Add_Skill_Name" id="Add_Skill_Name" placeholder="post content"></textarea>
+                                        <input style="display: none;" type="file" accept="image/png, image/jpeg, image/jpg" value="tap"> 
+                                        <div class="Add-Skill-Image" name="Add_Skill_Image"  ondragover="dragover(this)" ondragleave="dragout(this)"  ondrop="PictureDrop(this,event)">
+                                            <p class="note" align="center" style="cursor: pointer;">click / tap to add picture</p>
+                                        </div>
+                                    </div>
+    
+                                    <div class="add-description" >
+                                        <p class="indicator">add description</p>
+                                        <textarea class="Skill-description-text"  rows="5" name="Add_Skill_Discretion" placeholder="post content"></textarea>
+                                    </div>
+                                    
+                                    <div class="add-level">
+                                        <p class="indicator">add skill level</p>
+                                        <div class="option-list">
+                                            
+                                            <input id="Skill_Beginner"type="radio" style="display:none" name="Skill_level" value="Beginner"></input>
+                                            <label class="option" for="Skill_Beginner" >
+                                                <p class="option-text" onclick="">Beginner</p>
+                                            </label>
+    
+    
+                                            <input id="Skill_Intermediate" type="radio" style="display:none"name="Skill_level" value="Intermediate"></input>
+                                            <label class="option" for="Skill_Intermediate" >    
+                                                <p class="option-text" onclick="">Intermediate</p>
+                                            </label>
+    
+                                            <input id="Skill_Expert"type="radio" style="display:none" name="Skill_level" value="Expert"></input>
+                                            <label class="option" for="Skill_Expert" >
+                                                <p class="option-text" onclick="">Expert</p>
+                                            </label>
+    
+    
+                                            <!-- <input id="Skill_Master" type="radio" style="display:none" name="Skill_level" value="Master"></input>
+                                            <label class="option" for="Skill_Master" >
+                                                <p class="option-text">Master</p>
+                                            </label> -->
+    
+                                        </div>
+                                    </div>
                                 </div>
-                                <div>
-                                    <p>Native</p>
-                                    <p>Intermediate</p>
-                                </div>
+                                
+                                <div class="add-data-buttons">
+                                    <button name="add_task" class="button-accept" onmousedown="CreateSkillRow(this)">Post</button>
+                                </div> 
                             </div>
                         </div>
-        
+                        <hr style="width: 100%;">
+                    </form>
+                    
+                    <div class="Row VH-center" >
+                        <div class="Skill-row" >
+                            <div><h3>Skill</h3></div>
+                            <div><h3>Projects</h3></div>
+                            <div><h3>Level</h3></div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="Row">
+                        <div class="Skill-row" >
+                            <div><img src="images\java.png" alt="" class="responsiveImg" width="175" height="175"></div>
+                            <div><p>Programed 3 games (Flappy bird , Pong and Chrome dinosaur game) , totally functional but not perfect </p></div>
+                            <div><p>Intermediate</p></div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="Row">
+                        <div class="Skill-row" >
+                            <div><img src="images\HTML.png" alt="" class="responsiveImg" width="175" height="175"></div>
+                            <div><p>Currently learning how to make this project is first one to go online </p></div>
+                            <div><p>Intermediate</p></div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="Row">
+                        <div class="Skill-row" >
+                            <div><img src="images\C sharp.png" alt="" class="responsiveImg" width="175" height="175"></div>
+                            <div><p>Only made one game following a tutorial</p></div>
+                            <div><p>beginner</p></div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="Row">
+                        <div class="Skill-row" >
+                            <div><img src="images\Unity_3D_Pro_icon.png" alt="" class="responsiveImg" width="175" height="175"></div>
+                            <div><p>Just started learning using Unity and planing on re-making my old games then uploading it to my projects coming soon.</p></div>
+                            <div><p>beginner</p></div>
+                        </div>
                     </div>
                     
+                    
                 </div>
+                
 
+                <form >
+                    <div class="Row" >
+                        <div class="hide-show-UI">
+                            <div class="UI-button" onclick="toggleUI(this)">
+                                <button class="arrow-button" type="button" >
+                                    <div class="arrow-up"></div>
+                                    <div class="arrow-down"></div>
+                                    <p class="note">Add new section</p>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="add-data-section">
+                        <div class="add-new-section">
+                            <div class="add-self-description-input add-data ">
+                                
+                                <div class="add-data-M">
+                                    <p class="indicator">section title</p>
+                                    <textarea class="Title-textarea" id=""  rows="1"></textarea>
+                                </div>
+                                <div class="add-data-L">
+                                    <p class="indicator">section content</p>
+                                    <textarea class="Post-textarea" id=""  rows="5"></textarea>
+                                </div>
+                            </div>
+
+                                                        
+                            <div class="add-data-buttons">
+                                <button name="add_task" class="button-accept" onmousedown="CreateSkillRow(this)">Post</button>
+                            </div> 
+                        </div>
+                    </div>
+                    
+
+
+                </form>
+                <hr>
+                
 
                 <div class="Row " style=" place-items: center;">
-                    <div class="Col-1" >
-                        <h1 >Hobbies </h1>  
-                    </div>
-
-                    <div class="Col-1" style="padding-left:20%; padding-right: 20%;">
+                    <h1 class="title" >Hobbies </h1>  
+                    <div class="Content" >
                         <p align="left">Video games.</p>
-                    </div>
-
-                    <div class="Col-1" style="padding-left:20%; padding-right: 20%;">
+                
                         <p align="left">Reading.... sometimes.</p>
-                    </div>
-
-                    <div class="Col-1" style="padding-left:20%; padding-right: 20%;">
+                
                         <p align="left">Martial arts. </P>
-                    </div>
-
-                    <div class="Col-1" style="padding-left:20%; padding-right: 20%;">
+    
                         <P align="left">Drawing (not good at it).</P>
                     </div>
 
                 </div>
-                
             </div>
-
+            
             <script src="JS/Index.js"></script>
+
         </div>
     </body>
-    
-</html>
+
+</html> 
+

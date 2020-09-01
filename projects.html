@@ -22,94 +22,115 @@
 
         <nav class="nav-bar">
             
-            <div><a href="index.html" onmouseover="Navhoverin(this)" onmouseout="Navhoverout(this)" class="logo">Darkx97</a></div>
+            <div><a href="index.html"  class="logo">Darkx97</a></div>
             <ul class="nav-links">
-                <li><a href="projects.html" class="in-page">Projects</a></li></label>
-                <li><a href="Goals.html" onmouseover="Navhoverin(this)" onmouseout="Navhoverout(this)">Goals</a></li>
-                <li><a href="aboutme.html" onmouseover="Navhoverin(this)" onmouseout="Navhoverout(this)">About me</a></li>
-                <li><a href="Blog.html" onmouseover="Navhoverin(this)" onmouseout="Navhoverout(this)">Blog</a></li>
-                <li><a href="mailto:syn-97@hotmail.com" onmouseover="Navhoverin(this)" onmouseout="Navhoverout(this)">Contact me</a></li>
+                <li><a href="projects.html" class="in-page">Projects</a></li>
+                <li><a href="Goals.html" >Goals</a></li>
+                <li><a href="Blog.html" >Blog</a></li>
+                <li><a href="aboutme.html" >About me</a></li>
+                <li><a href="Genral_Chat.html">Chat</a></li>
+                <li><a href="mailto:syn-97@hotmail.com" >Contact me</a></li>
                 
             </ul>
 
-            <div class="burger">
+            <div class="burger" onclick="navSlide(this)">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <div class="line3"></div>
-            </div>   
+            </div>     
             
         </nav>  
         
         
-        <div class="nav-list" id="nav-list">
-            <div class="list-item"><a href="projects.html" class="in-page">Projects</a></div>
-            <div class="list-item"><a href="Goals.html" onmouseover="Navhoverin(this)" onmouseout="Navhoverout(this)">Goals</a></div>
-            <div class="list-item"><a href="aboutme.html" onmouseover="Navhoverin(this)" onmouseout="Navhoverout(this)">About me</a></div>
-            <div class="list-item"><a href="Blog.html" onmouseover="Navhoverin(this)" onmouseout="Navhoverout(this)">Blog</a></div>
-            <div class="list-item"><a href="mailto:syn-97@hotmail.com" onmouseover="Navhoverin(this)" onmouseout="Navhoverout(this)">Contact me</a></div>
-            <hr>
-            <div class="list-item">
-                <div class="list-option">
-                    <div>
-                        <h4 style="margin-bottom: 5px;">
-                            Dark/Light mode
-                        </h4>
-                    </div>
-                    
-                    <div>
-                        <input type="checkbox" class="checkbox" id="DLMode">
-                        <label for="DLMode" class="switch">
-                            <div class="ball"></div>
-                        </label>
-                    </div>
+        <div class="nav-list" >
+            <a href="projects.html" class="in-page">Projects</a>
+            <a href="Goals.html" >Goals</a>
+            <a href="Blog.html" >Blog</a>
+            <a href="aboutme.html" >About me</a>
+            <a href="Genral_Chat.html" >Chat</a>    
+            <a href="mailto:syn-97@hotmail.com" >Contact me</a> 
+            <div class="list-option">
+                <div>
+                    <h4>
+                        Dark/Light mode
+                    </h4>
                 </div>
                 
+                <div>
+                    <input type="checkbox" class="checkbox DLMode" id="DLMode">
+                    <label for="DLMode" class="switch" onclick="toggleMode(this)">
+                        <div class="ball"></div>
+                    </label>
+                </div>
             </div>
+            <p></p> 
+        </div>
             
-        </div>              
-            
+        </div>
             <!-- nav bar end -->
             
         <div class="Page ">
             <div class="container">
             
-                
-                
-                <div class="Row">
-                    <div class="Col-1" style="text-align: center;">
-                        <div><h1>Here I have all my projects .</h1></div>
-                        <div><h3>some of them are not done yet.</h3></div>
-                        
-                    </div>
-                </div>
-
-                <hr>
-
-
-
-                <div class="Row">
-                    <div class="Col-10-4-title">
-                        <div>
-                            <h2>Download button </h2>
-                        </div>
-
-                        <div style="text-align: center;">
-                            <p>22/4/2020</p>
+                <form >
+                    <div class="Row" >
+                        <div class="hide-show-UI">
+                            <div class="UI-button" onclick="toggleUI(this)">
+                                <button class="arrow-button" type="button" >
+                                    <div class="arrow-up"></div>
+                                    <div class="arrow-down"></div>
+                                    <p class="arrow-button-text">Add project</p>
+                                </button>
+                            </div>
                         </div>
                     </div>
+                    
+                    <div class="add-data-section">
+                        <div class="add-project-section">
+                            <div class="add-project-data add-data">
+                                <p >project Title</p>
+                                <textarea class="Title-textarea" rows="1" name="add_post_title" id="" placeholder="post title "  onkeypress="TextAreaAdjust(this)" onclick="TextAreaAdjust(this)"></textarea>
 
-                    <div class="Col-10-4-content">
-                        <div>
-                            <p >The main idea of this website is not just showing-off skills , in the time of making this website there is not much skill , this website was made to share my experience and skill developing , also to share what I have done  with other people who might be interested in programing.</p>
+                                <div class="add-project-description-picture">
+                                    <div class="add-description" >
+                                        <p class="indicator">add description</p>
+                                        <textarea class="Skill-description-text"  rows="5" name="Add_Skill_Discretion" placeholder="post content"></textarea>
+                                    </div>
+                                    <div class="add-picture" >
+                                        <p class="indicator">add image</p>
+                                        <input style="display: none;" type="file" accept="image/png, image/jpeg, image/jpg" value="tap"> 
+                                        <div class="Add-Skill-Image" name="Add_Skill_Image"  ondragover="dragover(this)" ondragleave="dragout(this)"  ondrop="PictureDrop(this,event)">
+                                            <p class="note" align="center" style="cursor: pointer;">click / tap to add picture</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                            <div class="add-data-buttons">
+                                <button name="add_task" class="button-accept" onmousedown="finalcheck()">Post</button>
+                                <button name="add_task" class="button-cancel" onmousedown="finalcheck()">Post</button>
+                            </div> 
                         </div>
+                    </div>
 
-                        <div style="text-align: center;">
+
+                    <hr>
+                </form>
+
+                <div class="Row">
+                    <div class="Title-date">
+                        <h2>Download button </h2>
+                        <p class="date">22/4/2020</p>
+                    </div>
+
+                    <div class="Content-picture">
+                        <p >The main idea of this website is not just showing-off skills , in the time of making this website there is not much skill , this website was made to share my experience and skill developing , also to share what I have done  with other people who might be interested in programing.</p>
                         <img src="Gifs\download-button-with-circular-progress-indicator.gif" alt="" class="responsiveImg">
-                        </div>
                     </div>
-                    <div class="Col-10-4-title">
-                        <div><h3>State : </h3> </div>
-                        <div style="text-align: center;"><p>Starting Soon</p></div>
+                    <div class="Title-date">
+                        <h3>State : </h3>
+                        <p class="date">Starting Soon</p>
                     </div>
                     
                 </div>
@@ -119,50 +140,44 @@
                 <hr>
 
                 <div class="Row">
-                    <div class="Col-10-4-title">
-                        <div>
-                            <h2>Comment and Suggestions section </h2>
-                        </div>
-
-                        <div style="text-align: center;">
-                            <p>22/4/2020</p>
-                        </div>
+                    <div class="Title-date">
+                        <h2>Comment and Suggestions section </h2>
+                        <p class="date">22/4/2020</p>
                     </div>
 
-                    <div class="Col-10-4-content">
-                        <div>
-                            <p >I haven't started working on it yet but im planing to start this week I want it to see if I can make this it might be harder than I think but learning is the important thing .</p>
-                        </div>
-
-                        <div style="text-align: center;">
+                    <div class="Content-picture">
+                        <p >I haven't started working on it yet but im planing to start this week I want it to see if I can make this it might be harder than I think but learning is the important thing .</p>
                         <img src="Gifs\Comment.gif" alt="" class="responsiveImg">
-                        </div>
                     </div>
 
-                    <div class="Col-10-4-title">
-                        <div><h3>State : </h3> </div>
-                        <div style="text-align: center;"><p>Work in progress</small></p></div>
+                    <div class="Title-date">
+                        <h3>State : </h3>
+                        <p class="date">Work in progress</p>
                     </div>
 
-                    <div class="comment-section">
-                
-                        <div class=" add-comment-section">
-                            <div><img src="Icons\Defult_User.png" alt="" class="profileImg"></div>
-                            <div >
-                                <label class="add-comment-text">
-                                    <textarea placeholder="Leave a Comment" name="" id=""  rows="1" class="Text"  onkeyup="textAreaAdjust(this)" onkeydown="textAreaAdjust(this)" onkeypress="textAreaAdjust(this)" onclick="textAreaAdjust(this)"></textarea>
-                                </label> 
-                            </div>
-                        </div>  
+                    <div class="comment-section ">
                         
-                        <div class="add-comment-buttons">
-                            <input type="button" value="Comment" class="button-post" >
-                            <input type="button" value="show/hide comments" class="button-cancel" onclick="showcomment(this)">
-                            <input type="button" value="Cancel" class="button-cancel" onclick="deletetext(this) ">
-                        </div> 
+                        <!-- <div class="add-data"> -->
+                            <div class="add-comment-section">
+                                <div >
+                                    <img src="Icons\Defult_User.png" alt="" class="profileImg">
+                                </div>
+                                <div>
+                                    <textarea class="Comment-textarea" placeholder="Leave a Comment" name="" id=""  rows="1" class="Text"  onkeyup="textAreaAdjust(this)" onkeydown="textAreaAdjust(this)" onkeypress="textAreaAdjust(this)" onclick="textAreaAdjust(this)"></textarea>
+                                </div>
+                                <div style="display: flex;">
+                                    <button class="button-cancel">one</button>
+                                </div>
+                            </div>  
+                            
+                        <!-- </div> -->
+                            <div class="add-data-buttons">
+                                <input type="button" value="Comment" class="button-accept" >
+                                <input type="button" value="show/hide comments" class="button-cancel" onclick="toggleUI(this)">
+                            </div> 
                         
                          
-                        <div class="comments" id="comment-section">
+                        <div class="Comments">
                             
                             <div class="comment">
                                 
@@ -187,62 +202,42 @@
                 </div>
 
 
-            
                 <hr>
+            
 
                 <div class="Row">
-                    <div class="Col-10-4-title">
-                        <div>
-                            <h2>Dark and light mode </h2>
-                        </div>
-
-                        <div style="text-align: center;">
-                            <p>22/4/2020</p>
-                        </div>
+                    <div class="Title-date">
+                        <h2>Dark and light mode </h2>
+                        <p class="date">22/4/2020</p>
                     </div>
 
-                    <div class="Col-10-4-content">
-                        <div>
-                            <p >Right now this website has only a "dark" mode this is because I prefer darker background and lighter font color , this makes it easier for me to look at the screen for longer times , how ever I know not a lot of people like this mode so im going to make a light/dark mode switch .</p>
-                        </div>
-
-                        <div style="text-align: center;">
+                    <div class="Content-picture" >
+                        <p >Right now this website has only a "dark" mode this is because I prefer darker background and lighter font color , this makes it easier for me to look at the screen for longer times , how ever I know not a lot of people like this mode so im going to make a light/dark mode switch .</p>
                         <img src="Gifs\D-L mode.gif" alt="" class="responsiveImg">
-                        </div>
                     </div>
                     
-                    <div class="Col-10-4-title">
-                        <div><h3>State : </h3> </div>
-                        <div style="text-align: center;"><p>Done <small>1/6/2020</small></p></div>
+                    <div class="Title-date">
+                        <h3>State : </h3>
+                        <p class="date">Done 1/6/2020</p>
                     </div>
                 </div>
 
                 <hr>
                 
                 <div class="Row">
-                    <div class="Col-10-4-title">
-                        <div>
-                            <h2>Grid system</h2>
-                        </div>
-
-                        <div style="text-align: center;">
-                            <p></p>
-                        </div>
+                    <div class="Title-date">
+                        <h2>Grid system</h2>
+                        <p class="date"> 3/2020 </p>
                     </div>
 
-                    <div class="Col-10-4-content">
-                        <div>
-                            <p >When I started learning unity I thought I needed to make simple library to make game developing easier and I decided to make a simple system to device the game into small squares,every square have can have a value can be used for path finding , placing objects , walkable and un-walkable areas and making heat maps .</p>
-                        </div>
-
-                        <div style="text-align: center;">
+                    <div class="Content-picture">
+                        <p >When I started learning unity I thought I needed to make simple library to make game developing easier and I decided to make a simple system to device the game into small squares,every square have can have a value can be used for path finding , placing objects , walkable and un-walkable areas and making heat maps .</p>
                         <img src="Gifs\GRID.gif" alt="" class="responsiveImg">
-                        </div>
                     </div>
 
-                    <div class="Col-10-4-title">
-                        <div><h3>State : </h3> </div>
-                        <div style="text-align: center;"><p>failed , will come back to it latter</p></div>
+                    <div class="Title-date">
+                        <h3>State : </h3>
+                        <p class="date">failed , will come back to it latter</p>
                     </div>
 
                     
@@ -251,143 +246,95 @@
                 <hr>
 
                 <div class="Row">
-                    <div class="Col-10-4-title">
-                        <div>
-                            <h2>This website</h2>
-                        </div>
-
-                        <div style="text-align: center;">
-                            <p></p>
-                        </div>
+                    <div class="Title-date">
+                        <h2>This website</h2>
+                        <p class="date"> 4/2020</p>
                     </div>
 
-                    <div class="Col-10-4-content">
-                        <div>
-                            <p >When I finished my 2nd year in collage I wasn't sure if I'm gonna keep going with this as my profession , so I decided I need to least learn something so I don't feel like I wasted 2 years of my life , and started making this website it went through a lot of designs but im fine with this design.</p>
-                        </div>
-
-                        <div style="text-align: center;">
+                    <div class="Content-picture">
+                        <p >When I finished my 2nd year in collage I wasn't sure if I'm gonna keep going with this as my profession , so I decided I need to least learn something so I don't feel like I wasted 2 years of my life , and started making this website it went through a lot of designs but im fine with this design.</p>                 
                         <img src="Gifs\HTML GIF.gif" alt="" class="responsiveImg">
-                        </div>
                     </div>
 
-                    <div class="Col-10-4-title">
-                        <div><h3>State : </h3> </div>
-                        <div style="text-align: center;"><p>work in progress</p></div>
+                    <div class="Title-date">
+                        <h3>State : </h3>
+                        <p class="date">work in progress</p>
                     </div>
                 </div>
 
                 <hr>
 
                 <div class="Row">
-                    <div class="Col-10-4-title">
-                        <div>
-                            <h2>Chrome dinosaur game</h2>
-                        </div>
-
-                        <div style="text-align: center;">
-                            <p></p>
-                        </div>
+                    <div class="Title-date">
+                        <h2>Chrome dinosaur game</h2>
+                        <p class="date">2/2020</p>
                     </div>
 
-                    <div class="Col-10-4-content">
-                        <div>
-                            <p >We all at some point lost internet connection and we're blessed with hours of - well maybe minute - of playing the dinosaur game if your using chrome, decided this game seems simple maybe I should make it some day ,2 years latter I started getting interested in programing and I met java , wasn't fun in the beginning but I was able to make it , it toke me about 3 days and its perfect , but its ugly so maybe I'll come back to it latter and fix that issue.</p>
-                        </div>
-
-                        <div style="text-align: center;">
+                    <div class="Content-picture">
+                        <p >We all at some point lost internet connection and we're blessed with hours of - well maybe minute - of playing the dinosaur game if your using chrome, decided this game seems simple maybe I should make it some day ,2 years latter I started getting interested in programing and I met java , wasn't fun in the beginning but I was able to make it , it toke me about 3 days and its perfect , but its ugly so maybe I'll come back to it latter and fix that issue.</p>
                         <img src="Gifs\Dino game GIF.gif" alt="" class="responsiveImg">
-                        </div>
                     </div>
 
-                    <div class="Col-10-4-title">
-                        <div><h3>State : </h3> </div>
-                        <div style="text-align: center;"><p>Done</p></div>
+                    <div class="Title-date">
+                       <h3>State : </h3>
+                       <p class="date">Done</p>
                     </div>
                 </div>
 
                 <hr>
 
                 <div class="Row">
-                    <div class="Col-10-4-title">
-                        <div>
-                            <h2>S-DES encryption system</h2>
-                        </div>
-
-                        <div style="text-align: center;">
-                            <p></p>
-                        </div>
+                    <div class="Title-date">
+                        <h2>S-DES encryption system</h2>
+                        <p class="date">3/2020</p>
                     </div>
 
-                    <div class="Col-10-4-content">
-                        <div>
-                            <p >This project is a disaster , the coding is allover the place , its not clean , its not easy to look at , the only reason I made it is cuz the professor told me to do it and I wasn't doing good in the subject at that time , I wasn't interested in encrypting , I'm still not interested but the thing worked in the end it took me 3 hours to made , and even tho I could have solve the "text without spaces" issue but when I finished it I was done with it so I stopped there .</p>
-                        </div>
-
-                        <div style="text-align: center;">
+                    <div class="Content-picture">
+                        <p >This project is a disaster , the coding is allover the place , its not clean , its not easy to look at , the only reason I made it is cuz the professor told me to do it and I wasn't doing good in the subject at that time , I wasn't interested in encrypting , I'm still not interested but the thing worked in the end it took me 3 hours to made , and even tho I could have solve the "text without spaces" issue but when I finished it I was done with it so I stopped there .</p>
                         <img src="Gifs\S-DES.gif" alt="" class="responsiveImg">
-                        </div>
                     </div>
 
-                    <div class="Col-10-4-title">
-                        <div><h3>State : </h3> </div>
-                        <div style="text-align: center;"><p>Done</p></div>
+                    <div class="Title-date">
+                        <h3>State : </h3>
+                        <p class="date">Done</p>
                     </div>
                 </div>
 
                 <hr>
 
                 <div class="Row">
-                    <div class="Col-10-4-title">
-                        <div>
-                            <h2>Pong</h2>
-                        </div>
+                    <div class="Title-date">
+                        <h2>Pong</h2>
 
-                        <div style="text-align: center;">
-                            <p></p>
-                        </div>
+                        <p class="date">3/2020</p>
                     </div>
 
-                    <div class="Col-10-4-content">
-                        <div>
-                            <p >Pong was weird game for me , I haven't really played that game but I knew about it existence and decided its gonna be one of my projects to try to make using java ofc , and weirdly enough toke me longer than any other game I made , its not perfect but it functions kinda like Pong its a bit deferent it needs more work but I was done with the game at that point so I just left it at that stage .</p>
-                        </div>
-
-                        <div style="text-align: center;">
+                    <div class="Content-picture">
+                        <p >Pong was weird game for me , I haven't really played that game but I knew about it existence and decided its gonna be one of my projects to try to make using java ofc , and weirdly enough toke me longer than any other game I made , its not perfect but it functions kinda like Pong its a bit deferent it needs more work but I was done with the game at that point so I just left it at that stage .</p>
                         <img src="Gifs\Pong GIF.gif" alt="" class="responsiveImg">
-                        </div>
                     </div>
-                    <div class="Col-10-4-title">
-                        <div><h3>State : </h3> </div>
-                        <div style="text-align: center;"><p>Done , failed</p></div>
+                    <div class="Title-date">
+                        <h3>State : </h3>
+                        <p class="date">Done , failed</p>
                     </div>
                 </div>
 
                 <hr>
 
                 <div class="Row">
-                    <div class="Col-10-4-title">
-                        <div>
+                    <div class="Title-date">
                             <h2>Flappy bird</h2>
-                        </div>
 
-                        <div style="text-align: center;">
-                            <p></p>
-                        </div>
+                            <p class="date">1/2020</p>
                     </div>
 
-                    <div class="Col-10-4-content">
-                        <div>
-                            <p >his game was very popular at some point , A lot of people played that game ,I played it way longer than I should have ,When I was done with the chrome dinosaur game I didn't have any simple game to make and remember the hours of time I wasted playing that game decided maybe I can make this , I was able to make it but it toke me way longer than it should have but it was working and I learned things in the process and thats the important thing .</p>
-                        </div>
-
-                        <div style="text-align: center;">
+                    <div class="Content-picture">
+                        <p >his game was very popular at some point , A lot of people played that game ,I played it way longer than I should have ,When I was done with the chrome dinosaur game I didn't have any simple game to make and remember the hours of time I wasted playing that game decided maybe I can make this , I was able to make it but it toke me way longer than it should have but it was working and I learned things in the process and thats the important thing .</p>
                         <img src="Gifs\FB giff.gif" alt="" class="responsiveImg">
-                        </div>
                     </div>
-                    <div class="Col-10-4-title">
-                        <div><h3>State : </h3> </div>
-                        <div style="text-align: center;"><p>Done</p></div>
+                    <div class="Title-date">
+                        <h3>State : </h3>
+                        <p class="date">Done</p>
                     </div>
                 </div>
 

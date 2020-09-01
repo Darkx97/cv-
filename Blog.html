@@ -8,11 +8,6 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="Css\Style index.css">
 
-        <style>
-            a{
-                text-decoration: none;
-            }
-        </style>
         
         <title>Blog</title>
 
@@ -23,131 +18,180 @@
 
             
         <!-- nav bar start-->
+        
+                    
         <nav class="nav-bar">
-
-            <div><a href="index.html" onmouseover="Navhoverin(this)" onmouseout="Navhoverout(this)" class="logo">Darkx97</a></div>
+            
+            <div><a href="index.html"  class="logo">Darkx97</a></div>
             <ul class="nav-links">
-                <li><a href="projects.html" onmouseover="Navhoverin(this)" onmouseout="Navhoverout(this)">Projects</a></li>
-                <li><a href="Goals.html" onmouseover="Navhoverin(this)" onmouseout="Navhoverout(this)">Goals</a></li>
-                <li><a href="aboutme.html" onmouseover="Navhoverin(this)" onmouseout="Navhoverout(this)">About me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="Goals.html" >Goals</a></li>
                 <li><a href="Blog.html" class="in-page">Blog</a></li>
-                <li><a href="mailto:syn-97@hotmail.com" onmouseover="Navhoverin(this)" onmouseout="Navhoverout(this)">Contact me</a></li>
+                <li><a href="aboutme.html" >About me</a></li>
+                <li><a href="Genral_Chat.html" >Chat</a></li>
+                <li><a href="mailto:syn-97@hotmail.com" >Contact me</a></li>
+                
             </ul>
 
-            <div class="burger">
+            <div class="burger" onclick="navSlide(this)">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <div class="line3"></div>
-            </div>   
-        </nav>   
-
-        <div class="nav-list" id="nav-list">
-            <div class="list-item"><a href="projects.html" onmouseover="Navhoverin(this)" onmouseout="Navhoverout(this)">Projects</a></div>
-            <div class="list-item"><a href="Goals.html" onmouseover="Navhoverin(this)" onmouseout="Navhoverout(this)">Goals</a></div>
-            <div class="list-item"><a href="aboutme.html" onmouseover="Navhoverin(this)" onmouseout="Navhoverout(this)">About me</a></div>
-            <div class="list-item"><a href="Blog.html" class="in-page">Blog</a></div>
-            <div class="list-item"><a href="mailto:syn-97@hotmail.com" onmouseover="Navhoverin(this)" onmouseout="Navhoverout(this)">Contact me</a></div>
-            <hr>
-            <div class="list-item">
-                <div class="list-option">
-                    <div>
-                        <h4 style="margin-bottom: 5px;">
-                            Dark/Light mode
-                        </h4>
-                    </div>
-
-                    <div>
-                        <input type="checkbox" class="checkbox" id="DLMode">
-                        <label for="DLMode" class="switch">
-                            <div class="ball"></div>
-                        </label>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- nav bar end -->
-        
-        <div class="Page ">
-
-            <div class="container" >
-                
-                
-                <div class="Row">
-                    <div class="Col-1" style="text-align: center;">
-                        <h1>Welcome to Blog.</h1>
-                    </div>
-                    
-                    <div class="Col-1" style="text-align: center;">
-                        <p>this is where I have my thoughts . things im interested in  and maybe problems im trying to solve .</p>
-                    </div>
-                </div>
-                
-                <hr>
-                
-                <div class="Row">
-                    <div class="Col-1" style="text-align:center" >
-                        <h2>why im sharing this ? </h2>
-                    </div>
-                    
-                    <div class="Col-1" >
-                        <p>maybe to give other people a deferent prospective on everything I talk about , to make every one think a little deferent about the topics that I bring here , and maybe to see what they think about it .</p>
-                    </div>
-
-                    <div class="Col-1">
-                        <p>or just for me to think more clearly about it I've never been into writing but I decided I'll start documenting what im thinking about , that might help me solve some of the problems that im facing , or maybe have some ideas and come back to do them latter .</p>
-                    </div>
-                </div>
-                
-                <hr>
-                
-                <div class="Row">
-                    <div class="Col-1" style="text-align: center;">
-                        <h1>Posts</h1>
-                    </div>
-                    
-                    <a href="Blog/Being my self.html"><div class="Col-10-4-title">
-                        <div>
-                            <h2>Being my self </h2>
-                        </div>
-                        
-                        <div style="text-align: center;">
-                            <p>14/6/2020</p>
-                        </div>
-                    </div></a>
-                    
-                    <hr>
-
-                    <a href="Blog/Should i trust my knowledge.html"><div class="Col-10-4-title">
-                        <div>
-                            <h2>Should I trust my knowledge</h2>
-                        </div>
-                        
-                        <div style="text-align: center;">
-                            <p>26/5/2020</p>
-                        </div>
-                    </div></a>
-                    
-                    <hr>
-                    
-                    <a href="Blog/Story of my life.html"><div class="Col-10-4-title">
-                        <div>
-                            <h2>Story of my life</h2>
-                        </div>
-
-                        <div style="text-align: center;">
-                            <p>24/5/2020</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
+            </div>     
             
-
-            <script src="JS/Index.js"></script>
+        </nav>  
+        
+        
+        <div class="nav-list" >
+            <a href="projects.html">Projects</a>
+            <a href="Goals.html" >Goals</a>
+            <a href="Blog.html" class="in-page">Blog</a>
+            <a href="aboutme.html" >About me</a>
+            <a href="Genral_Chat.html">Chat</a>    
+            <a href="mailto:syn-97@hotmail.com" >Contact me</a> 
+            <div class="list-option">
+                <div>
+                    <h4>
+                        Dark/Light mode
+                    </h4>
+                </div>
+                
+                <div>
+                    <input type="checkbox" class="checkbox DLMode" id="DLMode">
+                    <label for="DLMode" class="switch" onclick="toggleMode(this)">
+                        <div class="ball"></div>
+                    </label>
+                </div>
+            </div>
+            <p></p> 
         </div>
+        
+        <!-- nav bar end -->
+        <div class="Page">
+            <div class="container">
 
+                <form >
+                    <div class="Row" >
+                        <div class="hide-show-UI">
+                            <div class="UI-button" onclick="toggleUI(this)">
+                                <button class="arrow-button" type="button" >
+                                    <div class="arrow-up"></div>
+                                    <div class="arrow-down"></div>
+                                    <p class="note">Add new section</p>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="add-data-section">
+                        <div class="add-new-section">
+                            <div class="add-self-description-input add-data ">
+                                
+                                <div class="add-data-M">
+                                    <p class="indicator">section title</p>
+                                    <textarea class="Title-textarea" id=""  rows="1"></textarea>
+                                </div>
+                                <div class="add-data-L">
+                                    <p class="indicator">section content</p>
+                                    <textarea class="Post-textarea" id=""  rows="5"></textarea>
+                                </div>
+                            </div>
+
+                                                        
+                            <div class="add-data-buttons">
+                                <button name="add_task" class="button-accept" onmousedown="CreateSkillRow(this)">Post</button>
+                            </div> 
+                        </div>
+                    </div>
+                    
+
+
+                </form>
+
+                <div class="Row">
+                        <h1 class="title">Welcome to Blog.</h1>
+                        <p class="Content">this is where I have my thoughts . things im interested in  and maybe problems im trying to solve .</p>
+                </div>
+                
+                <hr>
+                
+                <div class="Row">
+                    
+                    <h2 class="title">why im sharing this ? </h2>
+                    <p class="Content">maybe to give other people a deferent prospective on everything I talk about , to make every one think a little deferent about the topics that I bring here , and maybe to see what they think about it .or just for me to think more clearly about it I've never been into writing but I decided I'll start documenting what im thinking about , that might help me solve some of the problems that im facing , or maybe have some ideas and come back to do them latter .</p>
+
+                </div>
+                
+                <hr>
+                
+                    
+                <h1 class="title">Posts</h1>
+
+                <form >
+                    <div class="Row" >
+                        <div class="hide-show-UI">
+                            <div class="UI-button" onclick="toggleUI(this)">
+                                <button class="arrow-button" type="button" >
+                                    <div class="arrow-up"></div>
+                                    <div class="arrow-down"></div>
+                                    <p class="note">Add blog</p>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="add-data-section">
+                        <div class="add-blog-section">
+                            <div class="add-blog-data add-data">
+                                <p align="center">Blog title</p>
+                                <textarea class="Title-textarea" rows="1" name="add_post_title" id="" placeholder="post title "  onkeypress="TextAreaAdjust(this)" onclick="TextAreaAdjust(this)"></textarea>
+                                <p align="center">Blog content</p>
+                                <textarea class="Blog-textarea" rows="5" name="add_post" id="add_post" placeholder="post content" onload="TextAreaAdjust(this)" onkeypress="TextAreaAdjust(this)" onmousedown="TextAreaAdjust(this)" ondragover="dragover(this)" ondragleave="dragout(this)"  ondrop="TextAreaDrop(this,event)"></textarea>
+                                <div name="add_post_images"  class="droparea"  ondragover="dragover(this)" ondragleave="dragout(this)"  ondrop="TextAreaDrop(this,event)"></div>
+                                <p class="note" align="center" >drag and drop files here</p>
+                            </div>
+                            
+                            <div class="add-data-buttons">
+                                <button name="add_task" class="button-accept" onmousedown="finalcheck()">Post</button>
+                                <button name="add_task" class="button-cancel" onmousedown="finalcheck()">Post</button>
+                            </div> 
+                        </div>
+                    </div>
+                    
+                </form>
+
+                <div class="container">
+                    <div class="Row">
+                        <a href="Blog/Being my self.html">
+                            <div class="Title-date">
+                                <h2>Being my self </h2>
+                                <p class="date">14/6/2020</p>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <hr>
+                    <div class="Row">
+                        <a href="Blog/Should i trust my knowledge.html">
+                            <div class="Title-date">
+                                <h2 >Should I trust my knowledge</h2>
+                                <p class="date">26/5/2020</p>
+                            </div>
+                        </a>
+                    </div>
+                        
+                    <hr>
+                    <div class="Row">
+                        <a href="Blog/Story of my life.html">
+                            <div class="Title-date">
+                                <h2 >Story of my life</h2>
+                                <p class="date">24/5/2020</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            <script src="JS/Index.js"></script>
+
+        </div>
     </body>
-    
-    </html>
+
+</html> 
