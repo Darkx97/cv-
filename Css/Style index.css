@@ -45,11 +45,11 @@
 
     /* elements sizes */
 
-    --new-section-height : 300px;
+    --new-section-height: 300px;
     --blog-section-height: 325px;
-    --skill-section-height : 300px;
-    --project-section-height:290px;
-    --self-description-section-height : 380px;
+    --skill-section-height: 220px;
+    --project-section-height: 290px;
+    --self-description-section-height: 380px;
 
     --add-skill-img-size : 80px;
     --drop-file-size:80px;
