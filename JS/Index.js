@@ -314,3 +314,30 @@ function CreateSkillRow(button)
     let SLevel = Parent.querySelector(".option-list");
     PickSkillLevel(SLevel)
 };
+
+
+function logoption(element)
+{
+    element.querySelector(".Sign");
+    
+
+    if(element.querySelector(".Log"))
+    {
+        element.classList.add("active")
+        element.parentElement.querySelector(".Sign-option").classList.remove("active")
+        element.parentElement.parentElement.querySelector(".Log-in-data").classList.add("active");
+        element.parentElement.parentElement.querySelector(".Sign-in-data").classList.remove("active");
+        element.parentElement.parentElement.parentElement.querySelector(".log").classList.add("active");
+        element.parentElement.parentElement.parentElement.querySelector(".sign").classList.remove("active");
+    }
+    else if(element.querySelector(".Sign"))
+    {
+        element.classList.add("active")
+        element.parentElement.querySelector(".Log-option").classList.remove("active")
+        element.parentElement.parentElement.querySelector(".Sign-in-data").classList.add("active");
+        element.parentElement.parentElement.parentElement.querySelector(".sign").classList.add("active");
+        element.parentElement.parentElement.parentElement.querySelector(".log").classList.remove("active");
+        element.parentElement.parentElement.querySelector(".Log-in-data").classList.remove("active");
+    }
+
+}
