@@ -1,0 +1,60 @@
+function toggleUI(element) 
+{
+    let parent =element.parentElement.parentElement.parentElement;
+
+    if (element.querySelector(".arrow-button")) 
+    {
+        let button =element.querySelector(".arrow-button")
+        button.children[0].classList.toggle("toggle")
+        button.children[1].classList.toggle("toggle")
+    }
+    let section = parent.querySelector(".add-skill-section")||parent.querySelector(".add-self-description-section")||parent.querySelector(".add-new-section")||parent.querySelector(".add-blog-section")||parent.querySelector(".add-project-section")||parent.querySelector(".Comments")||parent.querySelector(".add-post-section");
+    section.classList.toggle("active");
+    let Bsection = parent.querySelector(".add-data-buttons");
+    Bsection.classList.toggle("active");
+
+    console.log(parent.querySelector(`[type="file"]`));
+    console.log(parent.querySelector(`.droparea`));
+    console.log(parent.querySelector(`.Post-textarea`)||parent.querySelector(`.Self-Description-textarea`)||parent.querySelector(`.Blog-textarea`));
+    
+}
+
+
+function dragover(elemnt)
+{
+    let droparea =  elemnt.parentElement.parentElement.parentElement.querySelector(`.droparea`)||elemnt.parentElement.querySelector(".Add-Skill-Image");
+    droparea.classList.add("dragover");
+};
+
+function dragout(elemnt)
+{
+    let droparea = elemnt.parentElement.parentElement.parentElement.querySelector(`.droparea`)||elemnt.parentElement.querySelector(".Add-Skill-Image");
+    droparea.classList.remove("dragover");
+};
+
+function TextAreaDrop(elemnt,event)
+{
+    
+    let droparea = elemnt.parentElement.querySelector(`.droparea`)||elemnt.parentElement.parentElement.parentElement.querySelector(`.droparea`)||elemnt.parentElement.querySelector(".Add-Skill-Image");;
+    let input =droparea.parentElement.querySelector(`[type="file"]`);
+    droparea.classList.remove("dragover");
+    
+    data =  event.dataTransfer.files;
+    
+    
+    for (let i = 0; i < data.length; i++) 
+    {
+        if(data.item(i).type.indexOf("image") === -1)
+        {
+            continue
+        }
+        else
+        {
+            files.push(data.item(i));
+            TextAreaDropFile(droparea,data.item(i));
+        }
+    }
+    
+    input.files = new filelistitems(files)
+    console.log( input.files);
+};

@@ -29,7 +29,7 @@
                 <li><a href="Goals.html" >Goals</a></li>
                 <li><a href="Blog.html" >Blog</a></li>
                 <li><a href="aboutme.html" >About me</a></li>
-                <li><a href="Genral_Chat.html" >Chat</a></li>
+                <li><a href="Chat.html" >Chat</a></li>
                 <li><a href="mailto:syn-97@hotmail.com" >Contact me</a></li>
                 
             </ul>
@@ -48,7 +48,7 @@
             <a href="Goals.html" >Goals</a>
             <a href="Blog.html" >Blog</a>
             <a href="aboutme.html" >About me</a>
-            <a href="Genral_Chat.html" >Chat</a>    
+            <a href="Chat.html" >Chat</a>    
             <a href="mailto:syn-97@hotmail.com" >Contact me</a> 
             <div class="list-option">
                 <div>
@@ -84,20 +84,25 @@
                             </div>
                         </div>
                     </div>
+                    
                     <div class="add-data-section">
-                        <div class="add-blog-section">
-                            <div class="add-blog-data add-data">
+                        <div class="add-post-section">
+                            <div class="add-post-data add-data">
                                 <p align="center">Post content</p>
-                                <textarea class="Blog-textarea" rows="5" name="add_post" id="add_post" placeholder="post content" onload="TextAreaAdjust(this)" onkeypress="TextAreaAdjust(this)" onmousedown="TextAreaAdjust(this)" ondragover="dragover(this)" ondragleave="dragout(this)"  ondrop="TextAreaDrop(this,event)"></textarea>
+                                <textarea class="Post-textarea" name="add_post" placeholder="post content" onchange="TextAreaAdjust(this)" onkeypress="TextAreaAdjust(this)" onkeydown="TextAreaAdjust(this)" onmousedown="TextAreaAdjust(this)" ondragover="dragover(this)" ondragleave="dragout(this)"  ondrop="TextAreaDrop(this,event)"></textarea>
+                                <input type="file" style="display: none;" onchange="inputItemchange(this)" multiple> 
                                 <div name="add_post_images"  class="droparea"  ondragover="dragover(this)" ondragleave="dragout(this)"  ondrop="TextAreaDrop(this,event)"></div>
                                 <p class="note" align="center" >drag and drop files here</p>
                             </div>
                             
                             <div class="add-data-buttons">
                                 <button name="add_task" class="button-accept" onmousedown="finalcheck()">Post</button>
-                                <button name="add_task" class="button-cancel" onmousedown="finalcheck()">Post</button>
+                                <input type="button" name="add_task" class="button-cancel" onclick=" inputItem(this)" value="upload  file"  >
                             </div> 
                         </div>
+
+                        <!-- <input type="file" style="display: none;" onchange="inputItemchange(this)" multiple>
+                        <div name="add_post_images"  class="droparea" ondragover="dragover(this)" ondragleave="dragout(this)"  ondrop="TextAreaDrop(this,event)" ></div> -->
                     </div>
                     
                 </form>

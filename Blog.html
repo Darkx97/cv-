@@ -28,7 +28,7 @@
                 <li><a href="Goals.html" >Goals</a></li>
                 <li><a href="Blog.html" class="in-page">Blog</a></li>
                 <li><a href="aboutme.html" >About me</a></li>
-                <li><a href="Genral_Chat.html" >Chat</a></li>
+                <li><a href="Chat.html" >Chat</a></li>
                 <li><a href="mailto:syn-97@hotmail.com" >Contact me</a></li>
                 
             </ul>
@@ -47,7 +47,7 @@
             <a href="Goals.html" >Goals</a>
             <a href="Blog.html" class="in-page">Blog</a>
             <a href="aboutme.html" >About me</a>
-            <a href="Genral_Chat.html">Chat</a>    
+            <a href="Chat.html">Chat</a>    
             <a href="mailto:syn-97@hotmail.com" >Contact me</a> 
             <div class="list-option">
                 <div>
@@ -93,7 +93,7 @@
                                 </div>
                                 <div class="add-data-L">
                                     <p class="indicator">section content</p>
-                                    <textarea class="Post-textarea" id=""  rows="5"></textarea>
+                                    <textarea class="New-Section-textarea" name="add_post" id="add_post" placeholder="post content" onload="TextAreaAdjust(this)" onkeypress="TextAreaAdjust(this)" onmousedown="TextAreaAdjust(this)"  ></textarea>
                                 </div>
                             </div>
 
@@ -107,7 +107,7 @@
 
 
                 </form>
-
+                
                 <div class="Row">
                         <h1 class="title">Welcome to Blog.</h1>
                         <p class="Content">this is where I have my thoughts . things im interested in  and maybe problems im trying to solve .</p>
@@ -140,12 +140,12 @@
                         </div>
                     </div>
                     <div class="add-data-section">
-                        <div class="add-blog-section">
+                        <div class="add-blog-section" onchange="TextAreaAdjust(this)">
                             <div class="add-blog-data add-data">
                                 <p align="center">Blog title</p>
-                                <textarea class="Title-textarea" rows="1" name="add_post_title" id="" placeholder="post title "  onkeypress="TextAreaAdjust(this)" onclick="TextAreaAdjust(this)"></textarea>
+                                <textarea class="Title-textarea"  name="add_post_title" id="" placeholder="post title "  ></textarea>
                                 <p align="center">Blog content</p>
-                                <textarea class="Blog-textarea" rows="5" name="add_post" id="add_post" placeholder="post content" onload="TextAreaAdjust(this)" onkeypress="TextAreaAdjust(this)" onmousedown="TextAreaAdjust(this)" ondragover="dragover(this)" ondragleave="dragout(this)"  ondrop="TextAreaDrop(this,event)"></textarea>
+                                <textarea class="Blog-textarea" name="add_post" id="add_post" placeholder="post content" onload="TextAreaAdjust(this)" onkeypress="TextAreaAdjust(this)" onchange="TextAreaAdjust(this)" on="TextAreaAdjust(this)" onmousedown="TextAreaAdjust(this)" ondragover="dragover(this)" ondragleave="dragout(this)"  ondrop="TextAreaDrop(this,event)"></textarea>
                                 <div name="add_post_images"  class="droparea"  ondragover="dragover(this)" ondragleave="dragout(this)"  ondrop="TextAreaDrop(this,event)"></div>
                                 <p class="note" align="center" >drag and drop files here</p>
                             </div>

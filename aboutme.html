@@ -28,7 +28,7 @@
                 <li><a href="Goals.html" >Goals</a></li>
                 <li><a href="Blog.html" >Blog</a></li>
                 <li><a href="aboutme.html" class="in-page">About me</a></li>
-                <li><a href="Genral_Chat.html" >Chat</a></li>
+                <li><a href="Chat.html" >Chat</a></li>
                 <li><a href="mailto:syn-97@hotmail.com" >Contact me</a></li>
                 
             </ul>
@@ -47,7 +47,7 @@
             <a href="Goals.html" >Goals</a>
             <a href="Blog.html">Blog</a>
             <a href="aboutme.html"  class="in-page">About me</a>
-            <a href="Genral_Chat.html">Chat</a>    
+            <a href="Chat.html">Chat</a>    
             <a href="mailto:syn-97@hotmail.com" >Contact me</a> 
             <div class="list-option">
                 <div>
@@ -96,15 +96,11 @@
                                 
                                 <div class="add-data-M">
                                     <p class="indicator">say hello</p>
-                                    <textarea class="Title-textarea" id=""  rows="1"></textarea>
-                                </div>
-                                <div class="add-data-M">
-                                    <p class="indicator">leave a small message</p>
-                                    <textarea class="Title-textarea"  id=""  rows="1"></textarea>
+                                    <textarea class="Title-textarea" id="" ></textarea>
                                 </div>
                                 <div class="add-data-L">
                                     <p class="indicator">description about what you do </p>
-                                    <textarea class="Post-textarea" id=""  rows="5"></textarea>
+                                    <textarea class="Self-Description-textarea" name="add_post" id="add_post" placeholder="post content" onload="TextAreaAdjust(this)" onkeypress="TextAreaAdjust(this)" onmousedown="TextAreaAdjust(this)" ></textarea>
                                 </div>
                             </div>
                             
@@ -150,9 +146,9 @@
                                     <div class="add-picture" >
                                         <p class="indicator">add image</p>
                                         <textarea class="Skill-Name-text" rows="1" name="Add_Skill_Name" id="Add_Skill_Name" placeholder="post content"></textarea>
-                                        <input style="display: none;" type="file" accept="image/png, image/jpeg, image/jpg" value="tap"> 
-                                        <div class="Add-Skill-Image" name="Add_Skill_Image"  ondragover="dragover(this)" ondragleave="dragout(this)"  ondrop="PictureDrop(this,event)">
-                                            <p class="note" align="center" style="cursor: pointer;">click / tap to add picture</p>
+                                        <input style="display: none;" type="file" accept="image/png, image/jpeg, image/jpg" value="tap" onchange="skillItemChange(this)"> 
+                                        <div class="Add-Skill-Image" name="Add_Skill_Image"  ondragover="dragover(this)" ondragleave="dragout(this)"  ondrop="PictureDrop(this,event)"">
+                                            <p class="note" align="center" style="cursor: pointer;" onclick="inputItem(this)">click / tap to add picture</p>
                                         </div>
                                     </div>
     
@@ -180,12 +176,6 @@
                                             <label class="option" for="Skill_Expert" >
                                                 <p class="option-text" onclick="">Expert</p>
                                             </label>
-    
-    
-                                            <!-- <input id="Skill_Master" type="radio" style="display:none" name="Skill_level" value="Master"></input>
-                                            <label class="option" for="Skill_Master" >
-                                                <p class="option-text">Master</p>
-                                            </label> -->
     
                                         </div>
                                     </div>
@@ -266,7 +256,7 @@
                                 </div>
                                 <div class="add-data-L">
                                     <p class="indicator">section content</p>
-                                    <textarea class="Post-textarea" id=""  rows="5"></textarea>
+                                    <textarea class="New-Section-textarea" name="add_post" id="add_post" placeholder="post content" onload="TextAreaAdjust(this)" onkeypress="TextAreaAdjust(this)" onmousedown="TextAreaAdjust(this)" ></textarea>
                                 </div>
                             </div>
 

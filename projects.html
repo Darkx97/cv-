@@ -29,7 +29,7 @@
                 <li><a href="Goals.html" >Goals</a></li>
                 <li><a href="Blog.html" >Blog</a></li>
                 <li><a href="aboutme.html" >About me</a></li>
-                <li><a href="Genral_Chat.html">Chat</a></li>
+                <li><a href="Chat.html">Chat</a></li>
                 <li><a href="mailto:syn-97@hotmail.com" >Contact me</a></li>
             </ul>
 
@@ -47,7 +47,7 @@
             <a href="Goals.html" >Goals</a>
             <a href="Blog.html" >Blog</a>
             <a href="aboutme.html" >About me</a>
-            <a href="Genral_Chat.html" >Chat</a>    
+            <a href="Chat.html" >Chat</a>    
             <a href="mailto:syn-97@hotmail.com" >Contact me</a> 
             <div class="list-option">
                 <div>
@@ -96,9 +96,9 @@
                                     </div>
                                     <div class="add-picture" >
                                         <p class="indicator">add image</p>
-                                        <input style="display: none;" type="file" accept="image/png, image/jpeg, image/jpg" value="tap"> 
-                                        <div class="Add-Skill-Image" name="Add_Skill_Image"  ondragover="dragover(this)" ondragleave="dragout(this)"  ondrop="PictureDrop(this,event)">
-                                            <p class="note" align="center" style="cursor: pointer;">click / tap to add picture</p>
+                                        <input style="display: none;" type="file" accept="image/png, image/jpeg, image/jpg" value="tap" onchange="skillItemChange(this)"> 
+                                        <div class="Add-Skill-Image" name="Add_Skill_Image"  ondragover="dragover(this)" ondragleave="dragout(this)"  ondrop="PictureDrop(this,event)"">
+                                            <p class="note" align="center" style="cursor: pointer;" onclick="inputItem(this)">click / tap to add picture</p>
                                         </div>
                                     </div>
                                 </div>

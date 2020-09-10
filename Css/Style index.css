@@ -47,15 +47,22 @@
 
     --new-section-height: 300px;
     --blog-section-height: 325px;
+    --post-section-height: 231px;
     --skill-section-height: 220px;
     --project-section-height: 290px;
     --self-description-section-height: 380px;
 
     --Sign-in-section-width:500px;
 
+    --Post--Textarea-height : 115px;
+    --Blog--Textarea-height : 115px;
+    --Project-Textarea-height : 115px;
+    --Chat-Textarea-height : 50px;
+
     --add-skill-img-size : 80px;
-    --drop-file-size:80px;
+    --drop-file-size:85px;
 }
+
 html[data-theme ='dark']
 {
     --body-bg-color : #252525;
@@ -376,12 +383,41 @@ html{
     textarea.Post-textarea
     {
         margin: 0;
-        width: calc(98% - 5px);
+        width: calc(95% - 5px);
+        height: var(--Post--Textarea-height);
+    }
+    textarea.Project-textarea
+    {
+        margin: 0;
+        width: calc(95% - 5px);
+        height: var(--Project-Textarea-height);
     }
     textarea.Blog-textarea
     {
-        margin: 0px;
+        margin: 0;
+        width: calc(95% - 5px);
+        height: var(--Blog--Textarea-height);
     }
+    textarea.Self-Description-textarea
+    {
+        margin: 0;
+        width: calc(95% - 5px);
+        height: var(--Blog--Textarea-height);
+    }
+    textarea.New-Section-textarea
+    {
+        margin: 0;
+        width: calc(95% - 5px);
+        height: var(--Blog--Textarea-height);
+    }
+
+    textarea.Chat-textarea
+    {
+        margin: 0px;
+        height: var(--Chat-Textarea-height);
+    }
+
+
     textarea.Skill-Name-text
     {
         align-self: center;
@@ -785,7 +821,33 @@ html{
     {
         margin-bottom: 15px;
     }
-    .add-blog-input
+    .add-blog-section.active
+    {
+        height: var(--blog-section-height);
+    }
+
+    .add-post-section
+    {
+        width: 95%;
+        height: 0px;
+        display: grid;
+        justify-self: center;
+        justify-items: center;
+        justify-content: center;
+        transition: all 0.5s ease;
+        grid-template-columns: 1fr;
+    }
+
+    .add-post-data
+    {
+        justify-items: center;
+    }
+
+    .add-post-data p:last-child 
+    {
+        margin-bottom: 15px;
+    }
+    .add-post-input
     {
         width: 95%;
         display: grid;
@@ -796,9 +858,9 @@ html{
         transition: all 0.5s ease;
     }
 
-    .add-blog-section.active
+    .add-post-section.active
     {
-        height: var(--blog-section-height);
+        height: var(--post-section-height);
     }
 
     .add-project-section
@@ -1047,12 +1109,14 @@ html{
 
     .droparea
     {
-        width: 95%;
-        margin: 5px;
+        width: 90%;
+        padding: 5px;
         display :none;
-        min-height: 20px;
-        justify-self: center;
-        max-height: fit-content;
+        flex-direction: row;
+        justify-items: start;
+        align-items: center;
+        place-self: center;
+        height: fit-content; 
         border: 2px var(--Droparea-border-color) dashed;
     }
 
@@ -1091,11 +1155,12 @@ html{
     .dropitem
     {
         text-align: center;
-        display: inline-block;
+        display: inline;
         background-image: image();
         width: var(--drop-file-size);
         height: var(--drop-file-size);
         border: 2px #00000000 solid;
+        
     }
     .dropitem:hover
     {
@@ -1577,7 +1642,7 @@ html{
 
 
 /* responsiveness start */
-@media screen and (max-width: 900px) 
+@media screen and (max-width: 1000px) 
 {
     :root
     {
@@ -1596,11 +1661,17 @@ html{
         --Textarea-font-size : 18px;
         --Textarea-line-height : 20px;
 
+
+        --Post--Textarea-height : 105px;
+        --Project-Textarea-height : 105px;
+        --Chat-Textarea-height : 50px;
+
         /* elements sizes */
 
         --new-section-height : 300px;
         --blog-section-height: 325px;
         --skill-section-height : 300px;
+        --post-section-height: 215px;
         --project-section-height:285px;
         --self-description-section-height : 380px;
 
@@ -1611,7 +1682,7 @@ html{
 }
 
 
-@media screen and (max-width: 800px) 
+@media screen and (max-width: 820px) 
 {
     :root
     {
@@ -1630,10 +1701,14 @@ html{
         --Textarea-font-size : 18px;
         --Textarea-line-height : 20px;
 
+        --Post--Textarea-height : 100px;
+        --Project-Textarea-height : 100px;
+        --Chat-Textarea-height : 40px;
         /* elements sizes */
 
         --new-section-height : 265px;
         --blog-section-height: 280px;
+        --post-section-height: 215px;
         --skill-section-height : 480px;
         --project-section-height:265px;
         --self-description-section-height : 330px;
@@ -1695,10 +1770,15 @@ html{
         --Textarea-font-size : 14px;
         --Textarea-line-height : 16px;
 
+        --Post--Textarea-height : 90px;
+        --Project-Textarea-height :90px;
+        --Chat-Textarea-height : 35px;
+
         /* elements sizes */
 
         --new-section-height : 235px;
         --blog-section-height: 325px;
+        --post-section-height: 190px;
         --skill-section-height : 450px;
         --project-section-height:240px;
         --self-description-section-height : 295px;
