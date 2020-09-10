@@ -1464,6 +1464,18 @@ html{
         border-left: var(--arrow-comment-height) rgba(0, 0, 0, 0) solid;
         border-right: var(--arrow-comment-height) rgba(0, 0, 0, 0) solid;
     }
+    .arrow-up.toggle.commentUI 
+    {
+        visibility: visible;
+        transform:  translateY(calc(var(--arrow-comment-move) * -1));
+        transition: all 0.15s cubic-bezier(.44,.68,.64,.72);
+    }
+    .arrow-down.toggle.commentUI
+    {
+        visibility: hidden;
+        transform:  translateY(var(--arrow-comment-move));
+        transition: all 0.15s cubic-bezier(.44,.68,.64,.72);
+    }
 
     .arrow-button
     {
@@ -1514,13 +1526,7 @@ html{
         border-right: 10px rgba(0, 0, 0, 0) solid;
         transition: all 0.15s cubic-bezier(.44,.68,.64,.72);
     }
-    .arrow-up.toggle
-    {
-        visibility: visible;
-        transform:  translateY(calc(var(--arrow-comment-move) * -1));
-        transition: all 0.15s cubic-bezier(.44,.68,.64,.72);
-    }
-
+    
     .arrow-down
     {
         z-index: 1;
@@ -1534,10 +1540,17 @@ html{
         border-right: 10px rgba(0, 0, 0, 0) solid;
         transition: all 0.15s cubic-bezier(.44,.68,.64,.72);
     }
+
+    .arrow-up.toggle
+    {
+        visibility: visible;
+        transform:  translateY(-30px);
+        transition: all 0.15s cubic-bezier(.44,.68,.64,.72);
+    }
     .arrow-down.toggle
     {
         visibility: hidden;
-        transform:  translateY(var(--arrow-comment-move));
+        transform:  translateY(50px);
         transition: all 0.15s cubic-bezier(.44,.68,.64,.72);
     }
 
