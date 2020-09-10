@@ -60,8 +60,8 @@ function toggleUI(element)
 
 function toggleMode(element)
 {
-    let check = element.parentElement.querySelector('.DLMode');
-    if(!check.checked)
+    let check = element.querySelector('.DLMode');
+    if(check.checked)
     {
         document.documentElement.setAttribute('data-theme','light');
     }
@@ -153,6 +153,15 @@ function TextAreaAdjust(TA)
         TextMaxHegiht =300;
         ParentMaxhight = TextMaxHegiht+dropareaheight+ 175;
 
+    }
+    else if(TA.classList.contains("Comment-textarea"))
+    {
+        Textareaheight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--Textarea-line-height'));
+
+        sectionHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--comment-section-height')+dropareaheight);
+        minrows =1;
+        TextMaxHegiht =200;
+        ParentMaxhight = TextMaxHegiht+dropareaheight+ 25;
     }
 
     if(TA.value.length)
@@ -284,7 +293,6 @@ function TextAreaDropFile(droparea,file)
 {
     droparea.style.display="inline";
     let textarea =droparea.parentElement.querySelector(".Post-textarea") || droparea.parentElement.querySelector(".Chat-textarea") || droparea.parentElement.querySelector(".Blog-textarea");
-
     const reader = new FileReader();
     reader.readAsDataURL(file);
     reader.onload = () =>

@@ -45,12 +45,21 @@
 
     /* elements sizes */
 
+    --arrow-button-comment-width : 35px;
+    --arrow-comment-width:15px;
+    --arrow-comment-height:10px;
+    --arrow-comment-move:25px;
+    --arrow-top-comment-distant:17px;
+    --arrow-bottom-comment-distant:10px;
+
+
     --new-section-height: 300px;
     --blog-section-height: 325px;
     --post-section-height: 231px;
     --skill-section-height: 220px;
     --project-section-height: 290px;
     --self-description-section-height: 380px;
+    --comment-section-height:75px;
 
     --Sign-in-section-width:500px;
 
@@ -102,7 +111,6 @@ html[data-theme ='dark']
 
     --Textarea-border : #1d1d1d;
     --Textarea-background : #333333;
-
 }
 
 html[data-theme ='light']
@@ -204,7 +212,7 @@ html{
     body
     {
         position: relative;
-        transition: all 0.55s ease-out;
+        transition: all 0.55s cubic-bezier(.44,.68,.64,.72)-out;
         background-color:var(--body-bg-color);
     }
 
@@ -220,12 +228,10 @@ html{
         margin-top: 5px;
         font-weight: 100;
         font-size: var(--P-text-size);
-        /* padding-left: 15px; */
+
         margin-bottom: 5px ;
-        /* white-space: pre-wrap; */
-        /* word-break: break-word; */
         font-family: romanserif;
-        transition: all 0.3s ease;
+        transition: all 0.3s cubic-bezier(.44,.68,.64,.72);
         color: var(--Normal-text-color);
     }
 
@@ -234,7 +240,7 @@ html{
         margin: 0;
         font-weight: 100;
         font-family: bpmono;
-        transition: all 0.3s ease;
+        transition: all 0.3s cubic-bezier(.44,.68,.64,.72);
         font-size: var(--H1-text-size);
         color: var(--Title-text-color );
     }
@@ -245,7 +251,7 @@ html{
         font-weight: 100;
         font-size: var(--H2-text-size);
         font-family: Roboto ;
-        transition: all 0.3s ease;
+        transition: all 0.3s cubic-bezier(.44,.68,.64,.72);
         color: var(--Title-text-color);
     }
 
@@ -260,7 +266,7 @@ html{
         margin: 0;
         font-size: var(--H4-text-size);
         font-family: xolonium;
-        transition: all 0.3s ease;
+        transition: all 0.3s cubic-bezier(.44,.68,.64,.72);
         color: var(--Title-text-color );
     }
     hr
@@ -269,7 +275,7 @@ html{
         height: 2px;
         margin: 5px auto;
         border-style: none;
-        transition: all 0.5s ease;
+        transition: all 0.5s cubic-bezier(.44,.68,.64,.72);
         background-color: var(--HR-color);
         position: relative;
         justify-self: flex-start;
@@ -300,7 +306,7 @@ html{
         scrollbar-width: thin;
         white-space: pre-line;
         font-family: romanserif;
-        transition: all 0.5s ease;
+        transition: all 0.5s cubic-bezier(.44,.68,.64,.72);
         color: var(--Normal-text-color);
         font-size: var(--Textarea-font-size);
         line-height: var(--Textarea-line-height);
@@ -319,7 +325,7 @@ html{
         scrollbar-width: thin;
         white-space: pre-line;
         font-family: romanserif;
-        transition: all 0.5s ease;
+        transition: all 0.5s cubic-bezier(.44,.68,.64,.72);
         color: var(--Normal-text-color);
         font-size: var(--Textarea-font-size);
         line-height: var(--Textarea-line-height);
@@ -339,7 +345,7 @@ html{
         scrollbar-width: thin;
         white-space: pre-line;
         font-family: romanserif;
-        transition: all 0.5s ease;
+        transition: all 0.5s cubic-bezier(.44,.68,.64,.72);
         color: var(--Normal-text-color);
         font-size: var(--Textarea-font-size);
         line-height: var(--Textarea-line-height);
@@ -358,19 +364,19 @@ html{
         scrollbar-width: thin;
         white-space: pre-line;
         font-family: romanserif;
-        transition: all 0.5s ease;
         color: var(--Normal-text-color);
         font-size: var(--Textarea-font-size);
         line-height: var(--Textarea-line-height);
         border: 2px var(--Textarea-border) solid;
         background-color: var(--Textarea-background);
+        transition: all 0.2s cubic-bezier(.44,.68,.64,.72);
         scrollbar-color: var(--Main-scroll-thumb-color) var(--Main-scroll-bar-color);
     }
 
     textarea.Comment-textarea
     {
         width: calc(98% - 5px);
-        margin: 15px 0;
+        height: var(--Textarea-line-height);
         
     }
     textarea.Title-textarea
@@ -442,7 +448,7 @@ html{
     {
         font-size: var(--small-font-size);
         font-family: xolonium;
-        transition: all 0.3s ease;
+        transition: all 0.3s cubic-bezier(.44,.68,.64,.72);
         color: var(--Note-text-color );
     }
 
@@ -460,7 +466,7 @@ html{
         font-family: xolonium;
         color: var(--Normal-text-color);
         font-size: var(--button-font-size);
-        transition: background-color 0.5s ease;
+        transition: background-color 0.5s cubic-bezier(.44,.68,.64,.72);
         border: 2px var(--Universal-border-color) solid;
         background-color: var(--Button-accept-bg-color);
     }
@@ -475,7 +481,7 @@ html{
     .button-accept:active
     {
         transform: translateY(2px) ;
-        transition: translateY 0.05s ease;
+        transition: translateY 0.5s cubic-bezier(.44,.68,.64,.72);
         background-color: var(--Button-accept-hover-bg-color);   
     }
 
@@ -487,7 +493,7 @@ html{
         font-family:  xolonium;
         color: var(--Normal-text-color);
         font-size: var(--button-font-size);
-        transition: background-color 0.5s ease;
+        transition: background-color 0.5s cubic-bezier(.44,.68,.64,.72);
         border: 2px var(--Universal-border-color) solid;
         background-color: var(--Button-cancel-bg-color);
 
@@ -499,7 +505,7 @@ html{
     .button-cancel:active
     {
         transform: translateY(2px) ;
-        transition: translateY 0.05s ease;
+        transition: translateY 0.05s cubic-bezier(.44,.68,.64,.72);
         background-color: var(--Button-cancel-bg-hover-color);
     }
 
@@ -611,7 +617,7 @@ html{
         margin-left: 2.5%;
         margin-right: 2.5%;
         overflow-x: hidden;
-        transition: all 0.575s ease-out;
+        transition: all 0.575s cubic-bezier(.44,.68,.64,.72)-out;
         background-color:var(--body-bg-color);
     }
 
@@ -632,6 +638,8 @@ html{
         margin-top: 10px;
         margin-bottom: 10px;
         grid-template-columns: 1fr;
+        place-self: center;
+        text-align:start ;
     }
 
     .Content-picture
@@ -676,7 +684,7 @@ html{
         border-radius: 6px;
         height: fit-content;
         scrollbar-width: thin;
-        transition: all 0.5s ease;
+        transition: all 0.5s cubic-bezier(.44,.68,.64,.72);
         background-color: var(--Data-input-bg-color);
         border: 2px var(--Universal-border-color) solid;
         scrollbar-color: var(--Main-scroll-thumb-color) var(--Main-scroll-bar-color);
@@ -700,18 +708,20 @@ html{
     .add-comment-section
     {
         margin: 0;
-        padding: 0;
+        padding: 0 0 10px 0;
         width:100%;
+        height: var(--comment-section-height);
         display: grid;
-        align-items: center;
-        grid-template-columns: 1fr 20fr 1fr ;
-        justify-content: center;
-        align-content: center;
-        place-self: center;
         border-radius: 6px;
+        place-self: center;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        grid-template-columns: 1fr 10fr 1fr ;
         background-color: var(--Data-input-bg-color);
         border: 2px var(--Universal-border-color) solid;
         scrollbar-color: var(--Main-scroll-thumb-color) var(--Main-scroll-bar-color);
+        transition: all 0.5s cubic-bezier(.44,.68,.64,.72);
     }
 
     .add-comment-text
@@ -744,12 +754,12 @@ html{
         justify-self: center;
         justify-items: center;
         justify-content: center;
-        transition: all 0.5s ease;
+        transition: all 0.5s cubic-bezier(.44,.68,.64,.72);
         grid-template-columns: 1fr;
     }
     .add-skill-section.active
     {
-        transition: all 0.4s ease;
+        transition: all 0.4s cubic-bezier(.44,.68,.64,.72);
         height: var(--skill-section-height);
     }
     
@@ -762,7 +772,7 @@ html{
         justify-content: center;
         justify-items: center;
         justify-self: center;
-        transition: all 0.5s ease;
+        transition: all 0.5s cubic-bezier(.44,.68,.64,.72);
         grid-template-columns: 1fr;
     }
 
@@ -778,7 +788,7 @@ html{
         display: grid;
         justify-content: center;
         justify-items: center;
-        transition: all 0.5s ease;
+        transition: all 0.5s cubic-bezier(.44,.68,.64,.72);
         grid-template-columns: 1fr;
     }
     .add-new-section.active
@@ -797,7 +807,7 @@ html{
         padding: 10px 5px;
         align-items: start;
         height: fit-content;
-        transition: all 0.5s ease;
+        transition: all 0.5s cubic-bezier(.44,.68,.64,.72);
     }
 
     .add-blog-section
@@ -808,7 +818,7 @@ html{
         justify-self: center;
         justify-items: center;
         justify-content: center;
-        transition: all 0.5s ease;
+        transition: all 0.5s cubic-bezier(.44,.68,.64,.72);
         grid-template-columns: 1fr;
     }
 
@@ -834,7 +844,7 @@ html{
         justify-self: center;
         justify-items: center;
         justify-content: center;
-        transition: all 0.5s ease;
+        transition: all 0.5s cubic-bezier(.44,.68,.64,.72);
         grid-template-columns: 1fr;
     }
 
@@ -855,7 +865,7 @@ html{
         padding: 20px 4px;
         align-items: start;
         height: fit-content;
-        transition: all 0.5s ease;
+        transition: all 0.5s cubic-bezier(.44,.68,.64,.72);
     }
 
     .add-post-section.active
@@ -871,7 +881,7 @@ html{
         justify-self: center;
         justify-items: center;
         justify-content: center;
-        transition: all 0.5s ease;
+        transition: all 0.5s cubic-bezier(.44,.68,.64,.72);
         grid-template-columns: 1fr;
     }
 
@@ -931,7 +941,7 @@ html{
         place-items: center;
         place-content: center;
         align-content: center;
-        transition: all 0.6s ease;
+        transition: all 0.6s cubic-bezier(.44,.68,.64,.72);
     }
 
 
@@ -991,7 +1001,7 @@ html{
         height: 0px;
         overflow-y: scroll;
         scrollbar-width: thin;
-        transition: all 0.6s ease;
+        transition: all 0.6s cubic-bezier(.44,.68,.64,.72);
         scrollbar-color: var(--Main-scroll-thumb-color) var(--Main-scroll-bar-color);
     }
     .Comments.active
@@ -1032,10 +1042,10 @@ html{
 
     .responsiveImg
     {
-        width: 95%;
+        width: 40%;
         height: auto;
         place-self: center;
-        transition: all 0.5s ease;
+        transition: all 0.5s cubic-bezier(.44,.68,.64,.72);
     }
 
     .Skill-section
@@ -1060,7 +1070,7 @@ html{
         place-content: center;
         align-content: center;
         justify-content: center;
-        transition: all 0.5s ease;
+        transition: all 0.5s cubic-bezier(.44,.68,.64,.72);
     }
     .profileImg
     {
@@ -1068,7 +1078,7 @@ html{
         margin: 0 10px;
         max-width: 50px;
         border-radius: 100%;
-        transition: all 0.5s ease;
+        transition: all 0.5s cubic-bezier(.44,.68,.64,.72);
         border: 2px var(--Universal-border-color) solid;
     }
     
@@ -1197,7 +1207,7 @@ html{
         text-decoration: none;
         font-family: xolonium;
         margin: 0 0 0 10px;
-        transition: all 0.3s ease;
+        transition: all 0.3s cubic-bezier(.44,.68,.64,.72);
         justify-content: flex-start;
         color: var(--List-text-color);
         font-size: var(--H3-text-size);
@@ -1240,7 +1250,7 @@ html{
         padding: 5px 10px;
         font-family: bpmono;
         text-decoration: none;
-        transition: all 0.3s ease;
+        transition: all 0.3s cubic-bezier(.44,.68,.64,.72);
         
         color: var(--List-text-color);
     }
@@ -1270,7 +1280,7 @@ html{
         place-items: center;
         scrollbar-width: thin;
         flex-direction: column;
-        transition: all 0.5s ease;
+        transition: all 0.5s cubic-bezier(.44,.68,.64,.72);
         background-color:var(--Nav-list-bg-color);
         scrollbar-color: var(--Main-scroll-thumb-color) var(--Main-scroll-bar-color);
     }
@@ -1291,7 +1301,7 @@ html{
         font-family: bpmono;
         text-decoration: none;
         border-color: #00000000;
-        transition: all 0.5s ease;
+        transition: all 0.5s cubic-bezier(.44,.68,.64,.72);
         color: var(--List-text-color);
         
     }
@@ -1302,7 +1312,7 @@ html{
     }
     .nav-list .in-page
     {
-        transition: all 0.5s ease;
+        transition: all 0.5s cubic-bezier(.44,.68,.64,.72);
         color: var(--Normal-text-color);
         border-color: var(--Normal-text-color);
     }
@@ -1320,14 +1330,14 @@ html{
         width: 25px;
         height: 3px;
         margin: 5px;
-        transition: all 0.5s ease;
+        transition: all 0.5s cubic-bezier(.44,.68,.64,.72);
         color: var(--Universal-border-color);
         background-color: var(--Normal-text-color);
     }
     .nav-active
     {
         height: 400px;
-        transition: all 0.5s ease;
+        transition: all 0.5s cubic-bezier(.44,.68,.64,.72);
     }
 
     .toggle .line1
@@ -1352,7 +1362,7 @@ html{
         padding: 0px 4px;
         place-items: center;
         justify-self: center;
-        transition: all 0.5s ease;
+        transition: all 0.5s cubic-bezier(.44,.68,.64,.72);
         border-left: 2px var(--Universal-border-color) solid;
         border-right: 2px var(--Universal-border-color) solid;
     }
@@ -1360,7 +1370,7 @@ html{
     .option-text
     {
         font-size: var(--small-font-size);
-        transition: all 0.5s ease;
+        transition: all 0.5s cubic-bezier(.44,.68,.64,.72);
         padding: 2px 4px;
         font-family: xolonium;
         color: var(--Normal-text-color);
@@ -1371,7 +1381,7 @@ html{
         cursor: pointer;
         width: 100%;
         text-align: center;
-        transition: all 0.5s ease;
+        transition: all 0.5s cubic-bezier(.44,.68,.64,.72);
         background: var(#00000000);
     }
 
@@ -1395,7 +1405,7 @@ html{
         display: flex;
         cursor: pointer;
         border-radius: 40px;
-        transition: all 0.5s ease;
+        transition: all 0.5s cubic-bezier(.44,.68,.64,.72);
         background-color: var(--Switch-bg-color);
         border: 2px var(--Switch-border-color) outset;
     }
@@ -1408,7 +1418,7 @@ html{
         height: 14px;
         position: relative;
         border-radius:100px;
-        transition: all 0.5s ease;
+        transition: all 0.5s cubic-bezier(.44,.68,.64,.72);
         background-color: var(--Switch-ball-color);
     }
 
@@ -1433,6 +1443,28 @@ html{
         place-items: center;
     }
 
+    .arrow-button.commentUI
+    {
+        min-width: var(--arrow-button-comment-width);
+        height: var(--arrow-button-comment-width);
+    }
+    .arrow-up.commentUI
+    {
+        top: var(--arrow-top-comment-distant);
+        border-top: var(--arrow-comment-width) rgba(0, 0, 0, 0) solid;
+        border-bottom: var(--arrow-comment-width) var(--Normal-text-color) solid;
+        border-left: var(--arrow-comment-height) rgba(0, 0, 0, 0) solid;
+        border-right: var(--arrow-comment-height) rgba(0, 0, 0, 0) solid;
+    }
+    .arrow-down.commentUI
+    {
+        top: var(--arrow-bottom-comment-distant);
+        border-bottom: var(--arrow-comment-width) rgba(0, 0, 0, 0) solid;
+        border-top: var(--arrow-comment-width) var(--Normal-text-color) solid;
+        border-left: var(--arrow-comment-height) rgba(0, 0, 0, 0) solid;
+        border-right: var(--arrow-comment-height) rgba(0, 0, 0, 0) solid;
+    }
+
     .arrow-button
     {
         z-index: 3;
@@ -1447,7 +1479,7 @@ html{
         justify-items: center;
         background: var(--Button-cancel-bg-color);
         border:2px var(--Universal-border-color) solid;
-        transition: all 0.2s cubic-bezier(.44,.68,.64,.72);
+        transition: all 0.5s cubic-bezier(.44,.68,.64,.72);
         transition: active 0.1s ;
     }
     .arrow-button:hover
@@ -1464,7 +1496,7 @@ html{
     .arrow-button-text
     {
         font-family: xolonium;
-        transition: all 0.3s ease;
+        transition: all 0.3s cubic-bezier(.44,.68,.64,.72);
         color: var(--Normal-text-color );
         font-size: var(--small-font-size);
     }
@@ -1485,7 +1517,7 @@ html{
     .arrow-up.toggle
     {
         visibility: visible;
-        transform:  translateY(-30px);
+        transform:  translateY(calc(var(--arrow-comment-move) * -1));
         transition: all 0.15s cubic-bezier(.44,.68,.64,.72);
     }
 
@@ -1505,7 +1537,7 @@ html{
     .arrow-down.toggle
     {
         visibility: hidden;
-        transform:  translateY(-25px);
+        transform:  translateY(var(--arrow-comment-move));
         transition: all 0.15s cubic-bezier(.44,.68,.64,.72);
     }
 
@@ -1515,14 +1547,14 @@ html{
 .comment-section-active
 {
     height: 600px;
-    transition: all 0.5s ease;
+    transition: all 0.5s cubic-bezier(.44,.68,.64,.72);
 }
 
 .add-data-section
 {
     display: grid; 
     overflow: hidden;
-    transition: all 0.5s ease;
+    transition: all 0.5s cubic-bezier(.44,.68,.64,.72);
     /* background-color: var(--body-bg-color); */
 }
 
@@ -1637,7 +1669,6 @@ html{
     align-content: center;
     flex-direction: column;
     transition: all 0.5s cubic-bezier(.44,.68,.64,.72);
-    background-color: var(--body-bg-color);
 }
 
 
@@ -1661,7 +1692,13 @@ html{
         --Textarea-font-size : 18px;
         --Textarea-line-height : 20px;
 
-
+        --arrow-button-comment-width : 30px;
+        --arrow-comment-width:12px;
+        --arrow-comment-height:8px;
+        --arrow-comment-move:25px;
+        --arrow-top-comment-distant:20px;
+        --arrow-bottom-comment-distant:7px;
+    
         --Post--Textarea-height : 105px;
         --Project-Textarea-height : 105px;
         --Chat-Textarea-height : 50px;
@@ -1700,6 +1737,14 @@ html{
 
         --Textarea-font-size : 18px;
         --Textarea-line-height : 20px;
+
+        --arrow-button-comment-width : 20px;
+        --arrow-comment-width:8px;
+        --arrow-comment-height:5px;
+        --arrow-comment-move:25px;
+        --arrow-top-comment-distant:20px;
+        --arrow-bottom-comment-distant:5px;
+
 
         --Post--Textarea-height : 100px;
         --Project-Textarea-height : 100px;
@@ -1740,7 +1785,7 @@ html{
     .comment-active
     {
         height: 400px;
-        transition: all 0.5s ease;
+        transition: all 0.5s cubic-bezier(.44,.68,.64,.72);
     }
 
     .add-skill-input
@@ -1769,6 +1814,14 @@ html{
 
         --Textarea-font-size : 14px;
         --Textarea-line-height : 16px;
+
+        --arrow-button-comment-width : 20px;
+        --arrow-comment-width:8px;
+        --arrow-comment-height:5px;
+        --arrow-comment-move:25px;
+        --arrow-top-comment-distant:20px;
+        --arrow-bottom-comment-distant:5px;
+
 
         --Post--Textarea-height : 90px;
         --Project-Textarea-height :90px;

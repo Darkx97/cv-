@@ -56,9 +56,9 @@
                     </h4>
                 </div>
                 
-                <div>
+                <div onclick="toggleMode(this)">
                     <input type="checkbox" class="checkbox DLMode" id="DLMode">
-                    <label for="DLMode" class="switch" onclick="toggleMode(this)">
+                    <label for="DLMode" class="switch" >
                         <div class="ball"></div>
                     </label>
                 </div>
@@ -107,7 +107,6 @@
                             
                             <div class="add-data-buttons">
                                 <button name="add_task" class="button-accept" onmousedown="finalcheck()">Post</button>
-                                <button name="add_task" class="button-cancel" onmousedown="finalcheck()">Post</button>
                             </div> 
                         </div>
                     </div>
@@ -158,22 +157,27 @@
                     <div class="comment-section ">
                         
                         <!-- <div class="add-data"> -->
-                            <div class="add-comment-section">
+                            <div class="add-comment-section active">
                                 <div >
                                     <img src="Icons\Defult_User.png" alt="" class="profileImg">
                                 </div>
                                 <div>
-                                    <textarea class="Comment-textarea" placeholder="Leave a Comment" name="" id=""  rows="1" class="Text"  onkeyup="textAreaAdjust(this)" onkeydown="textAreaAdjust(this)" onkeypress="textAreaAdjust(this)" onclick="textAreaAdjust(this)"></textarea>
+                                    <textarea class="Comment-textarea" placeholder="Leave a Comment" name="" id=""  class="Text"  onkeyup="TextAreaAdjust(this)" onkeydown="TextAreaAdjust(this)" onkeypress="TextAreaAdjust(this)" onclick="TextAreaAdjust(this)"></textarea>
                                 </div>
-                                <div style="display: flex;">
-                                    <button class="button-cancel">one</button>
+                                <div >
+                                    <div class="UI-button" onclick="toggleUI(this)">
+                                        <button class="arrow-button commentUI" type="button" >
+                                            <div class="arrow-up commentUI"></div>
+                                            <div class="arrow-down commentUI"></div>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>  
                             
                         <!-- </div> -->
                             <div class="add-data-buttons">
                                 <input type="button" value="Comment" class="button-accept" >
-                                <input type="button" value="show/hide comments" class="button-cancel" onclick="toggleUI(this)">
+                
                             </div> 
                         
                          
