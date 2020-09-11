@@ -1076,7 +1076,7 @@ html{
 
     .responsiveImg
     {
-        width: 40%;
+        width: 65%;
         height: auto;
         place-self: center;
         transition: all 0.5s cubic-bezier(.44,.68,.64,.72);
