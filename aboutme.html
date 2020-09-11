@@ -83,7 +83,6 @@
                 </form>
                 
                 <form >
-
                     <div class="Row" >
                         <div class="hide-show-UI">
                             <div class="UI-button" onclick="toggleUI(this)">
@@ -95,8 +94,6 @@
                             </div>
                         </div>
                     </div>
-                    
-
                     <div class="add-data-section">
                         <div class="add-self-description-section">
                             <div class="add-self-description-input add-data ">
@@ -116,8 +113,9 @@
                             </div>               
                         </div>
                     </div>
-                    <hr>
                 </form>
+
+                <hr>
 
                 <div class="Row">
                     <div class="Content" style="text-align: center;">
@@ -193,9 +191,13 @@
                                 </div> 
                             </div>
                         </div>
-                        <hr style="width: 100%;">
                     </form>
-                    
+                </div>
+
+                <hr>
+                
+                <div class="container">
+
                     <div class="Row VH-center" >
                         <div class="Skill-row" >
                             <h3>Skill</h3>
@@ -235,66 +237,64 @@
                             <p>beginner</p>
                         </div>
                     </div>
+                </div>
                     
-                    
+                <div class="container">
+                    <form >
+                        <div class="Row" >
+                            <div class="hide-show-UI">
+                                <div class="UI-button" onclick="toggleUI(this)">
+                                    <button class="arrow-button" type="button" >
+                                        <div class="arrow-up"></div>
+                                        <div class="arrow-down"></div>
+                                        <p class="note">Add new section</p>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="add-data-section">
+                            <div class="add-new-section">
+                                <div class="add-self-description-input add-data ">
+                                    
+                                    <div class="add-data-M">
+                                        <p class="indicator">section title</p>
+                                        <textarea class="Title-textarea" id=""  rows="1"></textarea>
+                                    </div>
+                                    <div class="add-data-L">
+                                        <p class="indicator">section content</p>
+                                        <textarea class="New-Section-textarea" name="add_post" id="add_post" placeholder="post content" onload="TextAreaAdjust(this)" onkeypress="TextAreaAdjust(this)" onmousedown="TextAreaAdjust(this)" ></textarea>
+                                    </div>
+                                </div>
+                                
+                                
+                                <div class="add-data-buttons">
+                                    <button name="add_task" class="button-accept" onmousedown="CreateSkillRow(this)">Post</button>
+                                </div> 
+                            </div>
+                        </div>
+                    </form>
+
                 </div>
                 
-
-                <form >
-                    <div class="Row" >
-                        <div class="hide-show-UI">
-                            <div class="UI-button" onclick="toggleUI(this)">
-                                <button class="arrow-button" type="button" >
-                                    <div class="arrow-up"></div>
-                                    <div class="arrow-down"></div>
-                                    <p class="note">Add new section</p>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="add-data-section">
-                        <div class="add-new-section">
-                            <div class="add-self-description-input add-data ">
-                                
-                                <div class="add-data-M">
-                                    <p class="indicator">section title</p>
-                                    <textarea class="Title-textarea" id=""  rows="1"></textarea>
-                                </div>
-                                <div class="add-data-L">
-                                    <p class="indicator">section content</p>
-                                    <textarea class="New-Section-textarea" name="add_post" id="add_post" placeholder="post content" onload="TextAreaAdjust(this)" onkeypress="TextAreaAdjust(this)" onmousedown="TextAreaAdjust(this)" ></textarea>
-                                </div>
-                            </div>
-
-                                                        
-                            <div class="add-data-buttons">
-                                <button name="add_task" class="button-accept" onmousedown="CreateSkillRow(this)">Post</button>
-                            </div> 
-                        </div>
-                    </div>
-                    
-
-
-                </form>
                 <hr>
                 
-
                 <div class="Row " style=" place-items: center;">
                     <h1 class="title" >Hobbies </h1>  
                     <div class="Content" >
                         <p align="left">Video games.</p>
-                
+                        
                         <p align="left">Reading.... sometimes.</p>
-                
+                        
                         <p align="left">Martial arts. </P>
-    
+                            
                         <P align="left">Drawing (not good at it).</P>
                     </div>
-
-                </div>
+                        
+                 </div>
+                    
             </div>
-            
+
             <script src="JS/Index.js"></script>
 
         </div>

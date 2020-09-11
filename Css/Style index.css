@@ -274,7 +274,7 @@ html{
     }
     hr
     {
-        width: 85%;
+        width: 98%;
         height: 2px;
         margin: 5px auto;
         border-style: none;
@@ -800,7 +800,7 @@ html{
 
     .add-self-description-section
     {
-        width: 85%;
+        width: 100%;
         height: 0px;
         display: grid;
         justify-content: center;
@@ -835,7 +835,7 @@ html{
     
     .add-self-description-input
     {
-        width: 95%;
+        width: 90%;
         display: grid;
         column-gap:8px;
         padding: 10px 5px;
@@ -1554,6 +1554,7 @@ html{
         height: 0px;
         visibility: hidden;
         position: absolute;
+        border-radius: 6px;
         border-top: 15px rgba(0, 0, 0, 0) solid;
         border-bottom: 15px var(--Normal-text-color) solid;
         border-left: 10px rgba(0, 0, 0, 0) solid;
@@ -1568,6 +1569,7 @@ html{
         width: 0px;
         height: 0px;
         position: absolute;
+        border-radius: 6px;
         border-bottom: 15px rgba(0, 0, 0, 0) solid;
         border-top: 15px var(--Normal-text-color) solid;
         border-left: 10px rgba(0, 0, 0, 0) solid;
