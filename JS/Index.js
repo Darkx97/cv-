@@ -58,6 +58,7 @@ function toggleUI(element)
 
 
 
+
 function toggleMode(element)
 {
     let check = element.querySelector('.DLMode');

@@ -70,12 +70,19 @@
         <!-- nav bar end -->
         <div class="Page">
             <div class="container">
-
-                
                 <form >
                     <div class="Row">
-                        <img class="profile-picture" src="Icons\Defult_User.png" >
+                        <input style="display: none;" type="file" accept="image/png, image/jpeg, image/jpg" value="tap" onchange="skillItemChange(this)"> 
+                        <div class="profile-picture-container" >
+                            <img class="profile-picture" id="profile-picture" src="Icons\Defult_User.png" >
+                            <div class="profile-picture-label" onclick="ChangeProfilePicture(this)">
+                                <p class="note"> change profile picture</p>
+                            </div>
+                        </div>
                     </div>
+                </form>
+                
+                <form >
 
                     <div class="Row" >
                         <div class="hide-show-UI">

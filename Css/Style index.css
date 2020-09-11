@@ -43,6 +43,8 @@
     --Textarea-font-size : 20px;
     --Textarea-line-height : 22px;
 
+    --profile-image-size: 200px;
+    
     /* elements sizes */
 
     --arrow-button-comment-width : 35px;
@@ -77,6 +79,7 @@ html[data-theme ='dark']
     --body-bg-color : #252525;
     --Data-input-bg-color :#474747;
     --Universal-border-color:#000000;
+    --change-profile-image-background:#00000048;
 
     --Main-scroll-bar-color : #2e2e2e00;
     --Main-scroll-thumb-color :#592dd3;
@@ -694,16 +697,47 @@ html{
     {
         margin: 0 0 15px 0;
     } */
-
-    .profile-picture
+    .profile-picture-container
     {
-        width: 35%;
-        height: auto;
+        width: 100%;
         display: grid;
         place-self: center;
         place-items: center;
         border-radius: 100%;
     }
+    .profile-picture
+    {
+        width: var(--profile-image-size);
+        height: var(--profile-image-size);
+        display: grid;
+        place-self: center;
+        place-items: center;
+        border-radius: 100%;
+
+    }
+
+    .profile-picture-label
+    {
+        position: absolute;
+        background-color: #00000000;
+        opacity: 0;
+        display: grid;
+        
+        width: var(--profile-image-size);
+        height: var(--profile-image-size);
+        place-self: center;
+        place-items: center;
+        border-radius:100% ;
+        border: 2px #00000000 solid;
+    }
+    
+    .profile-picture-label:hover
+    {
+        opacity: 100;
+        background-color: var(--change-profile-image-background);
+        border: 2px var(--Universal-border-color) solid;
+    }
+
 
     .add-comment-section
     {
