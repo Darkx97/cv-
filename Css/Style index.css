@@ -39,6 +39,8 @@
     --H2-text-size :40px;
     --H3-text-size :32px;
     --H4-text-size :24px;
+    --H5-text-size :26px;
+    --H6-text-size :20px;
 
     --Textarea-font-size : 20px;
     --Textarea-line-height : 22px;
@@ -51,8 +53,8 @@
     --arrow-comment-width:15px;
     --arrow-comment-height:10px;
     --arrow-comment-move:25px;
-    --arrow-top-comment-distant:17px;
-    --arrow-bottom-comment-distant:10px;
+    --arrow-top-comment-distant:23px;
+    --arrow-bottom-comment-distant:15px;
 
 
     --new-section-height: 300px;
@@ -81,8 +83,8 @@ html[data-theme ='dark']
     --Universal-border-color:#000000;
     --change-profile-image-background:#00000048;
 
-    --Main-scroll-bar-color : #2e2e2e00;
-    --Main-scroll-thumb-color :#592dd3;
+    --Main-scroll-bar-color : #131212e0;
+    --Main-scroll-thumb-color :#541bf0;
     
     --HR-color :#c0c0c0;
 
@@ -226,12 +228,12 @@ html{
         text-decoration: none;
     }
 
-    p
+    p, li
     {
         margin-top: 5px;
         font-weight: 100;
         font-size: var(--P-text-size);
-
+        white-space: pre-line;
         margin-bottom: 5px ;
         font-family: romanserif;
         transition: all 0.3s cubic-bezier(.44,.68,.64,.72);
@@ -272,9 +274,27 @@ html{
         transition: all 0.3s cubic-bezier(.44,.68,.64,.72);
         color: var(--Title-text-color );
     }
+    
+    h5
+    {
+        margin: 0;
+        font-size: var(--H5-text-size);
+        font-family: Roboto ;
+        transition: all 0.3s cubic-bezier(.44,.68,.64,.72);
+        color: var(--Title-text-color );
+    }
+    h6
+    {
+        margin: 0;
+        font-size: var(--H6-text-size);
+        font-family: Roboto ;
+        transition: all 0.3s cubic-bezier(.44,.68,.64,.72);
+        color: var(--Title-text-color );
+    }
+
     hr
     {
-        width: 98%;
+        width: 90%;
         height: 2px;
         margin: 5px auto;
         border-style: none;
@@ -287,6 +307,7 @@ html{
     form
     {
         overflow: hidden;
+        height: calc(100% + 20px);
     }
     input[type=file].file-input-button
     {
@@ -461,6 +482,11 @@ html{
         justify-self: center;
     }
 
+    .post
+    {
+        place-self: center;
+        display: grid;
+    }
     .button-accept
     {
         margin: 0px 5px;
@@ -611,6 +637,47 @@ html{
         place-items: center;
     }
 
+
+    .CV-head
+    {
+        display: flex;
+        flex-direction: column;
+        background:  #1a1a1a;
+        border-bottom: 2px black solid;
+        padding: 10px 0 ;
+    }
+    .CV-head-details
+    {
+        display: grid;
+        grid-template-columns: 1fr 1.3fr 1fr;
+        margin-left: 5%;
+    }
+
+    .CV-titles-details
+    {
+        display: grid;
+        grid-template-columns: 2fr 12fr;
+        
+    }
+
+    .CV-titles
+    {
+        display: grid;
+        justify-content: center;
+        background: #1a1a1a;
+        border-bottom: 2px rgb(0, 0, 0) solid;
+        border-right: 2px rgb(0, 0, 0) solid;
+        min-height: 50px;
+        
+    }
+
+    .CV-details
+    {
+        display: grid;
+        border-bottom: 2px black solid;
+        padding: 2px;
+    }
+    
     .container
     {
         margin :0;
@@ -619,7 +686,7 @@ html{
         max-width: 100%;
         margin-left: 2.5%;
         margin-right: 2.5%;
-        overflow-x: hidden;
+        overflow: hidden;
         transition: all 0.575s cubic-bezier(.44,.68,.64,.72)-out;
         background-color:var(--body-bg-color);
     }
@@ -664,6 +731,16 @@ html{
         align-items: center;
         grid-template-columns: 10fr 4fr;
     }
+    .Title-name-date
+    {
+        padding: 0;
+        display: grid;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        align-items: center;
+        place-content: center;
+        grid-template-columns: 1fr 9fr 4fr;
+    }
     
     .Skill-row
     {
@@ -676,6 +753,12 @@ html{
         justify-items: center;
         grid-template-columns: 2fr 10fr 2fr;
         background-color: var(--body-bg-color);
+    }
+
+    .Skill-Name-picture
+    {
+        display: flex;
+        flex-direction: column;
     }
 
     .add-data
@@ -742,12 +825,12 @@ html{
     .add-comment-section
     {
         margin: 0;
-        padding: 0 0 10px 0;
-        width:100%;
+        padding: 0 0 0 0;
         height: var(--comment-section-height);
         display: grid;
         border-radius: 6px;
         place-self: center;
+        place-items: center;
         align-items: center;
         align-content: center;
         justify-content: center;
@@ -976,6 +1059,20 @@ html{
         place-content: center;
         align-content: center;
         transition: all 0.6s cubic-bezier(.44,.68,.64,.72);
+    }
+
+    .profile-picture-buttons
+    {
+        display: none;
+        place-items: center;
+        place-content: center;
+        align-content: center;
+        margin: 10px 0px 0px 0px;
+        transition: all 0.6s cubic-bezier(.44,.68,.64,.72);
+    }
+    .profile-picture-buttons.active
+    {
+        display: flex;
     }
 
 
@@ -1471,16 +1568,18 @@ html{
     .UI-button
     {
         z-index: 1;
-        height: 20px;
+        height: 40px;
         display: grid;
         cursor: pointer;
         place-items: center;
+        position: relative;
     }
 
     .arrow-button.commentUI
     {
         min-width: var(--arrow-button-comment-width);
         height: var(--arrow-button-comment-width);
+        
     }
     .arrow-up.commentUI
     {
@@ -1500,13 +1599,11 @@ html{
     }
     .arrow-up.toggle.commentUI 
     {
-        visibility: visible;
         transform:  translateY(calc(var(--arrow-comment-move) * -1));
         transition: all 0.15s cubic-bezier(.44,.68,.64,.72);
     }
     .arrow-down.toggle.commentUI
     {
-        visibility: hidden;
         transform:  translateY(var(--arrow-comment-move));
         transition: all 0.15s cubic-bezier(.44,.68,.64,.72);
     }
@@ -1520,7 +1617,6 @@ html{
         cursor: pointer;
         padding: 0px 5px;
         width: fit-content;
-        position: absolute;
         border-radius: 6px;
         justify-items: center;
         background: var(--Button-cancel-bg-color);
@@ -1535,7 +1631,6 @@ html{
     }
     .arrow-button:active
     {
-        transform: translateY(-2px) ;
         transition: active 0.1s ;
     }
 
@@ -1552,7 +1647,7 @@ html{
         top: 40px;
         width: 0px;
         height: 0px;
-        visibility: hidden;
+        opacity: 0%;
         position: absolute;
         border-radius: 6px;
         border-top: 15px rgba(0, 0, 0, 0) solid;
@@ -1579,13 +1674,13 @@ html{
 
     .arrow-up.toggle
     {
-        visibility: visible;
+        opacity: 100%;
         transform:  translateY(-30px);
         transition: all 0.15s cubic-bezier(.44,.68,.64,.72);
     }
     .arrow-down.toggle
     {
-        visibility: hidden;
+        opacity: 0%;
         transform:  translateY(50px);
         transition: all 0.15s cubic-bezier(.44,.68,.64,.72);
     }
@@ -1714,6 +1809,7 @@ html{
     display: grid;
     position: relative;
     text-align: center;
+    margin: 0 0 15px 0;
     justify-items: center;
     align-content: center;
     flex-direction: column;
@@ -1745,8 +1841,8 @@ html{
         --arrow-comment-width:12px;
         --arrow-comment-height:8px;
         --arrow-comment-move:25px;
-        --arrow-top-comment-distant:20px;
-        --arrow-bottom-comment-distant:7px;
+        --arrow-top-comment-distant:27px;
+        --arrow-bottom-comment-distant:14px;
     
         --Post--Textarea-height : 105px;
         --Project-Textarea-height : 105px;
@@ -1756,7 +1852,7 @@ html{
 
         --new-section-height : 300px;
         --blog-section-height: 325px;
-        --skill-section-height : 300px;
+        --skill-section-height : 200px;
         --post-section-height: 215px;
         --project-section-height:285px;
         --self-description-section-height : 380px;
@@ -1791,8 +1887,8 @@ html{
         --arrow-comment-width:8px;
         --arrow-comment-height:5px;
         --arrow-comment-move:25px;
-        --arrow-top-comment-distant:20px;
-        --arrow-bottom-comment-distant:5px;
+        --arrow-top-comment-distant:33px;
+        --arrow-bottom-comment-distant:17px;
 
 
         --Post--Textarea-height : 100px;
@@ -1842,6 +1938,15 @@ html{
         grid-template-columns: 1fr;
     }
 
+    .option-list
+    {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .add-skill-section.active
+    {
+        transition: all 0.8s cubic-bezier(.44,.68,.64,.72);
+    }
 }
 
 
@@ -1868,8 +1973,8 @@ html{
         --arrow-comment-width:8px;
         --arrow-comment-height:5px;
         --arrow-comment-move:25px;
-        --arrow-top-comment-distant:20px;
-        --arrow-bottom-comment-distant:5px;
+        --arrow-top-comment-distant:33px;
+        --arrow-bottom-comment-distant:17px;
 
 
         --Post--Textarea-height : 90px;
@@ -1878,7 +1983,7 @@ html{
 
         /* elements sizes */
 
-        --new-section-height : 235px;
+        --new-section-height : 270px;
         --blog-section-height: 325px;
         --post-section-height: 190px;
         --skill-section-height : 450px;
@@ -1893,6 +1998,11 @@ html{
         grid-template-columns: 1fr;
     } 
 
+    .CV-head-details
+    {
+        grid-template-columns: 1fr;
+        margin-left: 10%;
+    }
 }
 
 /* responsiveness finish */

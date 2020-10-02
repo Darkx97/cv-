@@ -93,7 +93,7 @@
                                 </div>
                                 <div class="add-data-L">
                                     <p class="indicator">section content</p>
-                                    <textarea class="New-Section-textarea" name="add_post" id="add_post" placeholder="post content" onload="TextAreaAdjust(this)" onkeypress="TextAreaAdjust(this)" onmousedown="TextAreaAdjust(this)"  ></textarea>
+                                    <textarea class="New-Section-textarea" name="add_post" id="add_post" placeholder="post content" onkeydown=" TextAreaAdjust(this)" onclick=" TextAreaAdjust(this)" onchange=" TextAreaAdjust(this)"   ></textarea>
                                 </div>
                             </div>
 
@@ -109,8 +109,8 @@
                 </form>
                 
                 <div class="Row">
-                        <h1 class="title">Welcome to Blog.</h1>
-                        <p class="Content">this is where I have my thoughts . things im interested in  and maybe problems im trying to solve .</p>
+                        <h1 class="title">Welcome to My Blog.</h1>
+                        <p class="Content">this is where I have my thoughts. things im interested in  and maybe problems im trying to solve .</p>
                 </div>
                 
                 <hr>
@@ -125,7 +125,7 @@
                 <hr>
                 
                     
-                <h1 class="title">Posts</h1>
+                <h2 class="title">Posts</h2>
 
                 <form >
                     <div class="Row" >
@@ -143,10 +143,10 @@
                         <div class="add-blog-section" onchange="TextAreaAdjust(this)">
                             <div class="add-blog-data add-data">
                                 <p align="center">Blog title</p>
-                                <textarea class="Title-textarea"  name="add_post_title" id="" placeholder="post title "  ></textarea>
+                                <textarea class="Title-textarea"  name="add_blog_title" id="" placeholder="post title "  ></textarea>
                                 <p align="center">Blog content</p>
-                                <textarea class="Blog-textarea" name="add_post" id="add_post" placeholder="post content" onload="TextAreaAdjust(this)" onkeypress="TextAreaAdjust(this)" onchange="TextAreaAdjust(this)" on="TextAreaAdjust(this)" onmousedown="TextAreaAdjust(this)" ondragover="dragover(this)" ondragleave="dragout(this)"  ondrop="TextAreaDrop(this,event)"></textarea>
-                                <div name="add_post_images"  class="droparea"  ondragover="dragover(this)" ondragleave="dragout(this)"  ondrop="TextAreaDrop(this,event)"></div>
+                                <textarea class="Blog-textarea" name="add_blog_content" id="add_post" placeholder="post content" onkeydown=" TextAreaAdjust(this)" onclick=" TextAreaAdjust(this)" onchange=" TextAreaAdjust(this)"   ondrop="TextAreaDrop(this,event)"></textarea>
+                                <div name="add_blog_images"  class="droparea"  ondragover="dragover(this)" ondragleave="dragout(this)"  ondrop="TextAreaDrop(this,event)"></div>
                                 <p class="note" align="center" >drag and drop files here</p>
                             </div>
                             
@@ -163,7 +163,7 @@
                     <div class="Row">
                         <a href="Blog/Being my self.html">
                             <div class="Title-date">
-                                <h2>Being my self </h2>
+                                <h5>Being my self </h5>
                                 <p class="date">14/6/2020</p>
                             </div>
                         </a>
@@ -173,7 +173,7 @@
                     <div class="Row">
                         <a href="Blog/Should i trust my knowledge.html">
                             <div class="Title-date">
-                                <h2 >Should I trust my knowledge</h2>
+                                <h5 >Should I trust my knowledge</h5>
                                 <p class="date">26/5/2020</p>
                             </div>
                         </a>
@@ -183,7 +183,7 @@
                     <div class="Row">
                         <a href="Blog/Story of my life.html">
                             <div class="Title-date">
-                                <h2 >Story of my life</h2>
+                                <h5 >Story of my life</h5>
                                 <p class="date">24/5/2020</p>
                             </div>
                         </a>

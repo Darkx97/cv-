@@ -72,12 +72,20 @@
             <div class="container">
                 <form >
                     <div class="Row">
-                        <input style="display: none;" type="file" accept="image/png, image/jpeg, image/jpg" value="tap" onchange="skillItemChange(this)"> 
-                        <div class="profile-picture-container" >
-                            <img class="profile-picture" id="profile-picture" src="Icons\Defult_User.png" >
-                            <div class="profile-picture-label" onclick="ChangeProfilePicture(this)">
-                                <p class="note"> change profile picture</p>
+                        <div class="add-data-section">
+                            <input style="display: none;" type="file" accept="image/png, image/jpeg, image/jpg" value="tap" onchange="ProfilePictureChange(this)"> 
+
+                            <div class="profile-picture-container" >
+                                <img class="profile-picture" id="profile-picture" src="images\hellothere6.jpg" >
+                                <div class="profile-picture-label" onclick="inputItem(this)">
+                                    <p class="note"> change profile picture</p>
+                                </div>
                             </div>
+                            <div class="profile-picture-buttons">
+                                <input type="button" name="add_task" class="button-accept" value="Conform"  >
+                                <input type="button" name="add_task" class="button-cancel" onclick="CancelProfilePicture(this)" value="Cancel"  >
+                            </div>   
+                            
                         </div>
                     </div>
                 </form>
@@ -104,12 +112,12 @@
                                 </div>
                                 <div class="add-data-L">
                                     <p class="indicator">description about what you do </p>
-                                    <textarea class="Self-Description-textarea" name="add_post" id="add_post" placeholder="post content" onload="TextAreaAdjust(this)" onkeypress="TextAreaAdjust(this)" onmousedown="TextAreaAdjust(this)" ></textarea>
+                                    <textarea class="Self-Description-textarea" name="add_post" id="add_post" placeholder="post content" onkeydown=" TextAreaAdjust(this)" onclick=" TextAreaAdjust(this)" onchange=" TextAreaAdjust(this)"  ></textarea>
                                 </div>
                             </div>
                             
                             <div class="add-data-buttons">
-                                <button name="add_task" class="button-accept" onmousedown="CreateSkillRow(this)">Post</button>
+                                <input type="button" name="add_task" class="button-accept" value="Add/change description"  >
                             </div>               
                         </div>
                     </div>
@@ -126,8 +134,9 @@
                     </div>
 
                     <div class="Content" >
-                        <p align="left"> I'm a computer science student interested in learning about Game developing websites developing and AI , just finished my second year at the time of making this website.</p>
-                        <p align="left">Only started taking programing seriously this year and decided to set my self challenges to see if can actually program things or not , This is the first website I make and going to go life at some point  right now its going be hosted through github for testing ,I made this website as a way to test my skills in website design also to share some of the stuff that I did thorough my journey of learning </p>
+                        <p class="Content"> I'm a computer science student interested in learning about Game developing websites developing and AI , just finished my second year at the time of making this website. 
+                            Only started taking programing seriously this year (2019) and decided to set my self challenges to see if can actually program things or not , This is the first website I make and going to go life at some point  right now its going be hosted through github for testing ,I made this website as a way to test my skills in website design also to share some of the stuff that I did thorough my journey of learning .
+                        this website is going to be a community website , right now its hosted via github , it cant support back end so post methods don't work in here , this is basically how things are going to look for now .</p>
                     </div>
                 </div>
 
@@ -187,7 +196,7 @@
                                 </div>
                                 
                                 <div class="add-data-buttons">
-                                    <button name="add_task" class="button-accept" onmousedown="CreateSkillRow(this)">Post</button>
+                                    <input type="button" name="add_task" class="button-accept" value="Add skill"  >
                                 </div> 
                             </div>
                         </div>
@@ -208,7 +217,10 @@
                     <hr>
                     <div class="Row">
                         <div class="Skill-row" >
-                            <img src="images\java.png" alt="" class="responsiveImg" width="175"  height="175">
+                            <div class="Skill-Name-picture">
+                                <p>Java</p>
+                                <img src="images\java.png" alt="" class="responsiveImg" width="175"  height="175">
+                            </div>
                             <p>Programed 3 games (Flappy bird , Pong and Chrome dinosaur game) , totally functional but not perfec
                             <p>Intermediate</p>
                         </div>
@@ -216,15 +228,43 @@
                     <hr>
                     <div class="Row">
                         <div class="Skill-row" >
-                            <img src="images\HTML.png" alt="" class="responsiveImg" width="175" height="175">
-                            <p>Currently learning how to make this project is first one to go online </p>
+                            <div class="Skill-Name-picture">
+                                <p>JavaScript</p>
+                                <img src="images\js-512.png" alt="" class="responsiveImg" width="175" height="175">
+                            </div>
+                            <p>Capable making the website behave the way intended and object oriented programing </p>
                             <p>Intermediate</p>
                         </div>
                     </div>
                     <hr>
                     <div class="Row">
                         <div class="Skill-row" >
-                            <img src="images\C sharp.png" alt="" class="responsiveImg" width="175" height="175">
+                            <div class="Skill-Name-picture">
+                                <p>HTML</p>
+                                <img src="images\HTML.png" alt="" class="responsiveImg" width="175" height="175">
+                            </div>
+                            <p>Understand the website structure can build a website for any purpose  </p>
+                            <p>Intermediate</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="Row">
+                        <div class="Skill-row" >
+                            <div class="Skill-Name-picture">
+                                <p>CSS</p>
+                                <img src="images\CSS.png" alt="" class="responsiveImg" width="175" height="175">
+                            </div>
+                            <p>Capable of styling the website to make it easy for the user to use and navigate through the website </p>
+                            <p>Intermediate</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="Row">
+                        <div class="Skill-row" >
+                            <div class="Skill-Name-picture">
+                                <p class="">C sharp</p>
+                                <img src="images\C sharp.png" alt="" class="responsiveImg" width="175" height="175">
+                            </div>
                             <p>Only made one game following a tutorial</p>
                             <p>beginner</p>
                         </div>
@@ -232,8 +272,19 @@
                     <hr>
                     <div class="Row">
                         <div class="Skill-row" >
+                            <div class="Skill-Name-picture">
+                                <p class="">git command line</p>
+                                <img src="images\index.png" alt="" class="responsiveImg" width="175" height="175">
+                            </div>
+                            <p>Can use some basic command lines navigate and create files and folders , initialize github repository , push and pull files.</p>
+                            <p>beginner</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="Row">
+                        <div class="Skill-row" >
                             <img src="images\Unity_3D_Pro_icon.png" alt="" class="responsiveImg" width="175" height="175">
-                            <p>Just started learning using Unity and planing on re-making my old games then uploading it to my projects coming soon.</p>
+                            <p>Can use some basic command lines navigate and create files and folders , initialize github repository , push and pull files.</p>
                             <p>beginner</p>
                         </div>
                     </div>
@@ -263,13 +314,13 @@
                                     </div>
                                     <div class="add-data-L">
                                         <p class="indicator">section content</p>
-                                        <textarea class="New-Section-textarea" name="add_post" id="add_post" placeholder="post content" onload="TextAreaAdjust(this)" onkeypress="TextAreaAdjust(this)" onmousedown="TextAreaAdjust(this)" ></textarea>
+                                        <textarea class="New-Section-textarea" name="add_post" id="add_post" placeholder="post content" onkeydown=" TextAreaAdjust(this)" onclick=" TextAreaAdjust(this)" onchange=" TextAreaAdjust(this)"  ></textarea>
                                     </div>
                                 </div>
                                 
                                 
                                 <div class="add-data-buttons">
-                                    <button name="add_task" class="button-accept" onmousedown="CreateSkillRow(this)">Post</button>
+                                    <input type="button" name="add_task" class="button-accept" value="Add section"  >
                                 </div> 
                             </div>
                         </div>
@@ -277,21 +328,6 @@
 
                 </div>
                 
-                <hr>
-                
-                <div class="Row " style=" place-items: center;">
-                    <h1 class="title" >Hobbies </h1>  
-                    <div class="Content" >
-                        <p align="left">Video games.</p>
-                        
-                        <p align="left">Reading.... sometimes.</p>
-                        
-                        <p align="left">Martial arts. </P>
-                            
-                        <P align="left">Drawing (not good at it).</P>
-                    </div>
-                        
-                 </div>
                     
             </div>
 

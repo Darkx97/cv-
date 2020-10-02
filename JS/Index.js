@@ -11,8 +11,7 @@ const output = document.getElementById("post_appearance")
 let files=[];
 let data=[];
 
-
-
+let OriginalPicture;
 
 let imgs=[];
 
@@ -99,7 +98,7 @@ function TextAreaAdjust(TA)
     let parent =TA.parentElement.parentElement||TA.parentElement.parentElement.parentElement;
     
     let droparea = parent.querySelector(".droparea") || "null";
-    let FontSize=parseInt(getComputedStyle(document.documentElement).getPropertyValue(' --Textarea-font-size'));
+    let FontSize=parseInt(getComputedStyle(document.documentElement).getPropertyValue('--Textarea-font-size'));
     let sectionHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--post-section-height'));
     let Textareaheight =parseInt(getComputedStyle(document.documentElement).getPropertyValue('--Post--Textarea-height'));
     let colcount =  Math.floor((TA.getBoundingClientRect().width/FontSize)*2.1);
@@ -119,7 +118,7 @@ function TextAreaAdjust(TA)
         minrows = 4;
         TextMaxHegiht =400;
         ParentMaxhight =sectionHeight+ (TextMaxHegiht-Textareaheight) + dropareaheight
-        console.log(ParentMaxhight);
+        
     }
     else if(TA.classList.contains("Blog-textarea"))
     {
@@ -132,7 +131,7 @@ function TextAreaAdjust(TA)
     else if(TA.classList.contains("Self-Description-textarea"))
     {
         parent =TA.parentElement.parentElement.parentElement;
-        console.log(parent);
+        
         Textareaheight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--Blog--Textarea-height'));
         minrows =4;
         TextMaxHegiht =325;
@@ -141,8 +140,7 @@ function TextAreaAdjust(TA)
         sectionHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--blog-section-height'));
 
         ParentMaxhight = sectionHeight+ (TextMaxHegiht-Textareaheight) + dropareaheight
-        
-
+    
     }
     else if(TA.classList.contains("New-Section-textarea"))
     {
@@ -157,8 +155,8 @@ function TextAreaAdjust(TA)
     }
     else if(TA.classList.contains("Comment-textarea"))
     {
+        parent =TA.parentElement;
         Textareaheight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--Textarea-line-height'));
-
         sectionHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--comment-section-height')+dropareaheight);
         minrows =1;
         TextMaxHegiht =200;
@@ -182,8 +180,8 @@ function TextAreaAdjust(TA)
                 x="";
                 rowcounter++;
             }
-
-
+            
+            console.log(colcount);
         }
     }
 
@@ -193,7 +191,6 @@ function TextAreaAdjust(TA)
         {
             parent.style.height= ParentMaxhight +"px";
             TA.style.height = TextMaxHegiht + "px";
-            console.log(sectionHeight);
         }
         else
         {
@@ -208,7 +205,6 @@ function TextAreaAdjust(TA)
             
             parent.style.height= sectionHeight+dropareaheight+"px" ;
             TA.style.height = Textareaheight + "px";
-            console.log(sectionHeight);
         }
         else
         {
@@ -309,6 +305,8 @@ function TextAreaDropFile(droparea,file)
 
 function inputItem(element)
 {
+    OriginalPicture = element.parentElement.innerHTML || null;
+    console.log( OriginalPicture );
     let parent = element.parentElement.parentElement;
     let input = parent.querySelector(`[type="file"]`);
     input.click();
@@ -374,9 +372,10 @@ function skillItemChange(element)
     console.log( element.files);
 }
 
+
 function PictureDrop(elemnt,event)
 {
-
+    
     let droparea = elemnt.parentElement.querySelector(".Add-Skill-Image");
     input =elemnt.parentElement.querySelector(`[type="file"]`)
     
@@ -389,7 +388,7 @@ function PictureDrop(elemnt,event)
     PictureDropFile(droparea,files[0]);
 
     input.files = new filelistitems(files);
-
+    
     console.log(  input.files);
 };
 
@@ -415,34 +414,35 @@ function RemovePicture(Pic)
     console.log(input.files);
 };
 
-
-
-function PickSkillLevel(SkillLevel)
+function ProfilePictureChange(element)
 {
-    let radios = SkillLevel.querySelectorAll("input");
-    for (var i = 0; i < radios.length; i++)if (radios[i].checked)skill=radios[i].value;
-    // console.log(skill);
+    let droparea =element.parentElement.querySelector(".profile-picture-container");
+
+    files[0]=(element.files[0])
+    element.files = new filelistitems(files)
+
+    ProfilePictureDropFile(droparea,files[0])
+    console.log( element.files);
+}
+
+function ProfilePictureDropFile(droparea,files) 
+{
+    droparea.parentElement.parentElement.querySelector(".profile-picture-buttons").classList.add("active")
+    const reader = new FileReader();
+    reader.readAsDataURL(files);
+    reader.onload = () =>
+    {
+        droparea.innerHTML=`<img class="profile-picture" id="profile-picture" src='${reader.result}'>`;
+        picture = `<img class="blogImg" " src='${reader.result}'>`;
+    };
 };
 
-
-function CreateSkillRow(button)
+function CancelProfilePicture(element)
 {
-    let Parent = button.parentElement.parentElement;
-
-    
-    let SNname  = Parent.querySelector(".Skill-Name-text");
-    GetSkillName(SNname);
-
-    let SPicture = Parent.querySelector(".Add-Skill-Image");
-    GetDropedFile(SPicture);
-
-    let SDescription= Parent.querySelector(".Skill-description-text")
-    GetSkillDescription(SDescription);
-
-
-    let SLevel = Parent.querySelector(".option-list");
-    PickSkillLevel(SLevel)
-};
+    element.parentElement.classList.remove("active")
+    let parent=element.parentElement.parentElement.querySelector(".profile-picture-container");
+    parent.innerHTML=OriginalPicture;
+}
 
 
 function logoption(element)

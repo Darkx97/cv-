@@ -87,7 +87,7 @@
                         <div class="add-project-section">
                             <div class="add-project-data add-data">
                                 <p >project Title</p>
-                                <textarea class="Title-textarea" rows="1" name="add_post_title" id="" placeholder="post title "  onkeypress="TextAreaAdjust(this)" onclick="TextAreaAdjust(this)"></textarea>
+                                <textarea class="Title-textarea" rows="1" name="add_post_title" id="" placeholder="post title "></textarea>
         
                                 <div class="add-project-description-picture">
                                     <div class="add-description" >
@@ -98,7 +98,7 @@
                                         <p class="indicator">add image</p>
                                         <input style="display: none;" type="file" accept="image/png, image/jpeg, image/jpg" value="tap" onchange="skillItemChange(this)"> 
                                         <div class="Add-Skill-Image" name="Add_Skill_Image"  ondragover="dragover(this)" ondragleave="dragout(this)"  ondrop="PictureDrop(this,event)"">
-                                            <p class="note" align="center" style="cursor: pointer;" onclick="inputItem(this)">click / tap to add picture</p>
+                                            <p class="note" align="center" style="cursor: pointer;" onclick="inputItem(this)">click / tap to add picture or drag picture</p>
                                         </div>
                                     </div>
                                 </div>
@@ -115,70 +115,89 @@
                     <hr>
                 </form>
             <div class="container">
-            
+
 
                 <div class="Row">
                     <div class="Title-date">
-                        <h2>Download button </h2>
-                        <p class="date">22/4/2020</p>
+                        <h2>Post section </h2>
+                        <p class="date">1/10/2020</p>
                     </div>
 
                     <div class="Content-picture">
-                        <p >The main idea of this website is not just showing-off skills , in the time of making this website there is not much skill , this website was made to share my experience and skill developing , also to share what I have done  with other people who might be interested in programing.</p>
-                        <img src="Gifs\download-button-with-circular-progress-indicator.gif" alt="" class="responsiveImg">
-                    </div>
-                    <div class="Title-date">
-                        <h3>State : </h3>
-                        <p class="date">Starting Soon</p>
-                    </div>
-                    
-                </div>
-
-    
-                
-                <hr>
-
-                <div class="Row">
-                    <div class="Title-date">
-                        <h2>Comment and Suggestions section </h2>
-                        <p class="date">22/4/2020</p>
-                    </div>
-
-                    <div class="Content-picture">
-                        <p >I haven't started working on it yet but im planing to start this week I want it to see if I can make this it might be harder than I think but learning is the important thing .</p>
+                        <p >not everything in this website have to be a long boring read through topic it could be something i would like to talk that is not that important and i want to make that easy to for me and other people who might use this website.</p>
                         <img src="Gifs\Comment.gif" alt="" class="responsiveImg">
                     </div>
 
                     <div class="Title-date">
                         <h3>State : </h3>
-                        <p class="date">Work in progress</p>
+                        <p class="date">work in progress</p>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="Row">
+                    <div class="Title-date">
+                        <h2>Blog section </h2>
+                        <p class="date">1/10/2020</p>
+                    </div>
+
+                    <div class="Content-picture">
+                        <p >I think about a lot of things not just programing , and like all people I go though a lot of things , things I usually only talk about with my friends , but one of my friends suggest i might have something interesting to say and suggest that I start righting what I think , and i want to make a platform where i dont have to write the html code every time i want to upload something to this website.</p>
+                        <img src="Gifs\Comment.gif" alt="" class="responsiveImg">
+                    </div>
+
+                    <div class="Title-date">
+                        <h3>State : </h3>
+                        <p class="date">Done</p>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="Row">
+                    <div class="Title-date">
+                        <h2>Comment section </h2>
+                        <p class="date">22/4/2020</p>
+                    </div>
+
+                    <div class="Content-picture">
+                        <p >Feed back is important and i want a place where i can get some feed back from people about what Im doing and their thoughts about it i can learn something from it , or others can learn from it</p>
+                        <img src="Gifs\Comment.gif" alt="" class="responsiveImg">
+                    </div>
+
+                    <div class="Title-date">
+                        <h3>State : </h3>
+                        <p class="date">Done</p>
                     </div>
 
                     <div class="comment-section ">
                         
-                        <!-- <div class="add-data"> -->
-                            <div class="add-comment-section active">
-                                <div >
-                                    <img src="Icons\Defult_User.png" alt="" class="profileImg">
-                                </div>
-                                <div>
-                                    <textarea class="Comment-textarea" placeholder="Leave a Comment" name="" id=""  class="Text"  onkeyup="TextAreaAdjust(this)" onkeydown="TextAreaAdjust(this)" onkeypress="TextAreaAdjust(this)" onclick="TextAreaAdjust(this)"></textarea>
-                                </div>
-                                <div >
-                                    <div class="UI-button" onclick="toggleUI(this)">
-                                        <button class="arrow-button commentUI" type="button" >
-                                            <div class="arrow-up commentUI"></div>
-                                            <div class="arrow-down commentUI"></div>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>  
+                        <form action="">
                             
-                        <!-- </div> -->
-                            <div class="add-data-buttons">
-                                <input type="button" value="Comment" class="button-accept" >
-                
+                            <div class="add-comment-section active">
+                                
+                                <img src="Icons\Defult_User.png" alt="" class="profileImg">
+                                
+                                
+                                <textarea class="Comment-textarea" placeholder="Leave a Comment" name="" id=""  class="Text" onkeypress="TextAreaAdjust(this)" onclick="TextAreaAdjust(this)" onchange="TextAreaAdjust(this)" ></textarea>
+                                
+                                
+                                <div class="UI-button" onclick="toggleUI(this)">
+                                    <button class="arrow-button commentUI" type="button" >
+                                        <div class="arrow-up commentUI"></div>
+                                        <div class="arrow-down commentUI"></div>
+                                    </button>
+                                </div>
+                                
                             </div> 
+
+                            <div class="add-data-buttons">
+                                <input type="button" value="Comment" class="button-accept" >            
+                            </div> 
+                            
+                        </form>
+                        
                         
                          
                         <div class="Comments">
@@ -222,7 +241,7 @@
                     
                     <div class="Title-date">
                         <h3>State : </h3>
-                        <p class="date">Done 1/6/2020</p>
+                        <p class="date">Done</p>
                     </div>
                 </div>
 

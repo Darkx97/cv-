@@ -89,7 +89,7 @@
                         <div class="add-post-section">
                             <div class="add-post-data add-data">
                                 <p align="center">Post content</p>
-                                <textarea class="Post-textarea" name="add_post" placeholder="post content" onchange="TextAreaAdjust(this)" onkeypress="TextAreaAdjust(this)" onkeydown="TextAreaAdjust(this)" onmousedown="TextAreaAdjust(this)" ondragover="dragover(this)" ondragleave="dragout(this)"  ondrop="TextAreaDrop(this,event)"></textarea>
+                                <textarea class="Post-textarea" name="add_post" placeholder="post content" onkeydown=" TextAreaAdjust(this)" onclick=" TextAreaAdjust(this)" onchange=" TextAreaAdjust(this)"  ondragover="dragover(this)" ondragleave="dragout(this)"  ondrop="TextAreaDrop(this,event)"></textarea>
                                 <input type="file" style="display: none;" onchange="inputItemchange(this)" multiple> 
                                 <div name="add_post_images"  class="droparea"  ondragover="dragover(this)" ondragleave="dragout(this)"  ondrop="TextAreaDrop(this,event)"></div>
                                 <p class="note" align="center" >drag and drop files here</p>
@@ -129,10 +129,7 @@
                     <p class="title note">This picture just displays languages I can work with, the size of the language displays how good I think I am in the language </p>
                 </div>
 
-
             </div>
-            
-            
             <script src="JS/Index.js"></script>
         </div>
     </body>
