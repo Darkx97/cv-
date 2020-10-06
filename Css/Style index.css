@@ -34,6 +34,7 @@
     
     --nav-font-size:16px;
     --button-font-size : 18px;
+    --menu-item-font-size :16px;
 
     --H1-text-size :56px;
     --H2-text-size :40px;
@@ -53,8 +54,8 @@
     --arrow-comment-width:15px;
     --arrow-comment-height:10px;
     --arrow-comment-move:25px;
-    --arrow-top-comment-distant:23px;
-    --arrow-bottom-comment-distant:15px;
+    --arrow-top-comment-distant:20px;
+    --arrow-bottom-comment-distant:12px;
 
 
     --new-section-height: 300px;
@@ -72,8 +73,8 @@
     --Project-Textarea-height : 115px;
     --Chat-Textarea-height : 50px;
 
-    --add-skill-img-size : 80px;
-    --drop-file-size:85px;
+    --add-skill-img-size : 115px;
+    --drop-file-size:110px;
 }
 
 html[data-theme ='dark']
@@ -1013,14 +1014,38 @@ html{
         justify-items: center;
     }
 
-    .add-project-description-picture
+    .add-project-title-status
     {
-        width: 100%;
+        width: 100%; 
+        display: grid;
+        grid-template-columns: 5fr 2fr;
+    }
+    .add-project-title
+    {
         display: grid;
         align-items: center;
         justify-items: center;
-        grid-template-columns: 10fr 2fr;
+
     }
+    .add-project-status
+    {
+        width: 100%; 
+        display: grid;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .add-project-description-picture
+    {
+        width: 100%;   
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        grid-template-columns: 5fr 2fr;
+        
+    }
+
+
 
     .add-data-M
     {
@@ -1274,7 +1299,7 @@ html{
 
     .Add-Skill-Image
     {
-        margin:5px;
+        margin:auto;
         padding: 4px;
         display: grid;
         cursor: pointer;
@@ -1309,6 +1334,76 @@ html{
     }
 
 
+    .select-item
+    {
+        gap: 2px;
+        display: grid;
+        border-radius: 6px;
+        width: calc(100% - 5px);
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: 6fr 1fr;
+    }
+
+    .item-list
+    {
+        
+        top: -2px;
+        left: -2px;
+        width: 100%;
+        height: 0;
+        opacity:0 ;
+        display: flex;
+        border-radius: 4px;
+        position: relative;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        scrollbar-width: thin;
+        flex-direction: column;
+        border: 2px var(--Universal-border-color) solid;
+        background: var(--Textarea-background);
+        transition: all 0.5s  cubic-bezier(.25,.50,.60,.80) ;
+        
+        /* transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1) ; */
+    }
+
+    .item-list p{
+        place-self: center;
+    }
+
+    .item-selected .active
+    {
+        border: 2px var(--Universal-border-color) solid;
+        height: 420%;
+        transition: all 0.5s cubic-bezier(.25,.50,.60,.80) ;
+        opacity: 100;
+    }
+
+    .item-selected
+    {
+        gap: 2px;
+        display: grid;
+        border-radius: 6px;
+        width: calc(100% - 5px);
+        height: calc(var(--Textarea-line-height) + 10px);
+        background: var(--Textarea-background);
+        border: 2px var(--Universal-border-color) solid;
+    }
+
+    p.menu-item
+    {
+        margin: auto;
+        align-self: center;
+        justify-self: center;
+        font-size: var(--menu-item-font-size);
+        position: absolute;
+        
+    }
+
+    .item-menu
+    {
+        display: flex;
+    }
 
 /* drag and drop areas style finish*/
 
@@ -1568,12 +1663,47 @@ html{
     .UI-button
     {
         z-index: 1;
-        height: 40px;
+        height: auto;
         display: grid;
+        margin: auto;
         cursor: pointer;
         place-items: center;
         position: relative;
     }
+
+    .arrow-button.listUI
+    {
+        min-width: calc(var(--Textarea-line-height) + 13px);;
+        height:calc(var(--Textarea-line-height) + 13px);;
+        
+    }
+    .arrow-up.listUI
+    {
+        top:25px;
+        border-top: 15px rgba(0, 0, 0, 0) solid;
+        border-bottom: 15px var(--Normal-text-color) solid;
+        border-left:10px rgba(0, 0, 0, 0) solid;
+        border-right:10px rgba(0, 0, 0, 0) solid;
+    }
+    .arrow-down.listUI
+    {
+        top: 10px;
+        border-bottom: 15px rgba(0, 0, 0, 0) solid;
+        border-top: 15px var(--Normal-text-color) solid;
+        border-left: 10px rgba(0, 0, 0, 0) solid;
+        border-right: 10px rgba(0, 0, 0, 0) solid;
+    }
+    .arrow-up.toggle.listUI
+    {
+        transform:  translateY(calc(var(25px) * -1));
+        transition: all 0.15s cubic-bezier(.44,.68,.64,.72);
+    }
+    .arrow-down.toggle.listUI
+    {
+        transform:  translateY(var(25px));
+        transition: all 0.15s cubic-bezier(.44,.68,.64,.72);
+    }
+
 
     .arrow-button.commentUI
     {
@@ -1828,6 +1958,8 @@ html{
         
         --nav-font-size:14px;
         --button-font-size : 16px;
+        --menu-item-font-size :12px;
+
 
         --H1-text-size :54px;
         --H2-text-size :38px;
@@ -1841,8 +1973,8 @@ html{
         --arrow-comment-width:12px;
         --arrow-comment-height:8px;
         --arrow-comment-move:25px;
-        --arrow-top-comment-distant:27px;
-        --arrow-bottom-comment-distant:14px;
+        --arrow-top-comment-distant:22px;
+        --arrow-bottom-comment-distant:10px;
     
         --Post--Textarea-height : 105px;
         --Project-Textarea-height : 105px;
@@ -1857,8 +1989,8 @@ html{
         --project-section-height:285px;
         --self-description-section-height : 380px;
 
-        --add-skill-img-size : 65px;
-        --drop-file-size:60px;
+        --add-skill-img-size : 100px;
+        --drop-file-size:90px;
     }
 
 }
@@ -1873,7 +2005,8 @@ html{
         --small-font-size :12px;
         
         --nav-font-size:14px;
-        --button-font-size : 14px;
+        --button-font-size : 12px;
+        --menu-item-font-size :10px;
 
         --H1-text-size :52px;
         --H2-text-size :36px;
@@ -1887,8 +2020,8 @@ html{
         --arrow-comment-width:8px;
         --arrow-comment-height:5px;
         --arrow-comment-move:25px;
-        --arrow-top-comment-distant:33px;
-        --arrow-bottom-comment-distant:17px;
+        --arrow-top-comment-distant:23px;
+        --arrow-bottom-comment-distant:6px;
 
 
         --Post--Textarea-height : 100px;
@@ -1905,8 +2038,8 @@ html{
 
         --Sign-in-section-width:350px;
 
-        --add-skill-img-size : 50px;
-        --drop-file-size:45px;
+        --add-skill-img-size : 100px;
+        --drop-file-size:95px;
     }
     .User-chat img
     {
@@ -1960,6 +2093,8 @@ html{
         
         --nav-font-size:14px;
         --button-font-size : 14px;
+        --menu-item-font-size :10px;
+
 
         --H1-text-size :32px;
         --H2-text-size :26px;
@@ -1973,8 +2108,8 @@ html{
         --arrow-comment-width:8px;
         --arrow-comment-height:5px;
         --arrow-comment-move:25px;
-        --arrow-top-comment-distant:33px;
-        --arrow-bottom-comment-distant:17px;
+        --arrow-top-comment-distant:23px;
+        --arrow-bottom-comment-distant:6px;
 
 
         --Post--Textarea-height : 90px;
@@ -1990,8 +2125,8 @@ html{
         --project-section-height:240px;
         --self-description-section-height : 295px;
 
-        --add-skill-img-size : 50px;
-        --drop-file-size:45px;
+        --add-skill-img-size : 85px;
+        --drop-file-size:80px;
     }
     .add-skill-input
     {

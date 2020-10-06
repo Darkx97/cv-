@@ -40,7 +40,7 @@ function toggleUI(element)
         button.children[0].classList.toggle("toggle")
         button.children[1].classList.toggle("toggle")
     }
-    let section = parent.querySelector(".add-skill-section")||parent.querySelector(".add-self-description-section")||parent.querySelector(".add-new-section")||parent.querySelector(".add-blog-section")||parent.querySelector(".add-project-section")||parent.querySelector(".Comments")||parent.querySelector(".add-post-section");
+    let section = parent.querySelector(".add-skill-section")||parent.querySelector(".add-self-description-section")||parent.querySelector(".add-new-section")||parent.querySelector(".add-blog-section")||parent.querySelector(".add-project-section")||parent.querySelector(".Comments")||parent.querySelector(".add-post-section")||parent.querySelector(".item-list");
     section.classList.toggle("active");
     let Bsection = parent.querySelector(".add-data-buttons");
     Bsection.classList.toggle("active");

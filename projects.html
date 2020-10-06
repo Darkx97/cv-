@@ -86,8 +86,45 @@
                     <div class="add-data-section">
                         <div class="add-project-section">
                             <div class="add-project-data add-data">
-                                <p >project Title</p>
-                                <textarea class="Title-textarea" rows="1" name="add_post_title" id="" placeholder="post title "></textarea>
+
+                                <div class="add-project-title-status">
+                                    <div class="add-project-title">
+                                        <p >project Title</p>
+                                        <textarea name="Project_title" class="Comment-textarea" rows="1"  id="" placeholder="post title "></textarea>
+                                    </div>
+
+                                    <div class="add-project-status">
+
+                                        <p> project status</p>
+                                        <div class="select-item" style="display: grid;">
+                                            <div class="item-selected">
+                                                <P class="menu-item">Starting soon</P>
+                                                <div class="item-list">
+                                                    <p>Done</p>
+                                                    <p>Work in progress</p>
+                                                    <p>Starting soon</p>
+                                                    <p>Canceled</p>
+                                                </div>
+                                            </div>
+                                            <div class="UI-button" onclick="toggleUI(this)" >
+                                                <button class="arrow-button listUI" type="button" >
+                                                    <div class="arrow-up listUI"></div>
+                                                    <div class="arrow-down listUI"></div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                            <!-- <div class="item-menu">
+
+                                            </div> -->
+                                        <!-- <select name="Project_Status" >
+                                            <option value="volvo">Starting soon</option>
+                                            <option value="saab">Work in progress</option>
+                                            <option value="mercedes">Done</option>
+                                            <option value="audi">Canceled</option>
+                                        </select> -->
+                                    </div>
+
+                                </div>
         
                                 <div class="add-project-description-picture">
                                     <div class="add-description" >
